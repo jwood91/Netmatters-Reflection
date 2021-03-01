@@ -1,0 +1,35 @@
+body {
+  background-color: lightgrey;
+}
+
+.page-head {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: white;
+  height: 172px;
+}
+
+.page-head .logo-container {
+  height: 90%;
+  width: 80%;
+  margin-right: 1.5rem;
+  margin-left: 1%;
+  margin-top: 2%;
+  z-index: 1;
+}
+
+.logo {
+  width: 65%;
+  height: auto;
+}
+
+.chat-icon {
+  position: fixed;
+  width: 74px;
+  height: 74px;
+  top: 3%;
+  left: 2.5%;
+  z-index: 99;
+}
