@@ -21,6 +21,7 @@ main {
 
 #mobile-top-row {
   display: flex;
+  max-width: 100%;
   width: 100%;
   height: auto;
 }
@@ -35,7 +36,7 @@ main {
   }
 
 #logo {
-  width: 100%;
+  width: 95%;
   height: 98%;
     }
 #chat-icon {
