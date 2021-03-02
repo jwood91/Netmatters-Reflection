@@ -8,87 +8,122 @@ header  {
 main {
   background-color: grey;
 }
-.page-head {
+#page-head {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
   background-color: white;
-  height: 10rem;
+  height: 9.4rem;
   width: 100%;
 
     }
 
-.logo-container {
-  max-width: 100%;
-  display: block;
-  width: 67%;
-  margin: 1.25rem 0rem 0rem 0.5rem;
+#mobile-top-row {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+#logo-container {
+  max-width: 450px;
+  width: 87%;
+  height: 70%;
+  margin: 1.4rem 0rem 0rem 0.5rem;
   order: -1;
 
   }
 
-.logo {
+#logo {
   width: 100%;
-  height: 95%;
+  height: 98%;
     }
-.chat-icon {
+#chat-icon {
   position: fixed;
-  width: 3.9rem;
-  height: 3.9rem;
-  top: 3.3%;
-  left: 3.6%;
+  width: 3.75rem;
+  height: 3.75rem;
+  top: 1rem;
+  left: 1.4rem;
   z-index: 99;
   }
 
-.search-bar-container {
-  top: 0px;
-  height: 3rem;
-  width: 98%;
-  margin: 0.25rem 0rem 0rem 0.23rem;
+#search-bar-container {
+  display: flex;
+  max-width: 600px;
+  height: 3.1rem;
+  width: 100%;
+  margin: 0.9rem 0.5rem 0.5rem 0.5rem;
   order: 3;
-  }
-
-  .search-input {
+  #search-icon-container {
+    width: 50px;
+    height: auto;
     background-color: rgba(0,0,0,.1);
-    outline: 1px solid hsla(0,0%,100%,.2);
     border: 2px solid rgba(0,0,0,.1);
-    width: 100%;
-    height: 80%;
-  }
+    border-left: none;
 
-  .search-button {
-    order: 4;
-  }
-
-  .links-container {
-    visibility: hidden;
-    order: 5;
-    align-items: flex-start;
-  }
-
-  .menu-button-container {
-    margin: 1rem 0.5rem 0rem 0.23rem;
-    width: auto;
-    height:auto;
-    color: black;
-    height: 2.0rem;
-    order: 2;
-    .menu-button {
-      height: 3.5rem;
-      width: 100%;
-      cursor: pointer;
     }
+::placeholder {
+    font-size: 15px;
+    color: #555;
+    font-family: 'Poppins', sans-serif;}
+
+  }
+
+#search-input {
+  background-color: rgba(0,0,0,.1);
+  outline: 1px solid hsla(0,0%,100%,.2);
+  border: 2px solid rgba(0,0,0,.1);
+  border-right: none;
+  width: calc(100% - 30px);
+  height: auto;
+  padding-left: 12px;
+  }
+
+
+  #search-icon {
+    margin: 10px 0px 0px 15px;
+    width: 1.25em;
+    height: 1.25em;
+    border-left: none;
+    }
+
+
+#search-button {
+  display: none;
+  margin-right: 2.8rem;
+  width: 2rem;
+  order: 9;
+  }
+
+#links-container {
+  visibility: hidden;
+  order: 5;
+  align-items: flex-start;
+  }
+
+#menu-button-container {
+  margin: 1rem 0.5rem 0rem 0.23rem;
+  width: auto;
+  height:auto;
+  color: black;
+  height: 2.0rem;
+  order: 2;
+  #menu-button {
+    height: 3.5rem;
+    width: 4.0rem;
+    cursor: pointer;
+    border-radius: 3px;
+  }
 }
 
 
-.phone-icon-container {
-  margin: 2.25rem 1.2rem 0rem 0.23rem;
-  width: 1.8rem;
+#phone-icon-container {
+  margin: 2.25rem 2rem 0rem 0.8rem;
+  width: 37px;
   color: black;
   height: 2.0rem;
   order: 1;
-  .phone-icon {
+  #phone-icon {
     height: auto;
     width: 93%;
     transform: rotate(-5deg);
