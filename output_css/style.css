@@ -1,19 +1,45 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?c9kw9z");
+  src: url("../fonts/icomoon.eot?c9kw9z#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?c9kw9z") format("truetype"), url("../fonts/icomoon.woff?c9kw9z") format("woff"), url("../fonts/icomoon.svg?c9kw9z#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-right2:before {
+  content: "\ea3c";
+}
+
+/* Header */
 header {
   background-color: grey;
   box-sizing: border-box;
-}
-
-main {
-  background-color: grey;
+  width: 100%;
 }
 
 #page-head {
+  max-width: 600px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
   background-color: white;
-  height: 9.4rem;
+  height: 10.3rem;
   width: 100%;
 }
 
@@ -21,13 +47,15 @@ main {
   display: flex;
   width: 100%;
   height: auto;
+  max-width: 600px;
+  margin: -2% -2% 0 -2%;
 }
 
 #logo-container {
   max-width: 450px;
   width: 87%;
-  height: 70%;
-  margin: 1.4rem 0rem 0rem 0.5rem;
+  height: 50%;
+  margin: 2.1rem 0rem 1rem 0.5rem;
   order: -1;
 }
 
@@ -40,17 +68,17 @@ main {
   position: fixed;
   width: 3.75rem;
   height: 3.75rem;
-  top: 1rem;
-  left: 1.4rem;
+  top: 1.2rem;
+  left: 1.9rem;
   z-index: 99;
 }
 
 #search-bar-container {
   display: flex;
   max-width: 600px;
-  height: 3.1rem;
+  height: 2.9rem;
   width: 100%;
-  margin: 0.9rem 0.5rem 0.5rem 0.5rem;
+  margin: -0.5rem 0.5rem 0rem 0.5rem;
   order: 3;
 }
 
@@ -99,8 +127,9 @@ main {
 }
 
 #menu-button-container {
-  margin: 1rem 0.5rem 0rem 0.23rem;
-  width: auto;
+  max-width: 600px;
+  margin: 2rem 1rem 0rem 0.23rem;
+  width: 4.0rem;
   height: auto;
   color: black;
   height: 2.0rem;
@@ -115,7 +144,7 @@ main {
 }
 
 #phone-icon-container {
-  margin: 2.25rem 2rem 0rem 0.8rem;
+  margin: 3.0rem 2rem 0rem 0.8rem;
   width: 37px;
   color: black;
   height: 2.0rem;
@@ -126,4 +155,75 @@ main {
   height: auto;
   width: 93%;
   transform: rotate(-5deg);
+}
+
+/* image slider */
+#outer-image-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+#image-slider-container {
+  height: 100vh;
+  width: 110%;
+  margin-top: -1%;
+  margin-left: -5%;
+  width: 110%;
+  height: 100%;
+  background: linear-gradient(to right, black, rgba(0, 0, 0, 0.45) 100%, transparent 25%), url("../images/cyber_zoom.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#image-slider-container h1 {
+  color: white;
+  position: absolute;
+  top: 40%;
+  left: 15%;
+  z-index: 2;
+  font-family: 'Poppins', sans-serif;
+  font-size: 45px;
+}
+
+#image-slider-container p {
+  color: white;
+  position: absolute;
+  text-align: center;
+  font-size: 19px;
+  top: 52%;
+  left: 10%;
+  width: 80%;
+  z-index: 2;
+  font-family: 'Poppins', sans-serif;
+}
+
+#cyber-btn {
+  position: absolute;
+  background-color: #f62459;
+  border-color: #f62459;
+  border-radius: 3px;
+  color: white;
+  top: 68%;
+  left: 28%;
+  width: 18em;
+  height: 4.7em;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.slider-button {
+  display: flex;
+  margin-left: 1.8rem;
+  font-size: 18px;
+}
+
+#arrow-button {
+  height: 5px;
+  width: 5px;
+}
+
+.icon-arrow-right2 {
+  font-size-adjust: auto;
+  font-size: 20px;
+  padding-left: 10px;
 }
