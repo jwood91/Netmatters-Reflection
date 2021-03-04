@@ -25,6 +25,12 @@
   content: "\ea3c";
 }
 
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Poppins', sans-serif;
+}
+
 /* Header */
 header {
   background-color: grey;
@@ -94,7 +100,6 @@ header {
 #search-bar-container ::placeholder {
   font-size: 15px;
   color: #555;
-  font-family: 'Poppins', sans-serif;
 }
 
 #search-input {
@@ -166,11 +171,9 @@ header {
 
 #image-slider-container {
   height: 100vh;
-  width: 110%;
+  width: 105vw;
   margin-top: -1%;
   margin-left: -5%;
-  width: 110%;
-  height: 100%;
   background: linear-gradient(to right, black, rgba(0, 0, 0, 0.45) 100%, transparent 25%), url("../images/cyber_zoom.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -182,7 +185,6 @@ header {
   top: 40%;
   left: 15%;
   z-index: 2;
-  font-family: 'Poppins', sans-serif;
   font-size: 45px;
 }
 
@@ -195,7 +197,6 @@ header {
   left: 10%;
   width: 80%;
   z-index: 2;
-  font-family: 'Poppins', sans-serif;
 }
 
 #cyber-btn {
@@ -227,4 +228,55 @@ header {
   font-size-adjust: auto;
   font-size: 20px;
   padding-left: 10px;
+}
+
+/* Content Boxes */
+.content-boxes-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0 -0.5em 0 -0.5em;
+}
+
+.content-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 3px;
+  width: 93vw;
+  margin: 25px 10px 10px 10px;
+}
+
+.content-box h2 {
+  color: black;
+  margin: 5em 1.5em 1em 1.5em;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 100;
+  z-index: 1;
+}
+
+.content-box span {
+  align-items: center;
+  justify-content: center;
+  color: black;
+  margin: 1em 2.5em 3em 2.5em;
+  padding: 5px;
+  font-size: 13.2px;
+  text-align: center;
+  z-index: 1;
+}
+
+.content-box .line-div {
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  z-index: 2;
 }
