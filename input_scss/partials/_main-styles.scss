@@ -1,4 +1,6 @@
 
+* {box-sizing: border-box;}
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -29,6 +31,7 @@ header  {
   height: 10.3rem;
   width: 100vw;
 
+
   }
 
 #mobile-top-row {
@@ -46,6 +49,7 @@ header  {
   height: 50%;
   margin: 2.1rem 0rem 1rem 0.5rem;
   order: -1;
+  box-sizing: border-box;
 
   }
 
