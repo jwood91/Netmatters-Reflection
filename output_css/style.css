@@ -16,19 +16,35 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-right2:before {
+  content: "\ea3c";
 }
 
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Poppins', sans-serif;
+  min-width: 100vw;
+}
+
+body h1 h2 {
+  font-weight: 600;
+}
+
+body p {
+  font-weight: 400;
 }
 
 /* Header */
 header {
   background-color: grey;
   box-sizing: border-box;
-  width: 100%;
+  width: 100vw;
 }
 
 #page-head {
@@ -39,7 +55,7 @@ header {
   justify-content: space-between;
   background-color: white;
   height: 10.3rem;
-  width: 100%;
+  width: 100vw;
 }
 
 #mobile-top-row {
@@ -78,7 +94,7 @@ header {
   max-width: 600px;
   height: 2.9rem;
   width: 100%;
-  margin: -0.5rem 0.5rem 0rem 0.5rem;
+  margin: -0.5rem 1.3rem 0rem 0.5rem;
   order: 3;
 }
 
@@ -127,7 +143,7 @@ header {
 
 #menu-button-container {
   max-width: 600px;
-  margin: 2rem 1rem 0rem 0.23rem;
+  margin: 2rem 2rem 0rem 0.23rem;
   width: 4.0rem;
   height: auto;
   color: black;
@@ -163,10 +179,11 @@ header {
 }
 
 #image-slider-container {
-  height: 100vh;
-  width: 105vw;
+  height: 98vh;
+  min-width: 100vw;
   margin-top: -1%;
   margin-left: -5%;
+  padding-right: 5%;
   background: linear-gradient(to right, black, rgba(0, 0, 0, 0.45) 100%, transparent 25%), url("../images/cyber.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -180,6 +197,7 @@ header {
   left: 15%;
   z-index: 2;
   font-size: 45px;
+  font-weight: 600;
 }
 
 #image-slider-container p {
@@ -214,14 +232,11 @@ header {
 }
 
 #arrow-button {
-  height: 5px;
-  width: 5px;
-}
-
-.icon-arrow-right2 {
   font-size-adjust: auto;
   font-size: 20px;
   padding-left: 10px;
+  min-height: 5px;
+  min-width: 5px;
 }
 
 /* Content Boxes */
@@ -540,13 +555,13 @@ header {
   padding: 5px;
   font-size: 18px;
   text-align: center;
-  font-weight: 100;
+  font-weight: 400;
 }
 
 .content-box .p {
   color: black;
-  margin: 1em 2.5em 3em 2.5em;
-  padding: 35px;
+  margin: 0em 0.5em 3em 0.5em;
+  padding: 30px;
   font-size: 13.2px;
   text-align: center;
 }
@@ -573,8 +588,8 @@ header {
 .line-div {
   align-items: center;
   justify-content: center;
-  background-color: red;
   border-bottom: 3px solid black;
+  margin-bottom: -1em;
   width: 1.85em;
 }
 
@@ -587,7 +602,7 @@ header {
   min-height: 50px;
   max-height: 45px;
   max-width: 130px;
-  margin: -2em 0 4em 0;
+  margin: -3em 0 2em 0;
   border: none;
   border-radius: 3px;
 }
@@ -597,4 +612,71 @@ header {
   min-width: 100%;
   font-weight: 600;
   margin-left: 2em;
+}
+
+/* about-us-container */
+.about-us-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 101vw;
+  margin-left: -0.5rem;
+  background-color: #333645;
+  padding: 25px 0 25px 0;
+}
+
+#about-text-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0.7em 1.7em 0.5em 1em;
+  line-height: 2em;
+  padding: 5px 5% 5px 5px;
+}
+
+#about-text-container h1 {
+  font-weight: 500;
+  font-size: 35px;
+  margin: 0 0.25em 0.8em 0;
+  color: white;
+}
+
+#about-text-container .about-text {
+  font-weight: 500;
+  font-size: 17px;
+  margin: 0 0.25em 1.5em 0.25em;
+  color: white;
+}
+
+#about-text-container #intro-text {
+  font-weight: 700;
+  font-size: 17px;
+  margin: 0 0.5em 1.5em 0;
+  color: white;
+}
+
+#abt-btn-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 0 1em 0.1em;
+  justify-content: center;
+  max-width: 13em;
+  min-height: 50px;
+  max-height: 50px;
+  cursor: pointer;
+  color: #333645;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+#abt-btn-container #culture-btn-txt {
+  font-weight: 500;
+  font-size: 17px;
+  margin: 0.1em 0 0 0.4em;
+}
+
+#abt-btn-container #culture-arrow {
+  margin: .1em 0em 0 0.5em;
+  font-size: 18px;
+  min-height: 5px;
+  min-width: 5px;
 }
