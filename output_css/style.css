@@ -174,7 +174,7 @@ header {
 
 /* image slider */
 #outer-image-container {
-  width: 100vw;
+  width: 105vw;
   height: 100vh;
 }
 
@@ -618,7 +618,7 @@ header {
 .about-us-container {
   display: flex;
   flex-direction: column;
-  min-width: 101vw;
+  min-width: 105vw;
   margin-left: -0.5rem;
   background-color: #333645;
   padding: 25px 0 25px 0;
