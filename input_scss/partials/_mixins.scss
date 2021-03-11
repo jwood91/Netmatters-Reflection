@@ -1,13 +1,16 @@
 @mixin content-boxes {
-    max-width: 500px;
+    max-width: 460px;
+    min-width: 460px;
+    min-height: 329px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
+    border: 2px solid lightgrey;
     border-radius: 3px;
-    width: 93vw;
-    margin: 25px 0 10px -1rem;
+    margin: 15px 5px 10px 5px;
+
+
 }
 
 
@@ -50,3 +53,22 @@
         }
       }
     }
+
+
+@mixin form-input {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 1rem 0 -2rem 0;
+    input {
+      width: 27rem;
+      height: 3.09em;
+      margin: 1rem 0 0 2.8rem;
+      border: 2px solid rgba(0,0,0,.23);
+        }
+    label{
+      margin: 2em 0 -0.8em 2.8rem;
+      font-size: 16px;
+      font-weight: 600;
+        }
+      }
