@@ -1,7 +1,7 @@
 @mixin content-boxes {
-    max-width: 460px;
-    width: 460px;
+    width: 95%;
     display: flex;
+    display: -ms-flex;
     min-height: 315px;
     flex-direction: column;
     justify-content: center;
@@ -9,7 +9,7 @@
     align-items: center;
     border: 2px solid lightgrey;
     border-radius: 3px;
-    margin: 15px 5px 10px 5px;
+    margin: 15px 20px 10px 20px;
     padding: 35px 0 45px 0;
 
 
@@ -59,17 +59,15 @@
 
 @mixin form-input {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  margin: 1rem 0 -2rem 0;
+  margin: 1rem 0 0 0;
     input {
-      width: 27rem;
+      width: 100%;
       height: 3.09em;
-      margin: 1rem 0 0 2.8rem;
       border: 2px solid rgba(0,0,0,.23);
         }
     label{
-      margin: 2em 0 -0.8em 2.8rem;
       font-size: 16px;
       font-weight: 600;
         }
@@ -86,3 +84,22 @@
 
   }
 }
+
+@mixin mq($break) {
+  $value: map-get($breakpoints, $break);
+  $sm: map-get($breakpoints, 'sm');
+
+  @if $value == null {
+    @warn '"#{$break}" is not a valid breakpoint name'
+      }
+    @else if $value < $sm {
+      @media (max-width: $value) {
+        @content;
+      }
+    }
+    @else {
+        @media (min-width: $value) {
+          @content;
+        }
+    }
+  }

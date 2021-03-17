@@ -1,0 +1,12 @@
+#page-head {
+
+}
+
+
+
+.bottom-4-box {
+
+  @include mq('sm'){
+    max-width: 40% !important;
+}
+}

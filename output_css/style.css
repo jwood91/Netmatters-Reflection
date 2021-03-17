@@ -88,39 +88,51 @@ header {
 
 /* =========MAIN HEADER CONTAINER=========*/
 #page-head {
-  max-width: 600px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
   background-color: white;
-  height: 20vh;
+  height: 23.8vh;
+  width: 100%;
   margin: 0;
+  padding: 5px;
   /* Header search bar/input containers*/
   /*links and menu button styles*/
 }
 
 #page-head #top-row {
   display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   max-width: 100%;
   width: 100%;
-  height: auto;
-  max-width: 600px;
-  margin: -2% -2% 0 -2%;
+  height: 50%;
 }
 
 #page-head #logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1em;
+  width: 70%;
+}
+
+#page-head #logo {
   max-width: 450px;
-  width: 87%;
-  height: 50%;
-  margin: 2.1rem 0rem 1rem 0.5rem;
+  width: 95%;
+  height: 60%;
+  margin: 1rem 0rem 0 0;
   order: -1;
   box-sizing: border-box;
 }
 
-#page-head #logo {
-  width: 95%;
-  height: 98%;
+#page-head #menu-phone {
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
 }
 
 #page-head #chat-icon {
@@ -132,32 +144,39 @@ header {
   z-index: 99;
 }
 
-#page-head #phone-icon-container {
-  margin: 2.6rem 2rem 0rem 0.8rem;
-  width: 48px;
-  height: 37px;
-  color: black;
-  order: 1;
-}
-
-#page-head #phone-icon-container #phone-icon {
-  height: 30px;
-  width: 85%;
-  transform: rotate(-7deg);
+#page-head #phone-icon {
+  height: 27px;
+  width: 27px;
+  transform: rotate(1deg);
+  margin: 0.5em 0 0 0;
 }
 
 #page-head #phone-icon-container:hover {
   border-bottom: 4px solid black;
 }
 
+#page-head #menu-button-container {
+  margin: 0.9em 0.5em 0 0;
+  width: 3.8rem;
+  height: 3.5rem;
+  color: black;
+  order: 2;
+}
+
+#page-head #menu-button-container #menu-button {
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
 #page-head #search-bar-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 600px;
-  height: 2.9rem;
+  height: 3rem;
   width: 100%;
-  margin: -0.5rem 0.5rem 0rem 0.5rem;
+  margin: 0.5rem 0.5rem 3rem 0.5rem;
   order: 3;
 }
 
@@ -174,6 +193,7 @@ header {
   width: calc(100% - 30px);
   height: 45px;
   padding-left: 12px;
+  border-radius: 2px;
 }
 
 #page-head #search-bar-container #search-icon-container {
@@ -185,6 +205,7 @@ header {
   background-color: rgba(0, 0, 0, 0.1);
   border: 2px solid rgba(0, 0, 0, 0.1);
   border-left: none;
+  border-radius: 2px;
 }
 
 #page-head #search-bar-container #search-icon-container button {
@@ -208,23 +229,6 @@ header {
   visibility: hidden;
   order: 5;
   align-items: flex-start;
-}
-
-#page-head #menu-button-container {
-  max-width: 600px;
-  margin: 2rem 1.2rem 0rem 0.23rem;
-  width: 4.0rem;
-  height: auto;
-  color: black;
-  height: 2.0rem;
-  order: 2;
-}
-
-#page-head #menu-button-container #menu-button {
-  height: 3.5rem;
-  width: 4.0rem;
-  cursor: pointer;
-  border-radius: 3px;
 }
 
 /* ========= IMAGE SLIDER ========= */
@@ -253,6 +257,7 @@ header {
   font-size: 19.7px;
   font-weight: 500;
   width: 90%;
+  max-width: 450px;
   line-height: 40px;
 }
 
@@ -295,9 +300,9 @@ header {
 }
 
 .content-box {
-  max-width: 460px;
-  width: 460px;
+  width: 95%;
   display: flex;
+  display: -ms-flex;
   min-height: 315px;
   flex-direction: column;
   justify-content: center;
@@ -305,7 +310,7 @@ header {
   align-items: center;
   border: 2px solid lightgrey;
   border-radius: 3px;
-  margin: 15px 5px 10px 5px;
+  margin: 15px 20px 10px 20px;
   padding: 35px 0 45px 0;
   color: #333645;
 }
@@ -615,6 +620,7 @@ header {
 }
 
 .content-box .icn {
+  display: -ms-flex;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -624,7 +630,7 @@ header {
 }
 
 .content-box .icn i {
-  margin-right: -2px;
+  margin-right: -1.5px;
   font-size: 23px;
 }
 
@@ -760,9 +766,8 @@ header {
 }
 
 #card-container .card {
-  margin: 2rem 2rem 2rem 1.2rem;
-  width: 92.5% !important;
-  max-width: 460px;
+  margin: 2rem 4% 2rem 2%;
+  width: 95% !important;
 }
 
 #card-container .card h5 {
@@ -856,30 +861,28 @@ header {
   background-color: #dddddd;
   color: inherit;
   height: 39rem;
+  padding: 45px;
 }
 
 #form-container h2 {
-  margin: 1em 1.5em -1em 2.8rem;
   font-size: 35px;
   font-weight: 400;
 }
 
 #form-container .form-input {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  margin: 1rem 0 -2rem 0;
+  margin: 1rem 0 0 0;
 }
 
 #form-container .form-input input {
-  width: 27rem;
+  width: 100%;
   height: 3.09em;
-  margin: 1rem 0 0 2.8rem;
   border: 2px solid rgba(0, 0, 0, 0.23);
 }
 
 #form-container .form-input label {
-  margin: 2em 0 -0.8em 2.8rem;
   font-size: 16px;
   font-weight: 600;
 }
@@ -895,12 +898,11 @@ header {
   max-height: 10rem;
   min-width: 10rem;
   font-size: 18px;
-  margin: 1.9em 0 1.2em 2.8rem;
+  margin-top: 0.8em;
   font-weight: 600;
 }
 
 #form-container #checkbox-container label {
-  margin: 0.8em 0 0 0.1em;
   width: 80%;
   font-size: 16px;
   line-height: 30px;
@@ -911,7 +913,6 @@ header {
   appearance: none;
   width: 1.8em;
   height: 1.8em;
-  margin-top: 0.5em;
   border: 3px solid #333645;
   border-radius: 3px;
   cursor: pointer;
@@ -921,9 +922,8 @@ header {
 #form-container #checkbox-container #email-chkbox ~ .icon-checkbox-checked {
   visibility: hidden;
   positon: absolute;
-  margin-left: -1.02em;
-  margin-top: 2.55em;
-  padding-right: 1em;
+  height: 20px;
+  margin: 0.5em 1.5em 0 -1.4em;
   transform: scale(1.9);
   z-index: 1;
 }
@@ -938,10 +938,10 @@ header {
   text-transform: uppercase;
   line-height: 35px;
   white-space: normal;
-  margin: 0 0 0 2.8em;
   border-radius: 3px;
   background-color: #333645;
   color: white;
+  margin-top: 1.8rem;
   font-weight: 500;
   font-size: 1.063rem;
 }
@@ -954,14 +954,13 @@ header {
   background-color: #333645;
   color: white;
   font-size: 13px;
-  height: 53.4rem;
-  padding-top: 2.3em;
-  padding-right: 0.9em;
+  height: 55.4rem;
+  padding: 45px 10px 15px 15px;
   /* social media footer buttons */
 }
 
 #footer-container .footer-item {
-  margin-left: 1.2em;
+  width: 98.5%;
   font-weight: 500;
   line-height: 1.375rem;
 }
@@ -983,7 +982,6 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   height: 180px;
-  width: 95%;
 }
 
 #footer-container .socials-facebook a {
@@ -1010,17 +1008,26 @@ header {
   background-color: #0077b5;
 }
 
-#footer-container .socials a {
+#footer-container .socials-container {
+  width: 46.5%;
+}
+
+#footer-container .socials-container a {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 13.8rem;
   height: 3.51rem;
   border-radius: 1px;
   text-decoration: none;
 }
 
-#footer-container .socials a i {
+#footer-container .socials-container a i {
   color: white;
   font-size: 25px;
+}
+
+@media (min-width: 768px) {
+  .bottom-4-box {
+    max-width: 40% !important;
+  }
 }
