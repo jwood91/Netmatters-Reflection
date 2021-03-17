@@ -45,7 +45,7 @@ body {
 header  {
     background-color: grey;
     box-sizing: border-box;
-    width: 100vw;
+    width: 100%;
   }
 
 /* =========MAIN HEADER CONTAINER=========*/
@@ -55,44 +55,38 @@ header  {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     background-color: white;
     height: 23.8vh;
     width: 100%;
     margin: 0;
-    padding: 5px;
-    #top-row {
+    padding: 20px 5px 0px 5px;
+
+      #top-row {
         display: flex;
-        flex-wrap: nowrap;
+        flex-direction: row;
         justify-content: space-between;
-        max-width: 100%;
+        flex-wrap: wrap;
+        align-items: center;
         width: 100%;
-        height: 50%;
+        height: 45%;
+        margin: 0 0.5em -0.5em 0.5em;
       }
 
      #logo-container {
        display: flex;
        align-items: center;
-       justify-content: center;
-       margin-left: 1em;
-       width: 70%
+       justify-content: flex-start;
+       width: 65%;
+       margin-right: auto;
+       order: 1;
      }
      #logo{
         max-width: 450px;
-        width: 95%;
-        height: 60%;
-        margin: 1rem 0rem 0 0;
-        order: -1;
+        width: 100%;
         box-sizing: border-box;
 
         }
-
-      #menu-phone {
-        display: -ms-flex;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 30%;
-              }
 
       #chat-icon {
         position: fixed;
@@ -102,19 +96,34 @@ header  {
         left: 1.9rem;
         z-index: 99;
         }
-      #phone-icon {
-          height: 27px;
-          width: 27px;
-          transform: rotate(1deg);
-          margin: 0.5em 0 0 0;
+    #menu-phone{
+      display: flex;
+      order: 2;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      width: 25%;
 
+      #phone-icon-container {
+        display: flex;
+        justify-content: flex-start;
+        width: 27px;
+        height: 27px;
+        #phone-icon {
+            height: 100%;
+            width: 100%;
+            transform: rotate(1deg);
+
+        }
       }
-
+      #search-md {
+        display: none;
+      }
       #phone-icon-container:hover {
         border-bottom: 4px solid black;
               }
       #menu-button-container {
-          margin: 0.9em 0.5em 0 0;
+          margin: 0.5em em 0 0;
           width: 3.8rem;
           height: 3.5rem;
           color: black;
@@ -126,45 +135,48 @@ header  {
               border-radius: 3px;
           }
         }
+      }
 
     /* Header search bar/input containers*/
     #search-bar-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 3rem;
-        width: 100%;
-        margin: 0.5rem 0.5rem 3rem 0.5rem;
-        order: 3;
-        ::placeholder {
-            font-size: 15px;
-            color: #555;
-              }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 2rem;
+      width: 100%;
+      margin: 0em 0.5em 0 0.5em;
+      order: 3;
+      ::placeholder {
+          font-size: 15px;
+          color: #555;
+            }
         #search-input {
             background-color: rgba(0,0,0,.1);
             outline: 1px solid hsla(0,0%,100%,.2);
             border: 2px solid rgba(0,0,0,.1);
             border-right: none;
-            width: calc(100% - 30px);
+            width: calc(100% - 35px);
             height: 45px;
             padding-left: 12px;
             border-radius: 2px;
+            z-index: 1;
                   }
         #search-icon-container {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 50px;
+            width: 55px;
             height: 45px;
             background-color: rgba(0,0,0,.1);
             border: 2px solid rgba(0,0,0,.1);
             border-left: none;
             border-radius: 2px;
+            z-index: 2;
             button {
               background: transparent;
               border: none !important;
               outline: none;
-              width: 100%;
+              width: 101%;
               font-size: 20px;
               height: 1.35em;
               border-left: none;
@@ -172,6 +184,7 @@ header  {
                       }
                     }
                   }
+
         #search-button {
             display: none;
             margin-right: 2.8rem;
@@ -181,12 +194,11 @@ header  {
 
         /*links and menu button styles*/
         #links-container {
-            visibility: hidden;
+            display: none;
             order: 5;
             align-items: flex-start;
             }
-
-      }
+        }
 
 
 

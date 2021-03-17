@@ -1,12 +1,107 @@
 #page-head {
+  @include mq('sm'){
+  height: 100px;
+  padding-bottom: 15px;
 
+
+  #top-row {
+    height: 100%;
+  }
+
+  #phone-icon-container #phone-icon, #search-bar-container {
+    display: none;
+   }
+
+  #logo-container {
+   width: 50%;
+   margin-right: auto;
+   #logo {
+     max-width: 340px;
+   }
+     }
+
+  #menu-phone{
+     display: -ms-flex;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+     align-items: center;
+     order: 3 !important;
+     width: 50%;
+
+     #search-md {
+         display: flex;
+         width: 60%;
+
+         input {
+           width: 178px;
+           height: 3.4em;
+           border: 1.1px solid #e5e5e5;
+           border-width: 1px;
+           border-color: #ccc;
+           box-shadow: rgba(0,0,0, 0.075);
+           transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+           padding: 5px 15px;
+                    }
+          textarea:focus, input:focus{
+              outline: none;
+              box-shadow: inset rgba(0,0,0, 0.075) 0px 1px 1px 0px, rgba(91, 192, 222, 0.6) 0px 0px 8px 0px;
+              border-color: rgba(91, 192, 222, 0.6);
+              transition: box-shadow ease-in-out 0.3s, border-color ease-in-out 0.3s;
+
+            }
+
+
+          }
+
+         button {
+           background-color: map-get($more-colors, 'searchgrey');
+           height: 3.4em;
+           width: 55px;
+           border: none!important;
+           outline: none!important;
+           border-image: none!important;
+           border-style: none!important;
+
+          }
+          i {
+            margin-top: 0.2em;
+            color: white;
+            font-size: 23px;
+          }
+          button:hover {
+            background-color: map-get($more-colors, 'searchhovergrey')
+          }
+       }
+     #menu-button-container {
+
+     }
+
+   #phone-icon-container, #phone-icon, #search-bar-container, #phone-icon-container:hover {
+     display: none !important;
+ }
 }
 
-
+  }
 
 .bottom-4-box {
-
   @include mq('sm'){
     max-width: 40% !important;
+}
+}
+
+#footer-container {
+    @include mq('sm') {
+      height: 45em;
+      flex-direction: row;
+      flex-wrap: wrap !important;
+
+
+  .footer-item {
+    width: 50%;
+  }
+  .socials {
+    width: 80% !important;
+  }
 }
 }
