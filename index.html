@@ -38,37 +38,34 @@
                   </a>
                 </div>
               <div id= "menu-phone">
-                <div id="search-md">
+                <div id="support-link" class="header-btn">
+                  <a href="https://support.netmatters.com/" id="support-link"><i class="fas fa-mouse"></i>Support</a>
+                </div>
+                <div id="contact-link" class="header-btn">
+                  <a href="https://www.netmatters.co.uk/contact-us"
+                  id="link-button"><i class="far fa-paper-plane"></i>Contact</a>
+                </div>
+                <div id="search-sm">
                     <input placeholder="Search..."></input>
                     <div id="search-icon-container">
                       <button type=submit><i class="fas fa-search"></i></button>
                     </div>
                 </div>
-                <div  id="phone-icon-container">
+                <div  id="phone-icon-container" class="hidden">
                   <a href="https://www.netmatters.co.uk/01603704020"><img src="images/telephone.png" id="phone-icon"></a>
                 </div>
                 <div id="menu-button-container">
                     <a href="#"><img src="images/menu_button.png" id="menu-button"></a>
                 </div>
               </div>
-
-
-                <div id="links-container">
-                <a href="https://support.netmatters.com/" id="support-link">
-                  Support</a>
-                  <a chref="https://www.netmatters.co.uk/contact-us"
-                  id="link-button">Contact</a>
+              <div id="search-bar-container" class="hidden">
+                <input placeholder="Search..." id="search-input" class="hidden"></input>
+                <div id="search-icon-container" class="hidden">
+                  <button type=submit class="hidden"><i class="fas fa-search"></i></button>
                 </div>
               </div>
-              <div id="search-bar-container">
-                  <input placeholder="Search..." id="search-input"></input>
-                  <div id="search-icon-container">
-                    <button type=submit><i class="fas fa-search"></i></button>
-                  </div>
-              </div>
-                <button type="submit" id="search-button">Search</button>
-               </div>
             </div>
+          </div>
 
       </header>
 
@@ -77,15 +74,16 @@
       <main>
 
           <div id="image-slider-container">
-            <h1>CYBER SECURITY</h1>
-            <p>Keeping businesses and their customers sensitive information
-                protected.</p>
+            <div id="image-inner">
+              <h1>CYBER SECURITY</h1>
+              <p>Keeping businesses and their customers sensitive information
+                  protected.</p>
 
-            <a href="https://www.netmatters.co.uk/cyber-security" id="cyber-btn">FIND OUT MORE
-            <span class="icon-arrow-right2"></span></a>
-                </div>
+              <a href="https://www.netmatters.co.uk/cyber-security" id="cyber-btn">FIND OUT MORE
+              <span class="icon-arrow-right2"></span></a>
               </div>
             </div>
+
 
 
 
@@ -93,7 +91,7 @@
   <!-- CONTENT BOXES FOR SERVICES OFFERED -->
 
         <div class="content-boxes-container">
-
+          <div id="content-inner">
             <div id="bespoke-box" class="content-box content-box-software top-3-box">
                 <div class="icn icn-box-software"><i class="fas fa-th"></i></div>
                 <h2>Bespoke Software</h2>
@@ -185,6 +183,7 @@
                 <span class="read-span">READ MORE</span>
                 </div>
             </div>
+          </div>
         </div>
 
         <!-- ABOUT US CONTAINTERS -->
@@ -192,16 +191,16 @@
       <div class="about-us-container">
         <div id="about-text-container">
             <h1>NETMATTERS</h1>
-            <p id="intro-text">
+            <p id="intro-text" class="about-lg">
               Netmatters Ltd is a leading web design, IT support and digital
               marketing agency based in Wymondham, Norfolk.
             </p>
-            <p class="about-text">
+            <p class="about-text about-lg">
               Founded in 2008, we work with businesses from a variety of industries
               to gain new prospects, nurture existing leads and further grow their
               sales.
             </p>
-            <p class="about-text">
+            <p class="about-text about-lg">
               We provide cost effective, reliable solutions to a range of services;
               from bespoke cloud-based management systems, workflow and IT solutions
               through to creative website development and integrated digital campaigning.
@@ -213,69 +212,122 @@
 
     <!--LATEST INFORMATION CARDS-->
 
-          <div id="latest-contatiner">
+        <div id="latest-contatiner">
             <h1>Latest</h1>
-          </div>
+        </div>
         <div id="card-container">
-
-          <!--News Card 1 -->
-          <div class="card c1" style="width: 90.5%;">
-            <div class="image-hover-zoom">
-                <a class="mini-link btn-purple" href="https://www.netmatters.co.uk/our-careers/web-design">Careers</a>
-                <a href="https://www.netmatters.co.uk/our-careers/office-administrator-receptionist"><img src="images/office-administrator.jpg" class="card-img-top" alt="Office administrator vacancy at Netmatters">
+          <div id="card-inner"
+            <!--News Card 1 -->
+            <div class="card c1" style="width: 90.5%;">
+              <div class="image-hover-zoom">
+                  <a class="mini-link btn-purple" href="https://www.netmatters.co.uk/our-careers/web-design">Careers</a>
+                  <a href="https://www.netmatters.co.uk/our-careers/office-administrator-receptionist"><img src="images/office-administrator.jpg" class="card-img-top" alt="Office administrator vacancy at Netmatters">
+              </div>
+              <div class="card-body">
+                  <h5 class="crd-ttl-purp">Office Administrator / Receptionist</h5></a>
+                  <p class="card-text">Salary: £18k-£24k + Bonuses + Pension Hours: 40 hours per week, Monday - Friday Location: W...</p>
+                  <a id="vacancy-button" class="btn btn-purple btn-lg btn-txt" href="https://www.netmatters.co.uk/our-careers/office-administrator-receptionist" role="button">READ MORE</a>
+              </div>
+              <div class="card-footer d-inline-flex flex-direction-row align-items-center bg-white">
+                  <img src="images/netmatters-ltd-VXAv.png" alt="Netmatters Logo Small">
+                  <div class="card-text-container mt-3 ms-4 ">
+                    <h6> Posted by Netmatters Ltd</h6>
+                    <p class="text-muted">2 days ago</p>
+                  </div>
+              </div>
             </div>
+
+            <!-- News Card 2-->
+          <div class="card c2" style="width: 90.5%;">
+              <div class="image-hover-zoom">
+                <a class="mini-link btn-blue" href="https://www.netmatters.co.uk/our-careers/web-design">Careers</a>
+                <a href="https://www.netmatters.co.uk/news/february-2021-notable-employee"><img src="images/february-2021-notable.jpg" class="card-img-top" alt="Notable employee of the month">
+              </div>
             <div class="card-body">
-                <h5 class="crd-ttl-purp">Office Administrator / Receptionist</h5></a>
-                <p class="card-text">Salary: £18k-£24k + Bonuses + Pension Hours: 40 hours per week, Monday - Friday Location: W...</p>
-                <a id="vacancy-button" class="btn btn-purple btn-lg btn-txt" href="https://www.netmatters.co.uk/our-careers/office-administrator-receptionist" role="button">READ MORE</a>
+                <h5 class="crd-ttl-blue">February 2021 Notable Employee</h5></a>
+                <p class="card-text">Every month we celebrate the most notable of employees here at Netmatters. Each department he..</p>
+                <a id="notable-button" class="btn btn-blue btn-lg btn-txt" href="https://www.netmatters.co.uk/news/february-2021-notable-employee" role="button">READ MORE</a>
             </div>
             <div class="card-footer d-inline-flex flex-direction-row align-items-center bg-white">
                 <img src="images/netmatters-ltd-VXAv.png" alt="Netmatters Logo Small">
-                <div class="card-text-container mt-3 ms-4 ">
+                <div class="card-text-container mt-3 ms-4">
                   <h6> Posted by Netmatters Ltd</h6>
                   <p class="text-muted">2 days ago</p>
                 </div>
             </div>
           </div>
 
-          <!-- News Card 2-->
-        <div class="card c2" style="width: 90.5%;">
+
+          <!-- News Card 3-->
+          <div class="card c3" style="width: 90.5%;">
             <div class="image-hover-zoom">
-              <a class="mini-link btn-blue" href="https://www.netmatters.co.uk/our-careers/web-design">Careers</a>
-              <a href="https://www.netmatters.co.uk/news/february-2021-notable-employee"><img src="images/february-2021-notable.jpg" class="card-img-top" alt="Notable employee of the month">
+                <a class="mini-link btn-purple" href="https://www.netmatters.co.uk/news/it-support">News</a>
+                <a href="https://www.netmatters.co.uk/netmatters-is-carbon-neutral"><img src="images/netmatters-is-carbon.jpg" class="card-img-top" alt="Netmatters is carbon neutral">
             </div>
-          <div class="card-body">
-              <h5 class="crd-ttl-blue">February 2021 Notable Employee</h5></a>
-              <p class="card-text">Every month we celebrate the most notable of employees here at Netmatters. Each department he..</p>
-              <a id="notable-button" class="btn btn-blue btn-lg btn-txt" href="https://www.netmatters.co.uk/news/february-2021-notable-employee" role="button">READ MORE</a>
-          </div>
-          <div class="card-footer d-inline-flex flex-direction-row align-items-center bg-white">
-              <img src="images/netmatters-ltd-VXAv.png" alt="Netmatters Logo Small">
-              <div class="card-text-container mt-3 ms-4">
-                <h6> Posted by Netmatters Ltd</h6>
-                <p class="text-muted">2 days ago</p>
-              </div>
+            <div class="card-body">
+                <h5 class="crd-ttl-purp">Netmatters is Carbon Neutral!</h5></a>
+                <p class="card-text">As a business, Netmatters pledged that 2021 would be the year that we became carbon neutral....</p>
+                <a id="read-button" class="btn btn-purple btn-lg btn-txt"  href="https://www.netmatters.co.uk/netmatters-is-carbon-neutral" role="button">READ MORE</a>
+            </div>
+            <div class="card-footer d-inline-flex flex-direction-row align-items-center bg-white">
+                <img src="images/netmatters-ltd-VXAv.png" alt="Netmatters Logo Small" class="ms-2">
+                <div class="card-text-container mt-3 ms-4">
+                  <h6> Posted by Netmatters Ltd</h6>
+                  <p class="text-muted">2 days ago</p>
+                </div>
           </div>
         </div>
-
-
-        <!-- News Card 3-->
-        <div class="card c3" style="width: 90.5%;">
-          <div class="image-hover-zoom">
-              <a class="mini-link btn-purple" href="https://www.netmatters.co.uk/news/it-support">News</a>
-              <a href="https://www.netmatters.co.uk/netmatters-is-carbon-neutral"><img src="images/netmatters-is-carbon.jpg" class="card-img-top" alt="Netmatters is carbon neutral">
-          </div>
-          <div class="card-body">
-              <h5 class="crd-ttl-purp">Netmatters is Carbon Neutral!</h5></a>
-              <p class="card-text">As a business, Netmatters pledged that 2021 would be the year that we became carbon neutral....</p>
-              <a id="read-button" class="btn btn-purple btn-lg btn-txt"  href="https://www.netmatters.co.uk/netmatters-is-carbon-neutral" role="button">READ MORE</a>
-          </div>
-          <div class="card-footer d-inline-flex flex-direction-row align-items-center bg-white">
-              <img src="images/netmatters-ltd-VXAv.png" alt="Netmatters Logo Small" class="ms-2">
-              <div class="card-text-container mt-3 ms-4">
-                <h6> Posted by Netmatters Ltd</h6>
-                <p class="text-muted">2 days ago</p>
+      </div>
+    </div>
+      <div id= "client-outer">
+        <div id="client-icons">
+            <div id="ci-1" class= "ci">
+              <div class="description">
+                <div class="box">
+                  <h3>Busseys<br><div id="client-line">&mdash;</div></h3>
+                  <p>One of the UK's leading Ford dealerships</p>
+                  <div class="arrow-box"></div>
+                </div>
               </div>
+              <img src="images/partner-images/greyscale/busseys-bw.jpg" class="greyscale">
+              <img src="images/partner-images/color-partner/busseys.png" class="partner-color">
+            </div>
+            <div id="ci-2" class= "ci">
+              <div class="description">
+                <div class="box">
+                  <h3>Crane Garden Builders<br><div id="client-line">&mdash;</div></h3>
+                  <p>Leading manufacturer and supplier of high-end garden rooms, summerhouses, workshops and sheds in the UK.</p>
+                  <div class="arrow-box">
+
+                  </div>
+                </div>
+              </div>
+              <img src="images/partner-images/greyscale/crane-bw.jpg" class="greyscale">
+              <img src="images/partner-images/color-partner/crane.png" class="partner-color">
+            </div>
+            <div id="ci-3" class= "ci">
+              <div class="description">
+                <div class="box">
+                  <h3>Beat<br><div id="client-line">&mdash;</div></h3>
+                  <p>The UK's eating disorder charity founded in 1989</p>
+                  <div class="arrow-box">
+
+                    </div>
+                </div>
+              </div>
+              <img src="images/partner-images/greyscale/beat-bw.jpg" class="greyscale">
+              <img src="images/partner-images/color-partner/beat.png" class="partner-color">
+            </div>
+            <div id="ci-4" class= "ci">
+              <div class="description">
+                <div class="box">
+                  <h3>Northern Diver<br><div id="client-line">&mdash;</div></h3>
+                  <p>lobal water based equipment manufacturers for sport, military, commercial and rescue businesses.</p>
+                  <div class="arrow-box"> </div>
+                </div>
+              </div>
+              <img src="images/partner-images/greyscale/northern-diver-bw.jpg" class="greyscale">
+              <img src="images/partner-images/color-partner/northern-diver.png" class="partner-color">
           </div>
         </div>
       </div>
@@ -284,12 +336,14 @@
       <!-- Sign-up form -->
 
 
-      <div id="form-container">
+      <div id="form-container-outer">
+        <div id="form-container">
           <form method="POST"
             action="https://www.netmatters.co.uk/newsletter-subscribers#sign-up"
             accept-charset="UTF-8" id="sign-up">
 
               <h2>Email Newsletter Sign-Up</h2>
+            <div id= "sign-up-inputs">
               <div id="name-input" class='form-input'>
                 <label for="name-entry" class="input-label"> Your Name <span class="ast-red">&#42;</span></label>
                 <input id="name-entry" type="text"/>
@@ -299,12 +353,13 @@
                 <label for="email-entry" class="input-label"> Your Email <span class="ast-red">&#42;</span></label>
                 <input id="email-entry" type="text"/>
               </div>
+            </div>
 
                <div id="checkbox-container">
                  <input id="email-chkbox" type="checkbox">
                  <span class="icon-checkbox-checked"></span></input>
                  <label for="email-chkbox" id="chckbox-label">Please tick this box if you wish to
-                   receive marketing information from us. Please see our Privacy
+                   receive marketing information from us. Please see our <a url= Privacy
                    Policy for more information on how we use your data.
                    </label>
                 </div>
@@ -317,6 +372,7 @@
 
       <!--FOOTER BEGINS HERE -->
        <footer>
+         <div id="foot-top">
           <div id="footer-container">
               <div id="contact-container" class="footer-item">
 
@@ -324,7 +380,7 @@
 
                 <h3>Contact Us</h3>
                   <ul>
-                    <li class="contact-list">
+                    <li class="contact-list fi-contact">
                       11 Penfold Drive<br>
                       Wymondham<br>
                       Norfolk<br>
@@ -339,7 +395,7 @@
 
             <!-- footer links list -->
 
-              <div class="footer-item">
+              <div id="fi-about" class="footer-item">
                     <h3>About Netmatters</h3>
                     <ul>
                       <li><a href="https://www.netmatters.co.uk/news" target="_blank">News</a></li>
@@ -388,6 +444,49 @@
                         </div>
                       </div>
                   </div>
+                </div>
+              </div>
+
+
+                  <div id="partner-images">
+                    <div id="partner-top-row">
+                    <div class="partner-item google-pi">
+                      <img id="google-partner" src="images/partner-images/google-partner.jpg">
+                    </div>
+                    <div class="partner-item">
+                        <img src="images/partner-images/color-partner/silver-microsoft-partner.jpg">
+                    </div>
+                    <div class="partner-item">
+                      <img src="images/partner-images/greyscale/future-50-bw.jpg" class="bw-partner">
+                      <img src="images/partner-images/color-partner/future-50.jpg" class="color-partner">
+                    </div>
+
+                    <div class="partner-item">
+                      <img src="images/partner-images/greyscale/qms-bw.jpg" class="bw-partner">
+                      <img src="images/partner-images/color-partner/qms.jpg" class="color-partner">
+                    </div>
+
+                    <div class="partner-item">
+                      <img src="images/partner-images/greyscale/norfolk-carbon-charter-bw.jpg" class="bw-partner">
+                      <img src="images/partner-images/color-partner/norfolk-carbon-charter.jpg" class="color-partner">
+                    </div>
+                  </div>
+              <div id="partner-bottom-row">
+                  <div class="partner-item">
+                      <img src="images/partner-images/greyscale/investing-in-future-growth-bw.jpg" class="bw-partner">
+                      <img src="images/partner-images/color-partner/investing-in-future-growth.jpg" class="color-partner" >
+                  </div>
+                  <div class="partner-item">
+                      <img  src="images/partner-images/greyscale/princess-royal-training-bw.jpg" class="bw-partner">
+                      <img src="images/partner-images/color-partner/princess-royal-training.jpg"  class="color-partner">
+                  </div>
+
+                  <div class="partner-item">
+                      <img src="images/partner-images/greyscale/skills-of-tomorrow-bw.jpg" class="bw-partner">
+                      <img src="images/partner-images/color-partner/skills-of-tomorrow.jpg" class="color-partner">
+                  </div>
+                </div>
+              </div>
       </footer>
     </body>
   </html>

@@ -1,3 +1,107 @@
+/* ================================= XS Breakpoint ================================*/
+
+#search-bar-container {
+@include mq('xs') {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  height: 0.3rem;
+  width: 100%;
+  margin: 2em 0.5em 0 0.5em;
+  order: 3;
+  ::placeholder {
+      font-size: 15px;
+      color: #555;
+        }
+    #search-input {
+        display: block !important;
+        background-color: rgba(0,0,0,.1);
+        outline: 1px solid hsla(0,0%,100%,.2);
+        border: 2px solid rgba(0,0,0,.1);
+        border-right: none;
+        width: calc(100% - 35px);
+        height: 45px;
+        padding-left: 12px;
+        border-radius: 2px;
+        z-index: 1;
+              }
+    #search-icon-container {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        width: 55px;
+        height: 45px;
+        background-color: rgba(0,0,0,.1);
+        border: 2px solid rgba(0,0,0,.1);
+        border-left: none;
+        border-radius: 2px;
+        z-index: 2;
+        button {
+          display: block!important;
+          background: transparent;
+          border: none !important;
+          outline: none;
+          width: 101%;
+          font-size: 20px;
+          height: 1.35em;
+          border-left: none;
+
+                  }
+                }
+              }
+            }
+  #search-sm {
+   @include mq('xs'){
+    display: none;
+  }
+}
+
+#phone-icon-container {
+@include mq('xs')
+  display: flex !important;
+  justify-content: flex-start;
+  width: 27px;
+  height: 27px;
+  #phone-icon {
+      height: 100%;
+      width: 100%;
+      transform: rotate(1deg);
+
+  }
+}
+
+#phone-icon-container:hover {
+  border-bottom: 4px solid black;
+}
+.content-box {
+  @include mq('xs'){
+    min-height: 315px;
+  }
+}
+
+#client-outer, #client-icons {
+  @include mq('xs') {
+  display: none !important;
+  }
+}
+
+#foot-top {
+  @include mq('xs') {
+  height: 53rem;
+  padding: 25px !important;
+  #footer-container {
+    margin-top: -2em !important;
+  }
+}
+}
+
+
+#partner-images {
+  @include mq('xs'){
+    display: none;
+  }
+}
+/* ================================== SM Breakpoint ================================*/
 #page-head {
   @include mq('sm'){
   height: 100px;
@@ -6,6 +110,7 @@
 
   #top-row {
     height: 100%;
+
   }
 
   #phone-icon-container #phone-icon, #search-bar-container {
@@ -27,9 +132,9 @@
      justify-content: space-around;
      align-items: center;
      order: 3 !important;
-     width: 50%;
+     width: 370px;
 
-     #search-md {
+     #search-sm {
          display: flex;
          width: 60%;
 
@@ -77,7 +182,7 @@
 
      }
 
-   #phone-icon-container, #phone-icon, #search-bar-container, #phone-icon-container:hover {
+   #phone-icon-container, #phone-icon, #phone-icon-container:hover {
      display: none !important;
  }
 }
@@ -89,19 +194,379 @@
     max-width: 40% !important;
 }
 }
+#client-outer{
+  @include mq('sm'){
+  height: 7.9em;
+  }
+}
+#client-icons {
+  @include mq('sm') {
+  justify-content: space-around !important;
+  width: 60%;
+    .ci {
+    transform: scale(0.7);
+    margin: 0 !important;
 
+    }
+  }
+}
 #footer-container {
     @include mq('sm') {
       height: 45em;
-      flex-direction: row;
+      flex-direction: row !important;
       flex-wrap: wrap !important;
+      width: 100% !important;
+      margin-left: 3em;
+
+
 
 
   .footer-item {
-    width: 50%;
+    width: 40% !important;
   }
+
   .socials {
     width: 80% !important;
   }
+
 }
+}
+
+/*================== md breakpoint styles =================*/
+
+#page-head {
+  @include mq('md') {
+      #logo-container {
+        width: 35%;
+      }
+
+      #menu-phone{
+         display: -ms-flex;
+         display: flex;
+         flex-direction: row;
+         justify-content: space-around;
+         align-items: center;
+         order: 3 !important;
+         width: 550px;
+         #search-sm {
+           width: 70px;
+
+           input {
+             display: none;
+           }
+       }
+    .header-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 7.5em;
+      height: 3em;
+      background-color: red;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.1px;
+      font-size: 19px;
+      font-weight: 500;
+      color: white;
+      padding-right: 3px;
+      line-height: 35px;
+      text-align: center;
+      a {
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+      }
+      i {
+        margin: 0.7em 0.1em 0 0;
+      }
+      }
+    #support-link {
+      background-color: map-get($more-colors, 'cardblue');
+      }
+    #support-link:hover {
+      background-color: map-get($more-colors, 'cardbluehover');
+        }
+    #contact-link {
+      background-color: map-get($more-colors, 'searchgrey');
+      }
+    #contact-link:hover {
+      background-color: map-get($more-colors, 'searchhovergrey');
+      }
+    }
+  }
+}
+#image-slider-container {
+  @include mq('md') {
+    flex-direction: column;
+    align-content: flex-start !important;
+    justify-content: flex-start !important;
+    align-content: flex-start;
+    padding-left: 8%;
+
+    #image-inner {
+      width: 60%;
+      align-self: flex-start;
+    }
+     p {
+      text-align: left;
+      align-self: flex-start;
+      font-size: 14;
+    }
+    h1 {
+      text-align: left;
+      align-self: flex-start;
+    }
+    a {
+      align-self: flex-start;
+    }
+  }
+}
+
+.content-boxes-container {
+  @include mq('md'){
+    flex-direction: row !important;
+    justify-content: center;
+    .top-3-box {
+      width: 18em;
+      min-height: 25rem;
+    }
+  }
+}
+
+#card-container {
+  @include mq('md'){
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    width: 100% !important;
+    padding-left: 6.5em;
+
+    .c3 {
+      display: none;
+    }
+    .card {
+      width: 40% !important;
+    }
+  }
+}
+#client-outer {
+  @include mq('md') {
+    height: 10em;
+    }
+  }
+
+#client-icons{
+  @include mq('md') {
+  width: 100%;
+  padding:0 3em 0 3em;
+
+  .ci {transform: scale(0.9) !important;}
+  }
+}
+
+
+#sign-up-inputs {
+  @include mq('md'){
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-between;
+    width: 100%;
+    .form-input {
+      width: 48% !important;
+    }
+  }
+}
+
+
+
+.partner-item {
+  @include mq('md'){
+    transform: scale(1.4);
+      }
+    }
+
+#google-partner {
+    @include mq('md'){
+  transform: scale(0.8)!important;
+}
+}
+
+/* =========================== LG Breakpoint ============================ */
+
+
+#top-row, #content-inner, #about-text-container, #card-inner, #client-icons, #form-container, #footer-container, #partner-top-row, #partner-bottom-row{
+  max-width: 1260px !important;
+}
+
+#menu-phone {
+  @include mq('lg') {
+    display: flex;
+    width: 55% !important;
+    justify-content: space-between !important;
+  #search-sm{
+    input{ display: flex !important; }
+      }
+    }
+  }
+#search-sm{
+  @include mq('lg') {
+    display: flex !important;
+    width: 15em !important;
+    input{
+        display: flex !important;
+      }
+    }
+  }
+
+/*image slider */
+
+  #image-slider-container{
+  @include mq('lg') {
+    justify-content: center !important;
+    flex-direction: row;
+    padding: 0% !important;
+
+
+    #image-inner {
+      justify-content: center!important;
+      align-items: center !important;
+      max-width: 80rem !important;
+      width: 98% !important;
+      padding-left: 2em;
+      margin: auto;
+
+      }
+    }
+  }
+
+
+
+/* content boxes */
+
+
+#content-inner {
+  @include mq('lg') {
+  width: 100%  !important;
+  justify-content: space-between !important;
+  padding: 25px !important;
+
+}
+}
+
+.top-3-box {
+  @include mq('lg') {
+    flex-direction: column;
+    min-height: 18rem !important;
+    max-height: 18rem;
+    min-width: 22.5rem;
+    margin: 0 !important;
+    padding: 0px!important;
+
+    .icn {
+      margin-top: -1em;
+          }
+    p {
+      padding: 25px 25px !important;
+      text-align: left !important;
+      font-size: 15px !important;
+    }
+  }
+}
+
+
+.bottom-4-box {
+  @include mq('lg') {
+  width: 21% !important;
+  min-height: 390px;
+  padding: 0px !important;
+  margin: 2em 0 0 0!important;
+  justify-content: center !important;
+
+
+  h3 {
+    width: 100%;
+    padding: 0px;
+  }
+  p {
+    width: 100%;
+  }
+  }
+}
+
+
+
+/* About us Container */
+.about-us-container {
+  @include mq('lg') {
+  flex-direction: row;
+  justify-content: center !important;
+
+  }
+}
+#about-text-container {
+  @include mq('lg') {
+    padding-left: 1.5em!important;
+    width: 100%!important;
+    .about-lg {
+      max-width: 30rem;
+    }
+    }
+
+  }
+
+#card-container {
+  padding-left: 0 !important;
+}
+
+#card-inner {
+  @include mq('lg') {
+  justify-content: flex-start !important;
+  width: 100% !important;
+
+  margin: 0 !important;
+  padding-left: 0!important;
+  .c3 {
+    display: flex;
+  }
+  .card {
+    width: 27.2% !important;
+    }
+  }
+}
+
+#client-icons{
+  @include mq('lg') {
+  width: 98%;
+  padding-right: 7em;
+  .ci {transform: scale(1) !important;}
+  .description {
+    bottom: 162%;
+  }
+  }
+}
+#foot-top {
+  @include mq('lg'){
+    flex-direction: row;
+    justify-content: center !important;
+    height:30em;
+
+    #footer-container {
+      width: 80% !important;
+      justify-content: space-between !important;
+      margin: 0 !important;
+
+      .footer-item{
+        width: 15% !important;
+        margin: 0 7em 0 0;
+      }
+      .socials {
+        width: 20em !important;
+      }
+    }
+
+  }
+}
+
+#partner-images {
+  justify-content: center;
 }
