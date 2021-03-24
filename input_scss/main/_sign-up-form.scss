@@ -1,0 +1,92 @@
+
+
+/* =========== SIGN UP FORM ============= */
+#form-container-outer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 45px;
+  background-color: #dddddd;
+  #form-container {
+      display: flex;
+      flex-direction: column;
+      background-color: #dddddd;
+      color: inherit;
+      width: 100%;
+      h2{
+          font-size: 35px;
+          font-weight: 400;
+          }
+
+      #sign-up-inputs {
+        display: flex;
+        flex-direction: column;
+        width:100%;
+      }
+
+      .form-input{
+          @include form-input
+          .ast-red {
+              color: #d24d57;
+              font-size: 18px;
+          }
+        }
+
+
+      #checkbox-container{
+          display: flex;
+          flex-direction: row;
+          max-height: 10rem;
+          min-width: 10rem;
+          font-size: 18px;
+          margin-top: 0.8em;
+          font-weight: 600;
+
+          label {
+              width: 80%;
+              font-size: 16px;
+              line-height: 30px;
+              cursor: pointer;
+                    }
+
+          #email-chkbox{
+              appearance: none;
+              width: 1.8em;
+              height: 1.8em;
+              border: 3px solid map-get($more-colors,'darkgrey');
+              border-radius: 3px;
+              cursor: pointer;
+              z-index: 2;
+
+              & ~ .icon-checkbox-checked {
+                  visibility: hidden;
+                  positon: absolute;
+                  height: 20px;
+                  margin: 0.5em 1.5em 0 -1.4em ;
+                  transform: scale(1.9);
+                  z-index: 1;
+              }
+          }
+        }
+        #email-chkbox:checked {
+            & ~ .icon-checkbox-checked {
+              visibility: visible;
+              }
+            }
+        .subscribe-btn {
+          width: 7.3em;
+          height: 2.8em;
+          text-transform: uppercase;
+          line-height: 35px;
+          white-space: normal;
+          border-radius: 3px;
+          background-color: map-get($more-colors,'darkgrey');
+          color: white;
+          margin-top: 1.8rem;
+          font-weight: 500;
+          font-size: 1.063rem;
+            }
+        }
+      }

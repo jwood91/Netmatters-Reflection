@@ -1,0 +1,70 @@
+/* =========ABOUT US CONTAINER OUR CULTURE========= */
+
+.about-us-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+    background-color: map-get($more-colors, 'darkgrey');
+    padding: 25px 0 25px 0;
+      }
+
+#about-text-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0.8em 1.7em 0.5em 1em;
+    line-height: 1.7em;
+    padding: 5px 5% 5px 5px;
+    h1 {
+      font-weight: 500;
+      font-size: 35px;
+      margin: 0.2em 0.25em 0.8em 0;
+      color: white;
+    }
+
+    .about-text  {
+       font-weight: 500;
+       font-size: 16px;
+       margin: 0 0.25em 1.5em 0.25em;
+       color: white;
+
+     }
+    #intro-text {
+        font-weight: 700;
+        font-size: 17px;
+        margin: 0 0.5em 1.5em 0;
+        color: white;
+      }
+    }
+
+#abt-btn-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2px;
+    margin: -0.1em 0 0.8em 0.1em;
+    justify-content: center;
+    height: 2.7em;
+    width: 180px;
+    cursor: pointer;
+    color: inherit;
+    background-color: #fff;
+    text-transform: uppercase;
+    border-radius: 3px;
+    border-style: none;
+    font-weight: 400;
+    font-size: 18.2px;;
+    margin: 0.1em 0 0 0.4em;
+
+      .icon-arrow-right2 {
+          margin: .1em 0em 0 0.5em;
+          font-size: 18px;
+          min-height: 5px;
+          min-width: 5px;
+
+        }
+      }
+#abt-btn-container:hover {
+    background-color: #ebebeb;
+    text-decoration: none;
+    }

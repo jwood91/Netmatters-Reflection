@@ -1,0 +1,49 @@
+// * {
+//   border: 2px solid red;
+// }
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+  }
+
+/* ======== BODY STYLES ========= */
+body {
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Poppins', sans-serif;
+    h1 h2{ font-weight: 600};
+    p {font-weight: 400};
+    min-width: 100vw;
+    background-color: #fff;
+    letter-spacing: .4px;
+    line-height: 1.42857143;
+    color: map-get($more-colors, 'darkgrey');
+    a {
+      text-decoration: none;
+      color: inherit;
+      }
+    a:hover {
+        color: inherit;
+        text-decoration: underline;
+      }
+    ul {
+        list-style: none;
+        padding-left: 0;
+          }
+}
+
+
+
+/* Header SCSS */
+
+
+header  {
+    background-color: grey;
+    box-sizing: border-box;
+    width: 100%;
+  }

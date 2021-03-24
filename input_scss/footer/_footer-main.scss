@@ -1,0 +1,62 @@
+/* ============ WEBSITE FOOTER ============ */
+
+#foot-top {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   background-color: map-get($more-colors, 'darkgrey');
+   color: white;
+   font-size: 13px;
+   width: 100%;
+   height: 35rem;
+
+
+   #footer-container {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     width: 100%;
+     height: 100%;
+     padding: 5em 0 0 0;
+
+   .footer-item {
+     width: 100%;
+     font-weight: 500;
+     line-height: 1.375rem;
+     }
+ h3 {
+     font-size: 1rem;
+     text-transform: uppercase;
+     font-weight: 600;
+     margin-bottom: 0.8em;
+   }
+
+
+/* social media footer buttons */
+.socials {
+   @include socials($socials-colors);
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   height: 180px;
+   }
+
+.socials-container {
+
+ width: 46.5%;
+ a {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 3.51rem;
+   border-radius: 1px;
+   text-decoration: none;
+   i {
+       color: white;
+       font-size: 25px;
+         }
+       }
+   }
+ }
+}

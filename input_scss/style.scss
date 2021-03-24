@@ -1,5 +1,22 @@
-@import 'partials/icons.scss',
-        'partials/mixins.scss',
-        'partials/variables.scss',
-        'partials/main-styles.scss',
-        'partials/breakpoint-styles.scss';
+@import 'utilities/mixins',
+        'utilities/icons',
+        'utilities/variables';
+
+@import 'main-styles';
+
+@import 'header/page-head';
+
+@import 'main/about-us-container',
+        'main/image-slider',
+        'main/latest-container',
+        'main/news-cards',
+        'main/sign-up-form',
+        'main/services-boxes',
+        'main/client-icons';
+
+@import 'footer/footer-main',
+        'footer/footer-partner-images';
+
+
+
+@import 'utilities/breakpoint-styles';

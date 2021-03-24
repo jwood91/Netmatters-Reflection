@@ -1,0 +1,92 @@
+/* =========MAIN HEADER CONTAINER=========*/
+
+#page-head {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: white;
+    height: 23.8vh;
+    width: 100%;
+    margin: 0;
+    padding: 20px 5px 0px 5px;
+
+      #top-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+        height: 45%;
+        margin: 0 0 .5em -0.5em 0.5em;
+      }
+
+
+     #logo-container {
+       display: flex;
+       align-items: center;
+       justify-content: flex-start;
+       width: 65%;
+       margin-right: auto;
+       order: 1;
+     }
+     #logo{
+        max-width: 450px;
+        width: 100%;
+        box-sizing: border-box;
+
+        }
+
+      #chat-icon {
+        position: fixed;
+        width: 3.75rem;
+        height: 3.75rem;
+        top: 1.2rem;
+        left: 1.9rem;
+        z-index: 99;
+        }
+    #menu-phone{
+      display: flex;
+      order: 2;
+      justify-content: space-around;
+      align-items: center;
+      height: 100%;
+
+
+
+      #menu-button-container {
+          display: flex;
+          justify-content: center;
+          margin: 0.5em 0 0.5em 0em;
+          width: 5rem;
+          height: 3.8rem;
+          color: black;
+          order: 2;
+          #menu-button {
+              height: 100%;
+              width: 100%;
+              cursor: pointer;
+              border-radius: 3px;
+          }
+        }
+      }
+
+    /* Header search bar/input containers*/
+    .hidden {
+      display: none;
+
+    }
+
+    #search-sm {
+      display: none;
+    }
+
+
+    /*links and menu button styles*/
+    .header-btn {
+        display: none;
+
+        }
+    }

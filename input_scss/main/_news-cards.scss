@@ -1,0 +1,205 @@
+
+
+/* ============ NEWS CARDS LINKED WITH BOOTSTRAP ============= */
+
+#card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: inset 0 35px 35px -35px rgba(0,0,0,.125);
+  padding-top: 10px;
+
+  .card {
+      margin: 2rem 4% 2rem 2%;
+      width: 100% ;
+
+      h5 {
+        font-size: 17px !important;
+        margin: 1.2em 0em 1.3em 0.8em;
+        font-weight: 600 !important;
+        }
+      p {
+        font-size: 13px;
+        margin: 0 0 1.9em 0.9em;
+        }
+      .crd-ttl-purp {
+        color: map-get($theme-colors, 'design') !important;
+        font-weight: 600;
+      }
+      .crd-ttl-blue {
+        color: map-get($more-colors, 'cardblue') !important;
+        font-weight: 600;
+        }
+      }
+  #card-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .image-hover-zoom {
+    overflow: hidden;
+
+    .mini-link {
+      position: absolute;
+      text-align: center;
+      width: 67px;
+      height: 25px;
+      padding: 3px 0 5px 0;
+      letter-spacing: .4px;
+      font-weight: 800;
+      text-transform: uppercase;
+      top: 10px;
+      right: 0px;
+      z-index: 99;
+      font-size: .75rem;
+      border-radius: 1px;
+        }
+
+    .card-img-top {
+        transition: transform 0.5s ease;
+        transform: scale(1);
+        z-index: 1;
+      }
+    .card-img-top:hover{
+        transition: transform 0.5s ease;
+        transform: scale(1.2);
+        opacity: 0.5;
+        ursor: pointer;
+           }
+  }
+
+
+
+/* News card buttons */
+
+.btn {
+    font-size: 18px;
+    font-weight: 500;
+    align-items: center;
+    height: 50px;
+    padding-top: 10px;
+    border-radius: 3px;
+    text-decoration: none !important;
+    }
+.btn-purple {
+  background-color: map-get($theme-colors, 'design') !important;
+  color: white;
+
+
+  }
+.btn-purple:hover {
+    background-color: map-get($more-colors, 'cardpurplehover') !important;
+    color: white;
+        }
+
+.btn-blue {
+    background-color: map-get($more-colors, 'cardblue') !important;
+    color: white;
+}
+.btn-blue:hover {
+    color: white !important;
+    background-color: map-get($more-colors, 'cardbluehover') !important;
+
+  }
+}
+
+/* ============== Client Icons ============ */
+#client-outer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 10em;
+  box-shadow: inset 0 15px 20px 10px rgba(0,0,0,.125);
+}
+#client-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+
+    }
+
+.ci {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-right: 3em;
+  transform: scale(0.9);
+  .partner-color {
+    display: none;
+  }
+  .description {
+    display: none;
+  }
+}
+.ci:hover {
+  .description {
+    display: flex;
+  }
+  .greyscale {
+    display: none;
+    }
+  .partner-color {
+    display: flex;
+        }
+      }
+
+.description {
+  display: none;
+  position: absolute;
+  justify-content: center;
+  align-self: center;
+  background-color: map-get($more-colors, 'darkgrey');
+  bottom: 175%;
+  width: 300px;
+  height: auto;
+  min-width: 260px;
+  max-width: 260px;
+  padding: 15px;
+  .arrow-box {
+    position: absolute;
+    bottom: -10%;
+    left: 31.2%;
+    width: 100px;
+    height: 100px;
+    transform: rotate(45deg);
+    background-color: map-get($more-colors, 'darkgrey');
+    color: white;
+    z-index: -1;
+      }
+
+    .box{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        z-index: 99;
+        color: white;
+        width: 100%;
+
+        h3 {
+          font-size: 17px;
+        }
+        p {
+          font-size: 12px;
+        }
+        #client-line {
+          font-size: 25px;
+          transform: scale(1.5);
+          margin-bottom: -0.5em;
+        }
+
+      }
+    }

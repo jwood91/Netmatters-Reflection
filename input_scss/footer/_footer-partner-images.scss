@@ -1,0 +1,56 @@
+/* Footer Partner Images */
+
+#partner-images {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  padding: 0px 4% 0px 7%;
+  height: 20rem;
+
+  #google-partner {
+    width: 200px;
+    height: 70px!important;
+    box-shadow: 1px 1px 3px map-get($more-colors, "searchgrey");
+
+  }
+  #partner-top-row, #partner-bottom-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 30%;
+    margin-bottom: -5em
+    }
+    .partner-item {
+      margin: 0 1em 0 0;
+      height: 60%;
+      img {
+        width: 90%;
+        height: 100%;
+      }
+
+
+  }
+  }
+#partner-top-row {
+  align-items: flex-end;
+}
+#partner-bottom-row {
+  align-items: flex-start;
+}
+.color-partner {
+  display: none;
+}
+
+.partner-item:hover {
+  .bw-partner {
+    display: none;
+  }
+  .color-partner{
+    display: flex;
+  }
+
+}

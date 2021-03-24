@@ -140,18 +140,17 @@ header {
 #page-head #menu-phone {
   display: flex;
   order: 2;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  height: 70px;
-  width: 150px;
+  height: 100%;
 }
 
 #page-head #menu-phone #menu-button-container {
   display: flex;
   justify-content: center;
   margin: 0.5em 0 0.5em 0em;
-  width: 4.2rem;
-  height: 3.9rem;
+  width: 5rem;
+  height: 3.8rem;
   color: black;
   order: 2;
 }
@@ -173,6 +172,77 @@ header {
 
 #page-head .header-btn {
   display: none;
+}
+
+/* =========ABOUT US CONTAINER OUR CULTURE========= */
+.about-us-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100vw;
+  background-color: #333645;
+  padding: 25px 0 25px 0;
+}
+
+#about-text-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0.8em 1.7em 0.5em 1em;
+  line-height: 1.7em;
+  padding: 5px 5% 5px 5px;
+}
+
+#about-text-container h1 {
+  font-weight: 500;
+  font-size: 35px;
+  margin: 0.2em 0.25em 0.8em 0;
+  color: white;
+}
+
+#about-text-container .about-text {
+  font-weight: 500;
+  font-size: 16px;
+  margin: 0 0.25em 1.5em 0.25em;
+  color: white;
+}
+
+#about-text-container #intro-text {
+  font-weight: 700;
+  font-size: 17px;
+  margin: 0 0.5em 1.5em 0;
+  color: white;
+}
+
+#abt-btn-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2px;
+  margin: -0.1em 0 0.8em 0.1em;
+  justify-content: center;
+  height: 2.7em;
+  width: 180px;
+  cursor: pointer;
+  color: inherit;
+  background-color: #fff;
+  text-transform: uppercase;
+  border-radius: 3px;
+  border-style: none;
+  font-weight: 400;
+  font-size: 18.2px;
+  margin: 0.1em 0 0 0.4em;
+}
+
+#abt-btn-container .icon-arrow-right2 {
+  margin: .1em 0em 0 0.5em;
+  font-size: 18px;
+  min-height: 5px;
+  min-width: 5px;
+}
+
+#abt-btn-container:hover {
+  background-color: #ebebeb;
+  text-decoration: none;
 }
 
 /* ========= IMAGE SLIDER ========= */
@@ -242,6 +312,351 @@ header {
   text-decoration: none;
 }
 
+/* ========= LATEST CONTAINER SECTION HEAD ========= */
+#latest-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 7em;
+  background-color: #fff;
+}
+
+#latest-inner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+}
+
+#latest-inner h1 {
+  min-height: 3em;
+  max-height: 3em;
+  border-bottom: 5.3px solid black;
+  margin: 0em 0 -1em 0.8em;
+  text-transform: uppercase;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+/* ============ NEWS CARDS LINKED WITH BOOTSTRAP ============= */
+#card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: inset 0 35px 35px -35px rgba(0, 0, 0, 0.125);
+  padding-top: 10px;
+  /* News card buttons */
+}
+
+#card-container .card {
+  margin: 2rem 4% 2rem 2%;
+  width: 100%;
+}
+
+#card-container .card h5 {
+  font-size: 17px !important;
+  margin: 1.2em 0em 1.3em 0.8em;
+  font-weight: 600 !important;
+}
+
+#card-container .card p {
+  font-size: 13px;
+  margin: 0 0 1.9em 0.9em;
+}
+
+#card-container .card .crd-ttl-purp {
+  color: #926fb1 !important;
+  font-weight: 600;
+}
+
+#card-container .card .crd-ttl-blue {
+  color: #4183d7 !important;
+  font-weight: 600;
+}
+
+#card-container #card-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+#card-container .image-hover-zoom {
+  overflow: hidden;
+}
+
+#card-container .image-hover-zoom .mini-link {
+  position: absolute;
+  text-align: center;
+  width: 67px;
+  height: 25px;
+  padding: 3px 0 5px 0;
+  letter-spacing: .4px;
+  font-weight: 800;
+  text-transform: uppercase;
+  top: 10px;
+  right: 0px;
+  z-index: 99;
+  font-size: .75rem;
+  border-radius: 1px;
+}
+
+#card-container .image-hover-zoom .card-img-top {
+  transition: transform 0.5s ease;
+  transform: scale(1);
+  z-index: 1;
+}
+
+#card-container .image-hover-zoom .card-img-top:hover {
+  transition: transform 0.5s ease;
+  transform: scale(1.2);
+  opacity: 0.5;
+  ursor: pointer;
+}
+
+#card-container .btn {
+  font-size: 18px;
+  font-weight: 500;
+  align-items: center;
+  height: 50px;
+  padding-top: 10px;
+  border-radius: 3px;
+  text-decoration: none !important;
+}
+
+#card-container .btn-purple {
+  background-color: #926fb1 !important;
+  color: white;
+}
+
+#card-container .btn-purple:hover {
+  background-color: #7e57a0 !important;
+  color: white;
+}
+
+#card-container .btn-blue {
+  background-color: #4183d7 !important;
+  color: white;
+}
+
+#card-container .btn-blue:hover {
+  color: white !important;
+  background-color: #2a6ec6 !important;
+}
+
+/* ============== Client Icons ============ */
+#client-outer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 10em;
+  box-shadow: inset 0 15px 20px 10px rgba(0, 0, 0, 0.125);
+}
+
+#client-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.ci {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-right: 3em;
+  transform: scale(0.9);
+}
+
+.ci .partner-color {
+  display: none;
+}
+
+.ci .description {
+  display: none;
+}
+
+.ci:hover .description {
+  display: flex;
+}
+
+.ci:hover .greyscale {
+  display: none;
+}
+
+.ci:hover .partner-color {
+  display: flex;
+}
+
+.description {
+  display: none;
+  position: absolute;
+  justify-content: center;
+  align-self: center;
+  background-color: #333645;
+  bottom: 175%;
+  width: 300px;
+  height: auto;
+  min-width: 260px;
+  max-width: 260px;
+  padding: 15px;
+}
+
+.description .arrow-box {
+  position: absolute;
+  bottom: -10%;
+  left: 31.2%;
+  width: 100px;
+  height: 100px;
+  transform: rotate(45deg);
+  background-color: #333645;
+  color: white;
+  z-index: -1;
+}
+
+.description .box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 99;
+  color: white;
+  width: 100%;
+}
+
+.description .box h3 {
+  font-size: 17px;
+}
+
+.description .box p {
+  font-size: 12px;
+}
+
+.description .box #client-line {
+  font-size: 25px;
+  transform: scale(1.5);
+  margin-bottom: -0.5em;
+}
+
+/* =========== SIGN UP FORM ============= */
+#form-container-outer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 45px;
+  background-color: #dddddd;
+}
+
+#form-container-outer #form-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #dddddd;
+  color: inherit;
+  width: 100%;
+}
+
+#form-container-outer #form-container h2 {
+  font-size: 35px;
+  font-weight: 400;
+}
+
+#form-container-outer #form-container #sign-up-inputs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#form-container-outer #form-container .form-input {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 1rem 0 0 0;
+}
+
+#form-container-outer #form-container .form-input input {
+  width: 100%;
+  height: 3.09em;
+  border: 2px solid rgba(0, 0, 0, 0.23);
+}
+
+#form-container-outer #form-container .form-input label {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#form-container-outer #form-container .form-input .ast-red {
+  color: #d24d57;
+  font-size: 18px;
+}
+
+#form-container-outer #form-container #checkbox-container {
+  display: flex;
+  flex-direction: row;
+  max-height: 10rem;
+  min-width: 10rem;
+  font-size: 18px;
+  margin-top: 0.8em;
+  font-weight: 600;
+}
+
+#form-container-outer #form-container #checkbox-container label {
+  width: 80%;
+  font-size: 16px;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+#form-container-outer #form-container #checkbox-container #email-chkbox {
+  appearance: none;
+  width: 1.8em;
+  height: 1.8em;
+  border: 3px solid #333645;
+  border-radius: 3px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+#form-container-outer #form-container #checkbox-container #email-chkbox ~ .icon-checkbox-checked {
+  visibility: hidden;
+  positon: absolute;
+  height: 20px;
+  margin: 0.5em 1.5em 0 -1.4em;
+  transform: scale(1.9);
+  z-index: 1;
+}
+
+#form-container-outer #form-container #email-chkbox:checked ~ .icon-checkbox-checked {
+  visibility: visible;
+}
+
+#form-container-outer #form-container .subscribe-btn {
+  width: 7.3em;
+  height: 2.8em;
+  text-transform: uppercase;
+  line-height: 35px;
+  white-space: normal;
+  border-radius: 3px;
+  background-color: #333645;
+  color: white;
+  margin-top: 1.8rem;
+  font-weight: 500;
+  font-size: 1.063rem;
+}
+
 /* ========= CONTENT BOXES OFFERING SERVICES INFORMATION ========= */
 .content-boxes-container {
   display: flex;
@@ -249,8 +664,13 @@ header {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin: 0 -0.5em 1.5em -0.5em;
+  margin: 0 -0.5em 1.5em 0em;
   width: 100vw;
+}
+
+.content-boxes-container a {
+  cursor: pointer;
+  text-decoration: none !important;
 }
 
 #content-inner {
@@ -565,6 +985,15 @@ header {
   color: #f62459;
 }
 
+.content-box a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100% !important;
+  height: 100% !important;
+}
+
 .content-box h2 {
   margin: 1em 1.5em 0.27em 1.5em;
   padding: 5px;
@@ -628,206 +1057,6 @@ header {
   min-width: 100%;
   font-weight: 500;
   text-transform: uppercase;
-}
-
-/* =========ABOUT US CONTAINER OUR CULTURE========= */
-.about-us-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100vw;
-  background-color: #333645;
-  padding: 25px 0 25px 0;
-}
-
-#about-text-container {
-  display: flex;
-  flex-direction: column;
-  margin: 0.8em 1.7em 0.5em 1em;
-  line-height: 1.7em;
-  padding: 5px 5% 5px 5px;
-}
-
-#about-text-container h1 {
-  font-weight: 500;
-  font-size: 35px;
-  margin: 0.2em 0.25em 0.8em 0;
-  color: white;
-}
-
-#about-text-container .about-text {
-  font-weight: 500;
-  font-size: 16px;
-  margin: 0 0.25em 1.5em 0.25em;
-  color: white;
-}
-
-#about-text-container #intro-text {
-  font-weight: 700;
-  font-size: 17px;
-  margin: 0 0.5em 1.5em 0;
-  color: white;
-}
-
-#abt-btn-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 2px;
-  margin: -0.1em 0 0.8em 0.1em;
-  justify-content: center;
-  height: 2.7em;
-  width: 180px;
-  cursor: pointer;
-  color: inherit;
-  background-color: #fff;
-  text-transform: uppercase;
-  border-radius: 3px;
-  border-style: none;
-  font-weight: 400;
-  font-size: 18.2px;
-  margin: 0.1em 0 0 0.4em;
-}
-
-#abt-btn-container .icon-arrow-right2 {
-  margin: .1em 0em 0 0.5em;
-  font-size: 18px;
-  min-height: 5px;
-  min-width: 5px;
-}
-
-#abt-btn-container:hover {
-  background-color: #ebebeb;
-  text-decoration: none;
-}
-
-/* ========= LATEST CONTAINER SECTION HEAD ========= */
-#latest-contatiner {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: #fff;
-  height: 7rem;
-}
-
-#latest-contatiner h1 {
-  align-self: center;
-  min-height: 4.3rem;
-  max-height: 5rem;
-  border-bottom: 5.3px solid black;
-  margin: 1em 0 -1em 0.8em;
-  text-transform: uppercase;
-  font-size: 21px;
-  font-weight: 600;
-}
-
-/* ============ NEWS CARDS LINKED WITH BOOTSTRAP ============= */
-#card-container {
-  diplay: flex;
-  flex-direction: row;
-  justify-content: center;
-  background-color: #fff;
-  box-shadow: inset 0 35px 35px -35px rgba(0, 0, 0, 0.125);
-  padding-top: 10px;
-  /* News card buttons */
-}
-
-#card-container .card {
-  margin: 2rem 4% 2rem 2%;
-  width: 95% !important;
-}
-
-#card-container .card h5 {
-  font-size: 17px !important;
-  margin: 1.2em 0em 1.3em 0.8em;
-  font-weight: 600 !important;
-}
-
-#card-container .card p {
-  font-size: 13px;
-  margin: 0 0 1.9em 0.9em;
-}
-
-#card-container .card .crd-ttl-purp {
-  color: #926fb1 !important;
-  font-weight: 600;
-}
-
-#card-container .card .crd-ttl-blue {
-  color: #4183d7 !important;
-  font-weight: 600;
-}
-
-#card-container #card-inner {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-#card-container .image-hover-zoom {
-  overflow: hidden;
-}
-
-#card-container .image-hover-zoom .mini-link {
-  position: absolute;
-  text-align: center;
-  width: 67px;
-  height: 25px;
-  padding: 3px 0 5px 0;
-  letter-spacing: .4px;
-  font-weight: 800;
-  text-transform: uppercase;
-  top: 10px;
-  right: 0px;
-  z-index: 99;
-  font-size: .75rem;
-  border-radius: 1px;
-}
-
-#card-container .image-hover-zoom .card-img-top {
-  transition: transform 0.5s ease;
-  transform: scale(1);
-  z-index: 1;
-}
-
-#card-container .image-hover-zoom .card-img-top:hover {
-  transition: transform 0.5s ease;
-  transform: scale(1.2);
-  opacity: 0.5;
-  ursor: pointer;
-}
-
-#card-container .btn {
-  font-size: 18px;
-  font-weight: 500;
-  align-items: center;
-  height: 50px;
-  padding-top: 10px;
-  border-radius: 3px;
-  text-decoration: none !important;
-}
-
-#card-container .btn-purple {
-  background-color: #926fb1 !important;
-  color: white;
-}
-
-#card-container .btn-purple:hover {
-  background-color: #7e57a0 !important;
-  color: white;
-}
-
-#card-container .btn-blue {
-  background-color: #4183d7 !important;
-  color: white;
-}
-
-#card-container .btn-blue:hover {
-  color: white !important;
-  background-color: #2a6ec6 !important;
 }
 
 /* ============== Client Icons ============ */
@@ -895,7 +1124,7 @@ header {
 .description .arrow-box {
   position: absolute;
   bottom: -10%;
-  left: 31.2%;
+  left: 33.2%;
   width: 100px;
   height: 100px;
   transform: rotate(45deg);
@@ -916,124 +1145,17 @@ header {
 }
 
 .description .box h3 {
-  font-size: 17px;
+  font-size: 20px;
 }
 
 .description .box p {
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .description .box #client-line {
   font-size: 25px;
   transform: scale(1.5);
   margin-bottom: -0.5em;
-}
-
-/* =========== SIGN UP FORM ============= */
-#form-container-outer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 45px;
-  background-color: #dddddd;
-}
-
-#form-container-outer #form-container {
-  display: flex;
-  flex-direction: column;
-  background-color: #dddddd;
-  color: inherit;
-  width: 100%;
-}
-
-#form-container-outer #form-container h2 {
-  font-size: 35px;
-  font-weight: 400;
-}
-
-#form-container-outer #form-container #sign-up-inputs {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-#form-container-outer #form-container .form-input {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  margin: 1rem 0 0 0;
-}
-
-#form-container-outer #form-container .form-input input {
-  width: 100%;
-  height: 3.09em;
-  border: 2px solid rgba(0, 0, 0, 0.23);
-}
-
-#form-container-outer #form-container .form-input label {
-  font-size: 16px;
-  font-weight: 600;
-}
-
-#form-container-outer #form-container .form-input .ast-red {
-  color: #d24d57;
-  font-size: 18px;
-}
-
-#form-container-outer #form-container #checkbox-container {
-  display: flex;
-  flex-direction: row;
-  max-height: 10rem;
-  min-width: 10rem;
-  font-size: 18px;
-  margin-top: 0.8em;
-  font-weight: 600;
-}
-
-#form-container-outer #form-container #checkbox-container label {
-  width: 80%;
-  font-size: 16px;
-  line-height: 30px;
-  cursor: pointer;
-}
-
-#form-container-outer #form-container #checkbox-container #email-chkbox {
-  appearance: none;
-  width: 1.8em;
-  height: 1.8em;
-  border: 3px solid #333645;
-  border-radius: 3px;
-  cursor: pointer;
-  z-index: 2;
-}
-
-#form-container-outer #form-container #checkbox-container #email-chkbox ~ .icon-checkbox-checked {
-  visibility: hidden;
-  positon: absolute;
-  height: 20px;
-  margin: 0.5em 1.5em 0 -1.4em;
-  transform: scale(1.9);
-  z-index: 1;
-}
-
-#form-container-outer #form-container #email-chkbox:checked ~ .icon-checkbox-checked {
-  visibility: visible;
-}
-
-#form-container-outer #form-container .subscribe-btn {
-  width: 7.3em;
-  height: 2.8em;
-  text-transform: uppercase;
-  line-height: 35px;
-  white-space: normal;
-  border-radius: 3px;
-  background-color: #333645;
-  color: white;
-  margin-top: 1.8rem;
-  font-weight: 500;
-  font-size: 1.063rem;
 }
 
 /* ============ WEBSITE FOOTER ============ */
@@ -1051,7 +1173,7 @@ header {
 #foot-top #footer-container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   width: 100%;
   height: 100%;
   padding: 5em 0 0 0;
@@ -1121,13 +1243,14 @@ header {
   font-size: 25px;
 }
 
+/* Footer Partner Images */
 #partner-images {
   background-color: white;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  justify-content: flex-start;
+  justify-content: center;
   padding: 0px 4% 0px 7%;
   height: 20rem;
 }
@@ -1239,6 +1362,7 @@ header {
   justify-content: flex-start;
   width: 27px;
   height: 27px;
+  margin-right: 3em;
 }
 
 #phone-icon-container #phone-icon {
@@ -1280,6 +1404,12 @@ header {
 }
 
 /* ================================== SM Breakpoint ================================*/
+@media (min-width: 768px) {
+  #top-row, #content-inner, #about-text-container, #card-inner, #client-icons, #form-container, #footer-container, #partner-top-row, #partner-bottom-row, #latest-inner {
+    max-width: 768px !important;
+  }
+}
+
 @media (min-width: 768px) {
   #page-head {
     height: 100px;
@@ -1350,8 +1480,20 @@ header {
 }
 
 @media (min-width: 768px) {
+  .card {
+    width: 43% !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .c3 {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
   .bottom-4-box {
-    max-width: 40% !important;
+    max-width: 44.5% !important;
   }
 }
 
@@ -1364,11 +1506,20 @@ header {
 @media (min-width: 768px) {
   #client-icons {
     justify-content: space-around !important;
-    width: 60%;
+    width: 50%;
   }
   #client-icons .ci {
     transform: scale(0.7);
-    margin: 0 !important;
+    margin: 0 -1em 0 -1em !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .description {
+    width: 300px !important;
+    max-width: 600px !important;
+    height: auto;
+    font-size: 22px;
   }
 }
 
@@ -1389,6 +1540,12 @@ header {
 }
 
 /*================== md breakpoint styles =================*/
+@media (min-width: 992px) {
+  #top-row, #content-inner, #about-text-container, #card-inner, #client-icons, #form-container, #footer-container, #partner-top-row, #partner-bottom-row, #latest-inner {
+    max-width: 992px !important;
+  }
+}
+
 @media (min-width: 992px) {
   #page-head #logo-container {
     width: 35%;
@@ -1476,7 +1633,6 @@ header {
 @media (min-width: 992px) {
   .content-boxes-container {
     flex-direction: row !important;
-    justify-content: center;
   }
   .content-boxes-container .top-3-box {
     width: 18em;
@@ -1490,13 +1646,12 @@ header {
     flex-direction: row !important;
     flex-wrap: wrap !important;
     width: 100% !important;
-    padding-left: 6.5em;
   }
   #card-container .c3 {
     display: none;
   }
   #card-container .card {
-    width: 40% !important;
+    width: 44% !important;
   }
 }
 
@@ -1513,6 +1668,7 @@ header {
   }
   #client-icons .ci {
     transform: scale(0.9) !important;
+    margin: 0 !important;
   }
 }
 
@@ -1541,15 +1697,22 @@ header {
 }
 
 /* =========================== LG Breakpoint ============================ */
-#top-row, #content-inner, #about-text-container, #card-inner, #client-icons, #form-container, #footer-container, #partner-top-row, #partner-bottom-row {
-  max-width: 1260px !important;
+@media (min-width: 1260px) {
+  #top-row, #content-inner, #about-text-container, #card-inner, #client-icons, #form-container, #footer-container, #partner-top-row, #partner-bottom-row, #latest-inner {
+    max-width: 1260px !important;
+  }
+}
+
+@media (min-width: 1260px) {
+  .mp-item {
+    margin-right: 1.5em;
+  }
 }
 
 @media (min-width: 1260px) {
   #menu-phone {
     display: flex;
-    width: 55% !important;
-    justify-content: space-between !important;
+    width: 65% !important;
   }
   #menu-phone #search-sm input {
     display: flex !important;
@@ -1563,6 +1726,7 @@ header {
   }
   #search-sm input {
     display: flex !important;
+    width: 30em !important;
   }
 }
 
@@ -1613,8 +1777,8 @@ header {
 
 @media (min-width: 1260px) {
   .bottom-4-box {
-    width: 21% !important;
-    min-height: 390px;
+    width: 23% !important;
+    min-height: 310px;
     padding: 0px !important;
     margin: 2em 0 0 0 !important;
     justify-content: center !important;
@@ -1646,8 +1810,11 @@ header {
   }
 }
 
-#card-container {
-  padding-left: 0 !important;
+/* News card breakpoints */
+@media (min-width: 1260px) {
+  #card-container {
+    padding-left: 0 !important;
+  }
 }
 
 @media (min-width: 1260px) {
