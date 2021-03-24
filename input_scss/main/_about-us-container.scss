@@ -6,6 +6,10 @@
     justify-content: center;
     width: 100vw;
     background-color: map-get($more-colors, 'darkgrey');
+    background-image: url("../images/netmatters-logo-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     padding: 25px 0 25px 0;
       }
 

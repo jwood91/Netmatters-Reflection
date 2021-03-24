@@ -30,14 +30,15 @@
     @include content-boxes
     @include themes($theme-colors);
     color: map-get($more-colors, 'darkgrey');
-    
+    min-height: 17rem;
     a {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       width: 100% !important;
-      height: 100% !important;
+      min-height: 100% !important;
+
     }
     h2 {
         margin: 1em 1.5em 0.27em 1.5em;
@@ -75,6 +76,12 @@
 
               }
       }
+    }
+
+  #it-support-box {
+    .p {
+      margin-bottom:  2.5em;
+    }
     }
 
 .line-div {

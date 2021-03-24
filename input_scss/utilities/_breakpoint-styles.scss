@@ -74,6 +74,16 @@
 #phone-icon-container:hover {
   border-bottom: 4px solid black;
 }
+
+.about-us-container {
+  @include mq('xs') {
+    background-image: none;
+    background-color: map-get($more-colors, 'darkgrey');
+  }
+
+}
+
+
 .content-box {
   @include mq('xs'){
     min-height: 315px;
@@ -368,7 +378,7 @@
     flex-direction: row !important;
     .top-3-box {
       width: 18em;
-      min-height: 25rem;
+      min-height: 20em;
           }
       }
 }

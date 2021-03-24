@@ -181,6 +181,10 @@ header {
   justify-content: center;
   width: 100vw;
   background-color: #333645;
+  background-image: url("../images/netmatters-logo-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   padding: 25px 0 25px 0;
 }
 
@@ -693,8 +697,8 @@ header {
   border: 2px solid lightgrey;
   border-radius: 3px;
   margin: 15px 20px 10px 20px;
-  padding: 35px 0 45px 0;
   color: #333645;
+  min-height: 17rem;
 }
 
 .content-box-software {
@@ -991,7 +995,7 @@ header {
   justify-content: center;
   align-items: center;
   width: 100% !important;
-  height: 100% !important;
+  min-height: 100% !important;
 }
 
 .content-box h2 {
@@ -1027,6 +1031,10 @@ header {
 .content-box .icn #telephone {
   transform: rotate(-55deg);
   margin-left: 0.2em;
+}
+
+#it-support-box .p {
+  margin-bottom: 2.5em;
 }
 
 .line-div {
@@ -1376,6 +1384,13 @@ header {
 }
 
 @media (max-width: 767px) {
+  .about-us-container {
+    background-image: none;
+    background-color: #333645;
+  }
+}
+
+@media (max-width: 767px) {
   .content-box {
     min-height: 315px;
   }
@@ -1636,7 +1651,7 @@ header {
   }
   .content-boxes-container .top-3-box {
     width: 18em;
-    min-height: 25rem;
+    min-height: 20em;
   }
 }
 
