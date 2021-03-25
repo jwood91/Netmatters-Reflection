@@ -75,17 +75,6 @@
   border-bottom: 4px solid black;
 }
 
-
-
-.about-us-container {
-  @include mq('xs') {
-    background-image: none;
-    background-color: map-get($more-colors, 'darkgrey');
-  }
-
-}
-
-
 .content-box {
   @include mq('xs'){
     min-height: 315px;
@@ -207,6 +196,9 @@
  }
   }
 }
+
+
+
 
 .card {
   @include mq('sm'){
@@ -385,6 +377,13 @@
     a {
       align-self: flex-start;
     }
+  }
+}
+
+.about-us-container {
+  @include mq('md') {
+    background-color: map-get($more-colors, 'darkgrey');
+    background-image: url("../images/netmatters-logo-bg.png");
   }
 }
 

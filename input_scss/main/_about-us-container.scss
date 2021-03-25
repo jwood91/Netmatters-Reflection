@@ -5,8 +5,8 @@
     flex-direction: row;
     justify-content: center;
     width: 100vw;
+    background-image: none;
     background-color: map-get($more-colors, 'darkgrey');
-    background-image: url("../images/netmatters-logo-bg.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

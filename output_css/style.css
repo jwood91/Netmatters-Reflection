@@ -430,8 +430,8 @@ header {
   flex-direction: row;
   justify-content: center;
   width: 100vw;
+  background-image: none;
   background-color: #333645;
-  background-image: url("../images/netmatters-logo-bg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1635,13 +1635,6 @@ header {
 }
 
 @media (max-width: 767px) {
-  .about-us-container {
-    background-image: none;
-    background-color: #333645;
-  }
-}
-
-@media (max-width: 767px) {
   .content-box {
     min-height: 315px;
   }
@@ -1905,6 +1898,13 @@ header {
   }
   #image-slider-container a {
     align-self: flex-start;
+  }
+}
+
+@media (min-width: 992px) {
+  .about-us-container {
+    background-color: #333645;
+    background-image: url("../images/netmatters-logo-bg.png");
   }
 }
 
