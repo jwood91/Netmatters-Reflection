@@ -1,5 +1,6 @@
 /* ============ WEBSITE FOOTER ============ */
 
+
 #foot-top {
    display: flex;
    flex-direction: column;
@@ -11,13 +12,14 @@
    height: 35rem;
 
 
+
    #footer-container {
      display: flex;
      flex-direction: column;
      justify-content: center;
      width: 100%;
      height: 100%;
-     padding: 5em 0 0 0;
+     padding: 3em 0 0 2em;
 
    .footer-item {
      width: 100%;

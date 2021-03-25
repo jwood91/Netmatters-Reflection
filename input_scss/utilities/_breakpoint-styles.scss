@@ -75,6 +75,8 @@
   border-bottom: 4px solid black;
 }
 
+
+
 .about-us-container {
   @include mq('xs') {
     background-image: none;
@@ -98,10 +100,11 @@
 
 #foot-top {
   @include mq('xs') {
+    align-items: flex-start;
   height: 53rem;
-  padding: 25px !important;
+  padding: 0px !important;
   #footer-container {
-    margin-top: -2em !important;
+    margin-top: -3em !important;
   }
 }
 }
@@ -205,7 +208,6 @@
   }
 }
 
-
 .card {
   @include mq('sm'){
 
@@ -253,20 +255,25 @@
   }
 }
 
+#foot-top{
+  flex-direction: row !important;
+  justify-content: center;
 
+}
 #footer-container {
     @include mq('sm') {
       height: 45em;
       flex-direction: row !important;
       flex-wrap: wrap !important;
-      width: 100% !important;
-      margin-left: 3em;
+      justify-content: center;
+      width: 50% !important;
+
 
 
 
 
   .footer-item {
-    width: 40% !important;
+    width: 50% !important;
   }
 
   .socials {
@@ -278,7 +285,7 @@
 
 /*================== md breakpoint styles =================*/
 
-#top-row, #content-inner, #about-text-container, #card-inner, #client-icons, #form-container, #footer-container, #partner-top-row, #partner-bottom-row, #latest-inner{
+#top-row, #content-inner, #about-text-container, #card-inner, #client-icons, #form-container, #footer-container, #partner-top-row, #partner-bottom-row, #latest-inner, #nav-main{
   @include mq('md') {
   max-width: 992px !important;
 }
@@ -346,6 +353,14 @@
     }
   }
 }
+
+#navbar {
+  @include mq('md') {
+    display: flex !important;
+  }
+}
+
+
 #image-slider-container {
   @include mq('md') {
     flex-direction: column;
@@ -429,6 +444,14 @@
 }
 
 
+#footer-container {
+  width: 100% !important;
+  justify-content: center !important;
+
+
+
+}
+
 
 .partner-item {
   @include mq('md'){
@@ -445,11 +468,12 @@
 /* =========================== LG Breakpoint ============================ */
 
 
-#top-row, #content-inner, #about-text-container, #card-inner, #client-icons, #form-container, #footer-container, #partner-top-row, #partner-bottom-row, #latest-inner{
+#top-row, #content-inner, #about-text-container, #card-inner, #client-icons, #form-container, #footer-container, #partner-top-row, #partner-bottom-row, #latest-inner, #nav-main{
   @include mq('lg') {
-  max-width: 1260px !important;
+  max-width: 1200px !important;
 }
 }
+
 
 .mp-item {
   @include mq('lg') {
@@ -478,6 +502,15 @@
     }
   }
 
+  #nav-items {
+    @include mq('lg') {
+    span {
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+}
+
 /*image slider */
 
   #image-slider-container{
@@ -490,7 +523,7 @@
     #image-inner {
       justify-content: center!important;
       align-items: center !important;
-      max-width: 80rem !important;
+      max-width: 75rem !important;
       width: 98% !important;
       padding-left: 2em;
       margin: auto;
@@ -506,7 +539,7 @@
 
 #content-inner {
   @include mq('lg') {
-  width: 100%  !important;
+  width: 105%  !important;
   justify-content: space-between !important;
   padding: 25px !important;
 
@@ -554,18 +587,16 @@
 }
 
 
-
 /* About us Container */
 .about-us-container {
   @include mq('lg') {
   flex-direction: row;
   justify-content: center !important;
-
   }
 }
 #about-text-container {
   @include mq('lg') {
-    padding-left: 1.5em!important;
+    padding-left: 2em!important;
     width: 100%!important;
     .about-lg {
       max-width: 30rem;
@@ -608,16 +639,22 @@
   }
   }
 }
+
+
+
+
+
 #foot-top {
   @include mq('lg'){
     flex-direction: row;
     justify-content: center !important;
     height:30em;
+    width: 100% !important;
 
     #footer-container {
-      width: 80% !important;
+      width: 90% !important;
       justify-content: space-between !important;
-      margin: 0 !important;
+
 
       .footer-item{
         width: 15% !important;

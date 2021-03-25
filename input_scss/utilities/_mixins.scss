@@ -9,10 +9,34 @@
     border: 2px solid lightgrey;
     border-radius: 3px;
     margin: 15px 20px 10px 20px;
-    
+  }
 
-
+@mixin nav($map) {
+  @each $theme, $color in $map {
+    .nav-#{$theme}{
+        i { color: $color; }
+        }
+    .nav-#{$theme}:hover{
+      .nav-link { background-color: $color; }
+      i {color: white;}
+      .nav-menu {
+        display: flex;
+        background-color: $color;
+        text-transform: uppercase;
+      }
+    }
+  }
 }
+
+@mixin menu($map) {
+  @each $theme, $color in $map {
+    .menu-#{$theme}{
+           background-color: $color !important;
+      }
+    }
+}
+
+
 
 
 @mixin themes($map) {
@@ -30,7 +54,6 @@
                 }
           .read-span { color: white;
           }
-
       }
       &-#{$theme}:hover {
         background-color: $color;
