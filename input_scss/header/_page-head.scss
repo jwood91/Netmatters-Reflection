@@ -7,7 +7,7 @@
     justify-content: center;
     align-items: flex-start;
     background-color: white;
-    height: 23.8vh;
+    height: auto;
     width: 100%;
     margin: 0;
     padding: 20px 5px 0px 5px;
@@ -53,17 +53,12 @@
       justify-content: space-around;
       align-items: center;
       height: 100%;
-
-
-
       #menu-button-container {
           display: flex;
           justify-content: center;
           margin: 0.5em 0 0.5em 0em;
           width: 5rem;
           height: 3.8rem;
-          color: black;
-          order: 2;
           #menu-button {
               height: 100%;
               width: 100%;
@@ -71,22 +66,289 @@
               border-radius: 3px;
           }
         }
+        .header-btn {
+          display: none;
+          justify-content: center;
+          align-items: center;
+          width: 7.5em;
+          height: 3em;
+          background-color: red;
+          border-radius: 3px;
+          text-transform: uppercase;
+          letter-spacing: 0.1px;
+          font-size: 19px;
+          font-weight: 500;
+          color: white;
+          padding-right: 3px;
+          line-height: 35px;
+          text-align: center;
+          a {
+            text-decoration: none;
+            width: 100%;
+            height: 100%;
+          }
+          i {
+            margin: 0.7em 0.1em 0 0;
+            }
+          }
+        #support-link {
+          background-color: map-get($more-colors, 'cardblue');
+          }
+        #support-link:hover {
+          background-color: map-get($more-colors, 'cardbluehover');
+            }
+        #contact-link {
+          background-color: map-get($more-colors, 'searchgrey');
+          }
+        #contact-link:hover {
+          background-color: map-get($more-colors, 'searchhovergrey');
+          }
       }
 
+  /* small search bar */
+      #search-sm {
+       @include mq('xs'){
+        display: none;
+        input {
+        display: none;
+          }
+        }
+      }
+
+
+
     /* Header search bar/input containers*/
-    .hidden {
-      display: none;
-
-    }
-
-    #search-sm {
+    #search-bar-container, .header-btn{
       display: none;
     }
+    #search-bar-container {
+    @include mq('xs') {
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      height: 0.3rem;
+      width: 100%;
+      margin: 2em 0.5em 2em 0.5em;
+      order: 3;
+      ::placeholder {
+          font-size: 15px;
+          color: #555;
+            }
+        #search-input {
+            display: block ;
+            background-color: rgba(0,0,0,.1);
+            outline: 1px solid hsla(0,0%,100%,.2);
+            border: 2px solid rgba(0,0,0,.1);
+            border-right: none;
+            width: calc(100% - 55px);
+            height: 45px;
+            padding-left: 12px;
+            border-radius-left: 2px;
+            z-index: 1;
+                  }
+        #search-icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 55px;
+            height: 45px;
+            background-color: rgba(0,0,0,.1);
+            border: 2px solid rgba(0,0,0,.1);
+            border-left: none;
+            border-radius-right: 2px;
+            z-index: 1;
+            button {
+              display: block;
+              background: transparent;
+              border: none;
+              outline: none;
+              width: 101%;
+              font-size: 20px;
+              height: 1.35em;
+              border-left: none;
 
+                      }
+                    }
+                  }
+                }
 
     /*links and menu button styles*/
     .header-btn {
         display: none;
 
         }
+    }
+
+
+
+/* media querys */
+
+/* xs breakpoint */
+#phone-icon-container {
+@include mq('xs')
+  display: flex;
+  justify-content: flex-start;
+  width: 27px;
+  height: 27px;
+  margin-right: 3em;
+  #phone-icon {
+      height: 100%;
+      width: 100%;
+      transform: rotate(1deg);
+
+  }
+  }
+
+  /* xs breakpoint */
+
+
+/* sm breakpoint */
+#page-head {
+  @include mq('sm'){
+  height: 100px;
+  padding-bottom: 15px;
+
+
+  #top-row {
+    height: 100%;
+
+  }
+
+  #phone-icon-container #phone-icon, #search-bar-container {
+    @include mq('sm'){
+    display: none;
+   }
+ }
+
+
+
+
+  #logo-container {
+   width: 50%;
+   margin-right: auto;
+   #logo {
+     max-width: 340px;
+   }
+     }
+
+  #menu-phone{
+     display: -ms-flex;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+     align-items: center;
+     order: 3;
+     width: 370px;
+
+     #search-sm {
+         display: flex;
+         width: 15em;
+
+         input {
+           width: 12em;
+           height: 3.4em;
+           border: 1.1px solid #e5e5e5;
+           border-width: 1px;
+           border-color: #ccc;
+           box-shadow: rgba(0,0,0, 0.075);
+           transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+           padding: 5px 15px;
+                    }
+          textarea:focus, input:focus{
+              outline: none;
+              box-shadow: inset rgba(0,0,0, 0.075) 0px 1px 1px 0px, rgba(91, 192, 222, 0.6) 0px 0px 8px 0px;
+              border-color: rgba(91, 192, 222, 0.6);
+              transition: box-shadow ease-in-out 0.3s, border-color ease-in-out 0.3s;
+
+            }
+
+
+          }
+
+         button {
+           background-color: map-get($more-colors, 'searchgrey');
+           height: 3.4em;
+           width: 55px;
+           border: none;
+           outline: none;
+           border-image: none;
+           border-style: none;
+
+          }
+          i {
+            margin-top: 0.2em;
+            color: white;
+            font-size: 23px;
+          }
+          button:hover {
+            background-color: map-get($more-colors, 'searchhovergrey')
+          }
+       }
+     #menu-button-container {
+
+     }
+
+   #phone-icon-container, #phone-icon, #phone-icon-container:hover {
+     display: none;
+ }
+  }
+}
+
+/* === md breakpoints === */
+
+#page-head {
+  @include mq('md') {
+      #logo-container {
+        width: 35%;
+      }
+
+  #menu-phone{
+     display: -ms-flex;
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     width: 62%;
+     .header-btn {
+       display: flex;
+     }
+
+    }
+    #search-sm {
+      width: 4em !important;
+      margin: 0 1em 0 1em;
+      input {
+        display: none;
+      }
+    }
+    .header-btn {
+      margin-right: 1em;
+    }
+  }
+}
+
+
+
+
+/* lg breakpoint */
+
+#menu-phone {
+  @include mq('lg') {
+    display: flex;
+    justify-content: center !important;
+    width: 65%;
+    .header-btn  {
+      margin: 1em;
+    }
+    #search-sm{
+        input{ display: flex; }
+          }
+    #search-sm {
+      width: 16em !important;
+      input{
+          display: flex;
+          width: 12em;
+          }
+        }
+          }
     }

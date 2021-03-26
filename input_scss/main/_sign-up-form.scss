@@ -24,11 +24,20 @@
       #sign-up-inputs {
         display: flex;
         flex-direction: column;
-        width:100%;
+        width: 100%;
+        @include mq('md'){
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            .form-input {
+              width: 48%;
+            }
+        }
       }
 
       .form-input{
-          @include form-input
+          @include form-input;
           .ast-red {
               color: #d24d57;
               font-size: 18px;
@@ -63,7 +72,6 @@
 
               & ~ .icon-checkbox-checked {
                   visibility: hidden;
-                  positon: absolute;
                   height: 20px;
                   margin: 0.5em 1.5em 0 -1.4em ;
                   transform: scale(1.9);
@@ -72,22 +80,22 @@
           }
         }
         #email-chkbox:checked {
-            & ~ .icon-checkbox-checked {
-              visibility: visible;
-              }
+            & ~ .icon-checkbox-checked{
+              visibility: visible !important;
+                          }
             }
         .subscribe-btn {
-          width: 7.3em;
-          height: 2.8em;
-          text-transform: uppercase;
-          line-height: 35px;
-          white-space: normal;
-          border-radius: 3px;
-          background-color: map-get($more-colors,'darkgrey');
-          color: white;
-          margin-top: 1.8rem;
-          font-weight: 500;
-          font-size: 1.063rem;
+            width: 7.3em;
+            height: 2.8em;
+            text-transform: uppercase;
+            line-height: 35px;
+            white-space: normal;
+            border-radius: 3px;
+            background-color: map-get($more-colors,'darkgrey');
+            color: white;
+            margin-top: 1.8rem;
+            font-weight: 500;
+            font-size: 1.063rem;
             }
         }
       }

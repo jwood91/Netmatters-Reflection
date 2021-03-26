@@ -15,14 +15,16 @@
     background-size: cover;
     color: white;
     #image-inner {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100% !important;
-      width: 80% !important;
-
-    }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        @include mq('md') {
+            flex-direction: column;
+              }
+            }
      h1 {
         margin: 0 0 0.5em 0;
         font-size: 48px;
@@ -58,8 +60,41 @@
                 }
       }
 
+@include mq('md') {
+      #image-inner {
+        width: 80%;
+        }
+       p {
+        text-align: left;
+        align-self: flex-start;
+        font-size: 14;
+      }
+      h1 {
+        text-align: left;
+        align-self: flex-start;
+      }
+      a {
+        align-self: flex-start;
+      }
+    }
+      #image-slider-container{
+      @include mq('lg') {
+          justify-content: center;
+          flex-direction: row;
+          padding: 0% ;
+          #image-inner {
+              justify-content: center;
+              align-items: center;
+              max-width: 75rem;
+              width: 98%;
+              padding-left: 2em;
+              margin: auto;
+          }
+        }
+      }
+    }
 
-}
+
 #cyber-btn:hover {
     background-color: #e80a42;
     text-decoration: none;

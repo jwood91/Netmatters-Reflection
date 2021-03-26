@@ -11,7 +11,16 @@
     background-position: center;
     background-size: cover;
     padding: 25px 0 25px 0;
+    @include mq('md') {
+        background-color: map-get($more-colors, 'darkgrey');
+        background-image: url("../images/netmatters-logo-bg.png");
+    }
+    @include mq('lg') {
+        flex-direction: row;
+        justify-content: center;
       }
+    }
+
 
 #about-text-container {
     display: flex;
@@ -38,6 +47,15 @@
         font-size: 17px;
         margin: 0 0.5em 1.5em 0;
         color: white;
+      }
+    #about-text-container {
+      @include mq('lg') {
+        padding-left: 2em;
+        width: 100%;
+        .about-lg {
+          max-width: 30rem;
+          }
+        }
       }
     }
 
@@ -72,3 +90,8 @@
     background-color: #ebebeb;
     text-decoration: none;
     }
+
+/* === media querys === */
+
+/* === lg breakpoint === */
+/* About us Container */

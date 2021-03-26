@@ -10,42 +10,79 @@
   background-color: #fff;
   box-shadow: inset 0 35px 35px -35px rgba(0,0,0,.125);
   padding-top: 10px;
+  @include mq('md'){
+      display: flex;
+      flex-direction: row !important;
+      flex-wrap: wrap !important;
+      width: 100% !important;
+  }
+  @include mq('lg') {
+  padding-left: 0 !important;
+  }
+
 
   .card {
       margin: 2rem 4% 2rem 2%;
       width: 100% ;
 
       h5 {
-        font-size: 17px !important;
-        margin: 1.2em 0em 1.3em 0.8em;
-        font-weight: 600 !important;
+          font-size: 17px !important;
+          margin: 1.2em 0em 1.3em 0.8em;
+          font-weight: 600 !important;
         }
       p {
-        font-size: 13px;
-        margin: 0 0 1.9em 0.9em;
+          font-size: 13px;
+          margin: 0 0 1.9em 0.9em;
         }
       .crd-ttl-purp {
-        color: map-get($theme-colors, 'design') !important;
-        font-weight: 600;
+          color: map-get($theme-colors, 'design') !important;
+          font-weight: 600;
       }
       .crd-ttl-blue {
-        color: map-get($more-colors, 'cardblue') !important;
-        font-weight: 600;
+          color: map-get($more-colors, 'cardblue') !important;
+          font-weight: 600;
         }
+      @include mq('sm'){
+           width: 43% !important;
+        }
+      @include mq('md'){
+      width: 44% !important;
       }
-  #card-inner {
+    }
+.c3 {
+      @include mq('sm'){
+        display: none;
+      }
+      @include mq('md'){
+        display: none;
+      }
+    }
+#card-inner {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
-  }
+    @include mq('lg') {
+    justify-content: flex-start !important;
+    width: 100% !important;
 
-  .image-hover-zoom {
+    margin: 0 !important;
+    padding-left: 0!important;
+    .c3 {
+      display: flex;
+    }
+    .card {
+      width: 27.2% !important;
+      }
+    }
+}
+
+.image-hover-zoom {
     overflow: hidden;
 
-    .mini-link {
+.mini-link {
       position: absolute;
       text-align: center;
       width: 67px;
@@ -61,18 +98,18 @@
       border-radius: 1px;
         }
 
-    .card-img-top {
-        transition: transform 0.5s ease;
-        transform: scale(1);
-        z-index: 1;
-      }
-    .card-img-top:hover{
-        transition: transform 0.5s ease;
-        transform: scale(1.2);
-        opacity: 0.5;
-        ursor: pointer;
-           }
-  }
+.card-img-top {
+      transition: transform 0.5s ease;
+      transform: scale(1);
+      z-index: 1;
+    }
+.card-img-top:hover{
+      transition: transform 0.5s ease;
+      transform: scale(1.2);
+      opacity: 0.5;
+      cursor: pointer;
+       }
+}
 
 
 
