@@ -1,15 +1,14 @@
 @mixin content-boxes {
-    width: 95%;
     display: flex;
     display: -ms-flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-wrap: wrap;
     align-items: center;
-    border: 2px solid lightgrey;
+    border: 1px solid lightgrey;
     border-radius: 3px;
-    margin: 15px 20px 10px 20px;
-  }
+          }
 
 @mixin nav($map) {
   @each $theme, $color in $map {

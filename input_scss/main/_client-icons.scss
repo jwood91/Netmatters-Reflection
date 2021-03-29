@@ -16,17 +16,16 @@
 #client-icons {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 100%;
-    #ci-3 {
-        justify-content: center;
-    }
+
 
     .ci {
           display: flex;
-          width: auto;          justify-content: space-between;
+          width: auto;
+          justify-content: center;
           transform: scale(0.7);
 
           .partner-color {
@@ -35,12 +34,13 @@
           .description {
                 display: none;
                 }
-          @include mq('sm') {
-            margin-right: -2em;
-          }
-          @include mq('md') {
-              transform: scale(0.9);
+            @include mq('sm') {
+              transform: scale(0.7);
                 margin: 0 -1em 0 -1em;
+            }
+            @include mq('md') {
+              transform: scale(0.9);
+                margin: 0 0em 0 0em;
             }
           }
 
@@ -57,78 +57,91 @@
             }
 
 
-    .description {
-        display: none;
-        position: absolute;
-        justify-content: center;
-        align-self: center;
-        background-color: map-get($more-colors, 'darkgrey');
-        bottom: 210%;
-        width: 300px;
-        height: auto;
-        min-width: 260px;
-        max-width: 260px;
-        padding: 15px;
-        .arrow-box {
-              position: absolute;
-              bottom: -10%;
-              left: 33.2%;
-              width: 100px;
-              height: 100px;
-              transform: rotate(45deg);
-              background-color: map-get($more-colors, 'darkgrey');
-              color: white;
-              z-index: -1;
+
+    @include mq('sm'){
+          justify-content: flex-start;
+          width: 100%;
+        }
+    @include mq('md') {
+        justify-content: space-between;
+        width: 100%;
+        height: 10em;
+        .description {
+            width: 300px;
+            max-width: 600px;
+            height: auto;
+            font-size: 22px;
+            bottom: 175%;
+                    }
                 }
 
-        .box{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            z-index: 99;
-            color: white;
-            width: 100%;
-            h3 {
-                font-size: 20px;
-              }
-            p {
-                font-size: 15px;
-              }
-            #client-line {
-              font-size: 25px;
-              transform: scale(1.5);
-              margin-bottom: -0.5em;
-              }
+
+      @include mq('lg') {
+            .description {
+            bottom: 175%;
+            }
           }
-
-          @include mq('xs') {
-              display: none;
-              }
             }
-          @include mq('sm'){
-                justify-content: flex-start;
-                width: 100%;
+
+
+.client-align {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  .description {
+      display: none;
+      position: absolute;
+      left:50%;
+      transform: translate(-50%, -0%);
+      justify-content: center;
+      background-color: map-get($more-colors, 'darkgrey');
+
+      width: 300px;
+      height: auto;
+      min-width: 260px;
+      max-width: 260px;
+      padding: 15px;
+      .arrow-box {
+            position: absolute;
+            bottom: -10%;
+            left: 33.5%;
+            width: 100px;
+            height: 100px;
+            transform: rotate(45deg);
+            background-color: map-get($more-colors, 'darkgrey');
+            color: white;
+            z-index: -1;
               }
-          @include mq('md') {
-              justify-content: space-between;
-              width: 100%;
-              padding:0 3em 0 3em;
-              height: 10em;
-              .description {
-                  width: 300px;
-                  max-width: 600px;
-                  height: auto;
-                  font-size: 22px;
-                  bottom: 175%;
-                          }
-                      }
 
-
-            @include mq('lg') {
-                  .description {
-                  bottom: 175%;
-                  }
-                }
+      .box{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          z-index: 99;
+          color: white;
+          width: 100%;
+          h3 {
+              font-size: 20px;
             }
+          p {
+              font-size: 15px;
+            }
+          .client-line {
+            font-size: 35px;
+            transform: scale(1.5);
+            margin-bottom: -0.5em;
+            }
+        }
+        @include mq('sm') {
+          bottom: 211%;
+        }
+        @include mq('xs') {
+            display: none;
+            }
+
+          }
+}

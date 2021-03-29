@@ -15,7 +15,7 @@
       background-color: #dddddd;
       color: inherit;
       width: 100%;
-      padding: 20px;
+
       h2{
           font-size: 35px;
           font-weight: 400;
@@ -25,6 +25,9 @@
         display: flex;
         flex-direction: column;
         width: 100%;
+        border-radius: solid 1.1px #e5e5e5;
+        border-color: #ccc;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
         @include mq('md'){
             display: flex;
             flex-direction: row;
@@ -34,6 +37,13 @@
               width: 48%;
             }
         }
+        textarea:focus, input:focus{
+            outline: none;
+            box-shadow: inset rgba(0,0,0, 0.075) 0px 1px 1px 0px, rgba(91, 192, 222, 0.6) 0px 0px 8px 0px;
+            border: 1.1px solid rgba(91, 192, 222, 0.7);
+            transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+          }
       }
 
       .form-input{

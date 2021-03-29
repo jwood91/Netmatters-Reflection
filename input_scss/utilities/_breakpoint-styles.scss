@@ -1,12 +1,12 @@
 /* ========== XS Breakpoint =========== */
-#top-row, #image-inner, #content-inner, #about-text-container, #card-inner, #client-icons, #form-container, #footer-container, #partner-top-row, #partner-bottom-row, #latest-inner{
+#top-row, #image-inner, #content-inner, #about-text-container, #card-inner, #client-icons, #form-container, #footer-container, #partner-top-row, #partner-bottom-row, #latest-inner, .menu-list{
   @include mq('xs') {
-  max-width: 740px !important;
-  min-width: 492px !important;
-}
+  max-width: 700px !important;
+  min-width: 320px !important;
+  }
 }
 /* ============ SM Breakpoint =========== */
-#top-row, #image-inner, #content-inner, #about-text-container, #card-inner, #client-icons, #form-container, #footer-container, #partner-top-row, #partner-bottom-row, #latest-inner{
+#top-row, #image-inner, #content-inner, #about-text-container, #card-inner, #client-icons, #form-container, #footer-container, #partner-top-row, #partner-bottom-row, #latest-inner, .menu-list{
   @include mq('sm') {
   max-width: 768px !important;
 }
@@ -14,17 +14,20 @@
 
 /* ============ md breakpoint styles ========== */
 
-#top-row, #image-inner, #content-inner, #about-text-container, #card-inner, #client-icons, #form-container, #footer-container, #partner-top-row, #partner-bottom-row, #latest-inner, #nav-main{
+#top-row, #image-inner, #content-inner, #about-text-container, #card-inner, #client-icons, #form-container, #footer-container, #partner-top-row, #partner-bottom-row, #latest-inner, #nav-main, .menu-list{
   @include mq('md') {
-  max-width: 980px !important;
+  max-width: 920px !important;
+  min-width: 920px !important;
 }
 }
 
 /* ============ LG Breakpoint ===========*/
 
 
-#top-row, #image-inner, #content-inner, #about-text-container, #card-inner, #client-icons, #form-container, #footer-container, #partner-top-row, #partner-bottom-row, #latest-inner, #nav-main{
+#top-row, #image-inner, #content-inner, #about-text-container, #card-inner, #client-icons, #form-container, #footer-container, #partner-top-row, #partner-bottom-row, #latest-inner, #nav-main, .menu-list{
   @include mq('lg') {
   max-width: 1200px !important;
+  min-width: 1200px !important;
+
 }
 }

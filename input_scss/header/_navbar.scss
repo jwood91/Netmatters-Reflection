@@ -25,9 +25,11 @@
     flex-direction: row;
     justify-content:center;
     align-items: center;
-    width: 90%;
+    width: 100%;
     height: 100%;
     max-width: 1260px;
+    border-left: 1px solid hsla(0,0%,100%,.1);
+    border-right: 1px solid rgba(0,0,0,.25);
     .nav-item {
       display: flex;
       flex-direction: column;
@@ -85,12 +87,12 @@
 
 
   z-index: 99;
-  ul {
+  .menu-list {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: row;
     align-items: center;
-    max-width: 1200px;
+    width: 100%;
     li {
     display: flex;
     flex-direction: row;
@@ -98,7 +100,7 @@
     align-items: center;
     border-left: none;
     border-right: none;
-    width: auto;
+
     flex: 0 0 auto;
 
     a {
@@ -111,9 +113,11 @@
       font-weight: 500 !important;
       flex-wrap: nowrap;
       width: auto;
+      text-decoration: none;
 
       span {
         text-align: left;
+
 
 
       }

@@ -3,7 +3,7 @@
 
 #foot-top {
    display: flex;
-   flex-direction: column;
+   flex-direction: row;
    justify-content: center;
    background-color: map-get($more-colors, 'darkgrey');
    color: white;
@@ -14,10 +14,10 @@
    #footer-container {
      display: flex;
      flex-direction: column;
-     justify-content: center;
+     justify-content: space-between;
      width: 100%;
      height: 100%;
-     padding: 3em 0 0 2em;
+     padding-top: 30px;
 
    .footer-item {
      width: 100%;
@@ -58,15 +58,13 @@
          @include mq('xs') {
              align-items: flex-start;
              height: 100%;
-             padding: 0px;
-             margin-top: -3em;
+                          
             }
          @include mq('sm'){
              flex-direction: row;
-             justify-content: center;
+             justify-content: space-between;
              flex-direction: row;
              flex-wrap: wrap;
-             justify-content: center;
              width: 100%;
              .footer-item {
                @include mq('sm')

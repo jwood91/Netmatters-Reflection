@@ -8,31 +8,32 @@
   justify-content: center;
   align-items: center;
   background-color: #fff;
+  width: 100%;
   box-shadow: inset 0 35px 35px -35px rgba(0,0,0,.125);
   padding-top: 10px;
   @include mq('md'){
       display: flex;
-      flex-direction: row !important;
-      flex-wrap: wrap !important;
-      width: 100% !important;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100% ;
   }
-  @include mq('lg') {
-  padding-left: 0 !important;
-  }
+
 
 
   .card {
-      margin: 2rem 4% 2rem 2%;
-      width: 100% ;
+      margin: 1em 0 1em 0;
+      width: 100% !important;
+      height: 40em;
+
 
       h5 {
-          font-size: 17px !important;
-          margin: 1.2em 0em 1.3em 0.8em;
+          font-size: 17px;
+          margin: 1.2em 0em 0.5em 0.8em;
           font-weight: 600 !important;
         }
       p {
           font-size: 13px;
-          margin: 0 0 1.9em 0.9em;
+          margin: 0 0 1.9em 0;
         }
       .crd-ttl-purp {
           color: map-get($theme-colors, 'design') !important;
@@ -43,10 +44,10 @@
           font-weight: 600;
         }
       @include mq('sm'){
-           width: 43% !important;
+           width: 47% !important;
         }
       @include mq('md'){
-      width: 44% !important;
+      width: 48% !important;
       }
     }
 .c3 {
@@ -60,21 +61,21 @@
 #card-inner {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
+    @include mq('xs') {
+      width: 96%;
+    }
     @include mq('lg') {
-    justify-content: flex-start !important;
-    width: 100% !important;
+    width: 100%;
 
-    margin: 0 !important;
-    padding-left: 0!important;
     .c3 {
       display: flex;
     }
     .card {
-      width: 27.2% !important;
+      width: 31% !important;
       }
     }
 }
