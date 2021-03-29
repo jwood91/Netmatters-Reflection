@@ -579,7 +579,7 @@ header {
   text-transform: uppercase;
 }
 
-#nav-main #nav-items li {
+#nav-main #nav-items .nav-item {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -590,7 +590,7 @@ header {
   border-left: 1px solid rgba(0, 0, 0, 0.25);
 }
 
-#nav-main #nav-items li a {
+#nav-main #nav-items .nav-item .nav-link {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -605,11 +605,11 @@ header {
   line-height: 1;
 }
 
-#nav-main #nav-items li a small {
+#nav-main #nav-items .nav-item .nav-link small {
   font-size: 10px;
 }
 
-#nav-main #nav-items li a i {
+#nav-main #nav-items .nav-item .nav-link i {
   font-size: 20px;
 }
 
@@ -639,41 +639,41 @@ header {
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  width: 80%;
+  width: auto;
   max-width: 1200px;
 }
 
-.nav-menu li {
+.nav-menu ul li {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  border-left: none !important;
-  border-right: none !important;
+  align-items: center;
+  border-left: none;
+  border-right: none;
+  width: auto;
+  flex: 0 0 auto;
 }
 
-.nav-menu li a {
+.nav-menu ul li a {
   display: flex;
-  flex-direction: row !important;
-  justify-content: flex-start !important;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
   flex-wrap: nowrap;
   font-size: 13px !important;
   font-weight: 500 !important;
   flex-wrap: nowrap;
+  width: auto;
 }
 
-.nav-menu li a span {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  white-space: nowrap;
+.nav-menu ul li a span {
   text-align: left;
 }
 
 .nav-menu li:not(:last-child) a::after {
-  display: flex;
   content: '-';
   font-size: 17px;
-  margin-left: 20px;
+  margin-left: 30px;
   padding-right: 30px;
   background-color: none;
 }
@@ -786,13 +786,19 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 90vh;
   margin: 0;
   background: linear-gradient(to right, black, rgba(0, 0, 0, 0.45) 100%, transparent 25%), url("../images/cyber.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   color: white;
+}
+
+@media (min-width: 992px) {
+  #image-slider-container {
+    height: 80vh;
+  }
 }
 
 #image-slider-container #image-inner {
