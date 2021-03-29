@@ -940,6 +940,7 @@ header {
   justify-content: center;
   align-items: center;
   height: 7em;
+  width: 100%;
   background-color: #fff;
 }
 
@@ -960,6 +961,12 @@ header {
   text-transform: uppercase;
   font-size: 25px;
   font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  #latest-inner {
+    margin-left: 0.8em;
+  }
 }
 
 /* ============ NEWS CARDS LINKED WITH BOOTSTRAP ============= */
