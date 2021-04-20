@@ -71,24 +71,71 @@
               text-align: center;
               color: #fff;
               height: 3.5rem;
-              font-size: 13px;
-              text-transform: uppercase;
-              font-weight: 500;
+
               width: 100%;
               cursor: pointer;
               border-radius: 3px;
               background-color: map-get($more-colors, 'darkgrey');
-              .fa-bars {
-                text-align: center;
-                font-size: 35px;
-                width: 1.85em;
-                height: 0.9em;
-                }
+              .hamburger-box {
+                margin-bottom: -0.4em;
+                display: flex;
+                width: 55px;
+                height: 35px;
+                justify-content: center;
+                align-self: center;
+
+                .hb-span {
+                    display: block;
+                    position: absolute;
+                    align-self: center;
+                    background-color: white;
+                    width: 32px;
+                    height: 3px;
+                    line-height: 1.4px;
+
+                  }
+
+                .hb-span:before{
+                    content: " ";
+                    display: block;
+                    position: absolute;
+                    background-color: white;
+                    width: 32px;
+                    height: 3px;
+                    line-height: 1.4px;
+                    top: -8px;
+                            }
+                .hb-span:after{
+                  content: " ";
+                  display: block;
+                  position: absolute;
+                  background-color: white;
+                  width: 32px;
+                  height: 3px;
+                  line-height: 1.4px;
+                  bottom: -8px;
+                  }
+
               }
+
             .hamburger:hover {
               background-color: #22242e;
               }
+              @include mq('sm'){
+                width: 4.5rem;
+              }
             }
+            .menu-span {
+              display: flex;
+              position: absolute;
+              top: 35px;
+              font-size: 13px;
+              text-transform: uppercase;
+              font-weight: 500;
+              color: black;
+            }
+
+          }
 
 
 
@@ -96,13 +143,13 @@
           display: none;
           justify-content: center;
           align-items: center;
-          width: 7.5em;
+          width: 7.2em;
           height: 3em;
           background-color: red;
           border-radius: 3px;
           text-transform: uppercase;
           letter-spacing: 0.1px;
-          font-size: 19px;
+          font-size: 18px;
           font-weight: 500;
           color: white;
           padding-right: 3px;
@@ -115,7 +162,7 @@
             height: 100%;
           }
           i {
-            margin: 0.7em 0.1em 0 0;
+            margin: 0.6em 0.1em 0 0;
             }
           }
         #support-link {
@@ -273,7 +320,7 @@
      justify-content: space-between;
      align-items: center;
      order: 3;
-     width: 40%;
+     width: 43%;
 
      #search-sm {
          display: flex;
@@ -304,7 +351,8 @@
            background-color: map-get($more-colors, 'searchgrey');
            height: 3.4em;
            width: 55px;
-           border: none;
+           border-left: none;
+           border-radius: 0 3px 3px 0;
            outline: none;
            border-image: none;
            border-style: none;
@@ -368,21 +416,25 @@
 #menu-phone {
   @include mq('lg') {
     display: flex;
-    width: 60% !important;
+    width: 58% !important;
     .header-btn  {
-          margin: 1em;
+          margin: 0.2em;
         }
     #search-sm{
         input{ display: flex; }
           }
     #search-sm {
-        width: 16em !important;
-        margin-right: 2.3em;
-        margin-left: 0.7em;
+        width: 18em !important;
+        margin-right: 0.5em;
+        margin-left: 0.3em;
         input{
             display: flex;
-            width: 13em !important;
+            width: 15em !important;
           }
+        button{
+          border-radius: 0px 3px 3px 0px;
+
+        }
         }
       }
     }

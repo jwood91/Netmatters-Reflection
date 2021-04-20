@@ -48,16 +48,14 @@
         margin: 0 0.5em 1.5em 0;
         color: white;
       }
-    #about-text-container {
-      @include mq('lg') {
-        padding-left: 2em;
-        width: 100%;
+    @include mq('lg') {
+
+        width: 90%;
         .about-lg {
-          max-width: 30rem;
+          max-width: 50%;
           }
         }
       }
-    }
 
 #abt-btn-container {
     display: flex;
@@ -90,8 +88,3 @@
     background-color: #ebebeb;
     text-decoration: none;
     }
-
-/* === media querys === */
-
-/* === lg breakpoint === */
-/* About us Container */
