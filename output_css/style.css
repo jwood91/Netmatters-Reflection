@@ -184,8 +184,6 @@ header {
 }
 
 #page-head #menu-phone #menu-button-container .hamburger .hamburger-box .hb-span {
-  display: block;
-  position: absolute;
   align-self: center;
   background-color: white;
   width: 32px;
@@ -196,7 +194,7 @@ header {
 #page-head #menu-phone #menu-button-container .hamburger .hamburger-box .hb-span:before {
   content: " ";
   display: block;
-  position: absolute;
+  position: relative;
   background-color: white;
   width: 32px;
   height: 3px;
@@ -207,12 +205,12 @@ header {
 #page-head #menu-phone #menu-button-container .hamburger .hamburger-box .hb-span:after {
   content: " ";
   display: block;
-  position: absolute;
+  position: relative;
   background-color: white;
   width: 32px;
-  height: 3px;
+  height: 2.5px;
   line-height: 1.4px;
-  bottom: -8px;
+  bottom: -5px;
 }
 
 #page-head #menu-phone #menu-button-container .hamburger .hamburger:hover {
