@@ -17,7 +17,7 @@
 
 #top-row, #image-inner, #content-inner, #about-text-container, #card-inner, #client-icons, #form-container, #footer-container, #partner-top-row, #partner-bottom-row, #latest-inner, #nav-main, .menu-list{
   @include mq('md') {
-  max-width: 900px !important;
+  max-width: 940px !important;
 
 }
 }

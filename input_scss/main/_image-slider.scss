@@ -25,9 +25,17 @@
         height: 100%;
         width: 100%;
         @include mq('md') {
-            flex-direction: column;
+            min-width: 940px;
+            justify-content: center;
+            align-items: flex-start;
                         }
             }
+        @include mq('lg') {
+            min-width: 1000px;
+            flex-direction: column;
+
+                        }
+
      h1 {
         margin: 0 0 0.5em 0;
         font-size: 48px;
@@ -66,7 +74,7 @@
 
 @include mq('md') {
       #image-inner {
-        width: 80%;
+        width: 100%;
         }
        p {
         text-align: left;

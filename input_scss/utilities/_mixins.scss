@@ -1,13 +1,15 @@
 @mixin content-boxes {
     display: flex;
     display: -ms-flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: space-between;
     flex-wrap: wrap;
-    align-items: center;
     border: 1px solid lightgrey;
     border-radius: 3px;
+    
+
+
           }
 
 @mixin nav($map) {

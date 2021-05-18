@@ -3,14 +3,14 @@
 
 .content-boxes-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.03);
-    padding: 20px 15px 20px 15px;
+
 
     a {
       display: flex;
@@ -23,112 +23,116 @@
     }
     @include mq('md'){
       flex-direction: row;
-      justify-content: center;
-              }
+                    }
+
+
 }
 
 #content-inner {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  margin: 2.5rem  0 1rem 1.5rem;
+  @include mq('sm') {
+    margin: 2.5rem 0 1rem 0;
+  }
+
+
+
     .top-3-box {
-      font-size: 18px;
-      margin: 10px 0 10px 0;
+        font-size: 18px;
 
-      @include mq('sm') {
-      height: 15em;
-      padding: 0 10px 0 10px;
+        @include mq('sm') {
+        height: 15em;
 
-      }
-      @include mq('md'){
-          width: 32%;
-          height: 20em;
-          padding: 30px 5px 0 5px;
+              }
+        @include mq('md'){
+            width: 30.5%;
+            height: 20em;
 
-                            }
-      @include mq('lg') {
-          flex-direction: column;
-          justify-content: flex-start;
-          width: 32%;
-          height: 15em;
-          padding: 20px 10px 0 10px;
-          margin: 4px 0 23px 0!important;
-          .icn {
 
-                }
-          p {
-              margin-bottom: 0.5em;
-              text-align: left;
-            }
+                              }
+        @include mq('lg') {
+            flex-direction: column;
+            justify-content: flex-start;
+            width: 31.1%;
+            height: 15em;
 
-          }
-        }
-    .bottom-4-box {
-      font-size: 18px;
-      margin: 10px 0 10px 0;
-      @include mq('sm') {
-          max-width: 49%;
-          min-height: 12em;
-          margin-top: 10px;
-          padding: 10px 10px 0 10px;
-                    }
-      @include mq('md'){
-          max-width: 49%;
-          min-height: 17em;
-          justify-content: center;
 
-          padding: 20px 10px 0 10px;
+            .icn {
 
                   }
-      @include mq('lg'){
-          justify-content: flex-start;
-          width: 23.5%;
-          max-height: 18.2em;
-          min-height: 18.2em;
+            p {
 
+                text-align: left;
+              }
 
-          h3 {
-            width: 100%;
-            padding: 0px;
-          }
-          p {
-            width: 100%;
             }
           }
-        }
-      }
+      .bottom-4-box {
+        font-size: 18px;
+
+        @include mq('sm') {
+            max-width: 46.2%;
+            min-height: 17em;
+                        }
+        @include mq('md'){
+            max-width: 47.2%;
+            min-height: 17em;
+
+                    }
+        @include mq('lg'){
+            width: 22.8%;
+            max-height: 18.2em;
+            min-height: 16em;
 
 
+            h3 {
+              width: 100%;
+
+            }
+            p {
+              width: 100%;
+              }
+            }
+          }
+
+
+
+
+
+}
 
 .content-box {
     @include content-boxes
     @include themes($theme-colors);
     color: map-get($more-colors, 'darkgrey');
-    height: 100%;
+    height: auto;
     width: 100%;
+    padding: 15px 0 15px 0;
+    margin: 0 1.5rem 1.5rem 0rem;
     .content-tag {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
       align-items: center;
       width: 100%;
-      min-height: 17em;
+      height: 100%;
+
 
     }
     h2 {
-        margin: 0.5em 1.5em 0.27em 1.5em;
-        padding: 5px;
+
         font-size: 17px;
         text-align: center;
         font-weight: 400;
        }
     .p {
-        margin: 0em 0.5em 1.3em 0.5em;
-        padding: 15px 0 15px 0;
+
         font-size: 13px;
         text-align: center;
 
@@ -142,19 +146,17 @@
         width: 60px;
         height: 60px;
         border-radius: 50%;
+        i {
+            margin-right: -1.8px;
+            font-size: 23px;
+          }
+        }
 
-
-
-    i {
-        margin-right: -1.5px;
-        font-size: 23px;
-      }
-    }
     @include mq('xs'){
-        min-height: 315px;
+      min-height: 15em;
     }
     @include mq('sm'){
-        min-height: 320px;
+
     }
   }
     .telephone {
@@ -176,7 +178,6 @@
     justify-content: center;
     width: 132px;
     height: 47px;
-    margin: -1em 0 -1em 0;
     border: none;
     border-radius: 3px;
     .read-span {
