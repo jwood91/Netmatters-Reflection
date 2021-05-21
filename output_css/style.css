@@ -884,67 +884,126 @@ header {
 }
 
 /* ========= IMAGE SLIDER ========= */
-#image-slider-container {
+/* Slider */
+.slick-slider {
   display: flex;
-  flex-direction: column;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  height: 90vh;
-  margin: 0;
-  background: linear-gradient(to right, black, rgba(0, 0, 0, 0.45) 100%, transparent 25%), url("../images/cyber.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  color: white;
+  height: 80vh;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
 }
 
-@media (min-width: 992px) {
-  #image-slider-container {
-    height: 80vh;
-  }
-}
-
-#image-slider-container #image-inner {
+.slick-list {
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-@media (min-width: 992px) {
-  #image-slider-container #image-inner {
-    min-width: 940px;
-    justify-content: center;
-    align-items: flex-start;
-  }
+.slick-list:focus {
+  outline: none;
 }
 
-@media (min-width: 1260px) {
-  #image-slider-container {
-    min-width: 1000px;
-    flex-direction: column;
-  }
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
 }
 
-#image-slider-container h1 {
-  margin: 0 0 0.5em 0;
-  font-size: 48px;
-  font-weight: 500;
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+
+.slick-track:after {
+  clear: both;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  min-height: 1px;
+}
+
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: flex;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+  display: flex;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.image-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 50%;
+  color: white;
   text-align: center;
 }
 
-#image-slider-container p {
-  text-align: center;
-  font-size: 19.7px;
-  font-weight: 500;
-  width: 90%;
-  max-width: 450px;
-  line-height: 40px;
+.image-inner h1 {
+  font-size: 95px;
 }
 
-#image-slider-container a {
+.image-inner a {
   margin-top: 0.9em;
   padding-top: 0.84em;
   text-align: center;
@@ -960,50 +1019,93 @@ header {
   border-style: none;
 }
 
-#image-slider-container a .icon-arrow-right2 {
+.image-inner a .icon-arrow-right2 {
   font-size-adjust: auto;
+  text-decoration: none;
   margin-left: 7px;
   min-height: 5px;
   min-width: 5px;
 }
 
-@media (min-width: 992px) {
-  #image-slider-container #image-inner {
-    width: 100%;
-  }
-  #image-slider-container p {
-    text-align: left;
-    align-self: flex-start;
-    font-size: 14;
-  }
-  #image-slider-container h1 {
-    text-align: left;
-    align-self: flex-start;
-  }
-  #image-slider-container a {
-    align-self: flex-start;
-  }
+#slick-slide00 {
+  background: linear-gradient(to right, black, rgba(0, 0, 0, 0.45) 20%, transparent 85%), url("../images/webdev.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-@media (min-width: 1260px) {
-  #image-slider-container #image-slider-container {
-    justify-content: center;
-    flex-direction: row;
-    padding: 0%;
-  }
-  #image-slider-container #image-slider-container #image-inner {
-    justify-content: center;
-    align-items: center;
-    max-width: 75rem;
-    width: 98%;
-    padding-left: 2em;
-    margin: auto;
-  }
+#slick-slide01 {
+  background: linear-gradient(to right, black, rgba(0, 0, 0, 0.45) 20%, transparent 85%), url("../images/itsupport.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-#cyber-btn:hover {
-  background-color: #e80a42;
-  text-decoration: none;
+#slick-slide02 {
+  background: linear-gradient(to right, black, rgba(0, 0, 0, 0.45) 30%, transparent 85%), url("../images/telecoms.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#slick-slide03 {
+  background: linear-gradient(to right, black, rgba(0, 0, 0, 0.45) 30%, transparent 85%), url("../images/bespoke.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#slick-slide04 {
+  background: linear-gradient(to right, black, rgba(0, 0, 0, 0.45) 30%, transparent 85%), url("../images/digital.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#slick-slide05 {
+  background: linear-gradient(to right, black, rgba(0, 0, 0, 0.45) 0%, transparent 85%), url("../images/cyber.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+.slick-dots {
+  display: flex;
+  position: absolute;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  width: 10%;
+  bottom: 5%;
+}
+
+.slick-dots button {
+  overflow: hidden;
+  margin-right: 15px;
+  border-radius: 100%;
+  opacity: 0.9;
+  border: none;
+  width: 12px;
+  height: 12px;
+  text-indent: -9999px;
+  background-color: #666666;
+}
+
+.slick-dots button:hover {
+  background-color: #869791;
+}
+
+.slick-active button {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background-color: white;
+  border: 2px solid white;
+  background-clip: content-box;
+  padding: 5px;
+  opacity: 0.9;
+}
+
+.slick-active button:hover {
+  background-color: white;
 }
 
 /* ========= LATEST CONTAINER SECTION HEAD ========= */

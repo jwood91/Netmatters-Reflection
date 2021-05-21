@@ -4,11 +4,13 @@
 
 @import 'main-styles';
 
+
 @import 'header/page-head',
         'header/navbar';
 
 @import 'main/about-us-container',
         'main/image-slider',
+        'main/slick',
         'main/latest-container',
         'main/news-cards',
         'main/sign-up-form',
