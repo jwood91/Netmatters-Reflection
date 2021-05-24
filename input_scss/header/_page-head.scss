@@ -116,16 +116,17 @@
                   bottom: -4.6px;
 
                   }
-
+                }
+                @include mq('sm'){
+                  width: 4.5rem;
+                }
               }
 
             .hamburger:hover {
               background-color: #22242e;
               }
-              @include mq('sm'){
-                width: 4.5rem;
-              }
-            }
+
+
             .menu-span {
               display: flex;
               position: absolute;

@@ -215,14 +215,14 @@ header {
   bottom: -4.6px;
 }
 
-#page-head #menu-phone #menu-button-container .hamburger .hamburger:hover {
-  background-color: #22242e;
-}
-
 @media (min-width: 768px) {
   #page-head #menu-phone #menu-button-container .hamburger {
     width: 4.5rem;
   }
+}
+
+#page-head #menu-phone #menu-button-container .hamburger:hover {
+  background-color: #22242e;
 }
 
 #page-head #menu-phone #menu-button-container .menu-span {
