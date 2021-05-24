@@ -1,6 +1,8 @@
 /* Slider */
 
 .slick-slider {
+    @include slider($theme-colors);
+    @include  slider-alt($theme-colors-alt)
     display: flex;
     position: relative;
     flex-direction: row;
@@ -19,6 +21,7 @@
     -webkit-tap-highlight-color: transparent;
 }
 .slick-list {
+  @include slider($theme-colors);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -69,11 +72,43 @@
         visibility: hidden;
     }
 }
+
+
+#slick-slide00 {
+  background: linear-gradient(to right, rgb(0,0,0), rgba(0,0,0,.45) 100%, transparent 85%),
+   url("../images/webdev.jpg");   }
+
+#slick-slide01 {
+  background: linear-gradient(to right, rgb(0,0,0), rgba(0,0,0,.45) 100%, transparent 85%),
+   url("../images/itsupport.jpg");}
+
+#slick-slide02 {
+  background: linear-gradient(to right, rgb(0,0,0), rgba(0,0,0,.45) 100%, transparent 85%),
+   url("../images/telecoms.jpg");}
+
+
+#slick-slide03 {
+  background: linear-gradient(to right, rgb(0,0,0), rgba(0,0,0,.45) 100%, transparent 85%),
+   url("../images/bespoke.jpg");}
+
+#slick-slide04 {
+  background: linear-gradient(to right, rgb(0,0,0), rgba(0,0,0,.45) 100%, transparent 85%),
+   url("../images/digital.jpg");}
+
+#slick-slide05 {
+  background: linear-gradient(to right, rgb(0,0,0), rgba(0,0,0,.45) 100%, transparent 85%),
+   url("../images/cyber.jpg");
+}
+
 .slick-slide {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: row;
   height: 100%;
   width: 100%;
+  padding: 19px;
   align-items: center;
   justify-content: center;
   float: left;
@@ -107,21 +142,27 @@
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  width: 50%;
+  width: 100%;
   color: white;
   text-align: center;
-
   h1{
-    font-size: 95px;
+    font-size: 46px;
+    margin-bottom: 20px;
+    width: 100%;
+    text-transform: uppercase;
+  }
+  p {
+    font-size: 19px;
+    font-weight: 500;
+    padding: 0 5px 0 5px;
   }
   a {
           margin-top: 0.9em;
           padding-top: 0.84em;
+          padding: 0.84em 15px 0 15px;
           text-align: center;
-          background-color: #f62459;
-          border-color: #f62459;
           border-radius: 3px;
-          width: 11em;
+          width: auto;
           height: 3.08em;
           cursor: pointer;
           outline: none;
@@ -131,57 +172,39 @@
           .icon-arrow-right2 {
               font-size-adjust: auto;
               text-decoration: none;
-              margin-left: 7px;
+              text-align: center;
+              margin-left: 2px;
               min-height: 5px;
               min-width: 5px;
                   }
         }
 
+    @include mq('sm') {
+      width: 80%;
+    }
+    @include mq('md') {
+          min-width: 940px;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          h1 {
+            width: 60%;
+            text-align: left;
+          }
+          p {
+            width: 50%;
+            text-align: left;
+          }
+                      }
+
+    @include mq('lg') {
+      min-width: 1000px;
+
+}
 }
 
 
 
-#slick-slide00 {
-  background: linear-gradient(to right, rgb(0,0,0), rgba(0,0,0,.45) 20%, transparent 85%),
-   url("../images/webdev.jpg");
-   background-repeat: no-repeat;
-   background-size: cover;
-}
-
-#slick-slide01 {
-  background: linear-gradient(to right, rgb(0,0,0), rgba(0,0,0,.45) 20%, transparent 85%),
-   url("../images/itsupport.jpg");
-   background-repeat: no-repeat;
-   background-size: cover;
-}
-
-#slick-slide02 {
-  background: linear-gradient(to right, rgb(0,0,0), rgba(0,0,0,.45) 30%, transparent 85%),
-   url("../images/telecoms.jpg");
-   background-repeat: no-repeat;
-   background-size: cover;
-}
-
-#slick-slide03 {
-  background: linear-gradient(to right, rgb(0,0,0), rgba(0,0,0,.45) 30%, transparent 85%),
-   url("../images/bespoke.jpg");
-   background-repeat: no-repeat;
-   background-size: cover;
-}
-
-#slick-slide04 {
-  background: linear-gradient(to right, rgb(0,0,0), rgba(0,0,0,.45) 30%, transparent 85%),
-   url("../images/digital.jpg");
-   background-repeat: no-repeat;
-   background-size: cover;
-}
-
-#slick-slide05 {
-  background: linear-gradient(to right, rgb(0,0,0), rgba(0,0,0,.45) 0%, transparent 85%),
-   url("../images/cyber.jpg");
-   background-repeat: no-repeat;
-   background-size: cover;
-}
 
 .slick-arrow.slick-hidden {
     display: none;
@@ -225,8 +248,5 @@
     }
     button:hover {
       background-color: white;
-
-
      }
-
-}
+ }

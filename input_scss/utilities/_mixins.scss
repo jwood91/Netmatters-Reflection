@@ -7,7 +7,7 @@
     flex-wrap: wrap;
     border: 1px solid lightgrey;
     border-radius: 3px;
-    
+
 
 
           }
@@ -128,3 +128,30 @@
         }
     }
   }
+
+@mixin slider($map) {
+  @each $theme, $item in $map {
+    .slide-#{$theme}{
+
+      a {
+        background-color: $item;
+        border-color: $item;
+        color: white;
+        }
+    }
+  }
+}
+
+@mixin slider-alt($map) {
+  @each $theme, $item in $map {
+    .slide-alt-#{$theme}{
+
+      a:hover {
+        background-color: $item;
+        border-color: $item;
+        text-decoration: none;
+
+        }
+    }
+  }
+}
