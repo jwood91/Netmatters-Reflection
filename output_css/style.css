@@ -977,7 +977,6 @@ header {
 }
 
 .slick-list {
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -1166,7 +1165,6 @@ header {
 .image-inner a .icon-arrow-right2 {
   font-size-adjust: auto;
   text-decoration: none;
-  text-align: center;
   margin-left: 2px;
   min-height: 5px;
   min-width: 5px;
@@ -1207,24 +1205,26 @@ header {
 
 .slick-dots {
   display: flex;
-  position: absolute;
+  position: relative;
   flex-direction: row;
   align-items: flex-end;
   justify-content: center;
   width: 10%;
-  bottom: 5%;
+  bottom: 12%;
+  z-index: 999;
 }
 
 .slick-dots button {
-  overflow: hidden;
-  margin-right: 15px;
+  width: 25px;
+  height: 25px;
   border-radius: 100%;
-  opacity: 0.9;
-  border: none;
-  width: 12px;
-  height: 12px;
-  text-indent: -9999px;
   background-color: #666666;
+  border: 2px solid transparent;
+  background-clip: content-box;
+  padding: 6px;
+  opacity: 0.9;
+  margin-right: 10px;
+  text-indent: -9999px;
 }
 
 .slick-dots button:hover {
