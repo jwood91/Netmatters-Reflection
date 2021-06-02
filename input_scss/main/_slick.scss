@@ -4,7 +4,7 @@
     @include slider($theme-colors);
     @include  slider-alt($theme-colors-alt)
     display: flex;
-    position: relative;
+    overflow-y: hidden;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -22,7 +22,6 @@
 }
 .slick-list {
   @include slider($theme-colors);
-
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -51,6 +50,7 @@
 .slick-track {
     position: relative;
     width: 100%;
+    height: 100%;
     left: 0;
     top: 0;
     height: 100%;
@@ -76,36 +76,45 @@
 
 #slick-slide00 {
   background: linear-gradient(to right, rgb(0,0,0), rgba(0,0,0,.45) 100%, transparent 85%),
-   url("../images/webdev.jpg");   }
+   url("../images/webdev.jpg") no-repeat center;
+     background-size: cover;
+ }
 
 #slick-slide01 {
-  background: linear-gradient(to right, rgb(0,0,0), rgba(0,0,0,.45) 100%, transparent 85%),
-   url("../images/itsupport.jpg");}
+  background: linear-gradient(to right, rgb(0,0,0), rgba(0,0,0,.45) 100%, transparent 85%),   url("../images/itsupport.jpg") no-repeat center;
+    background-size: cover;
+}
 
 #slick-slide02 {
   background: linear-gradient(to right, rgb(0,0,0), rgba(0,0,0,.45) 100%, transparent 85%),
-   url("../images/telecoms.jpg");}
+   url("../images/telecoms.jpg") no-repeat center;
+  background-size: cover;
+ }
 
 
 #slick-slide03 {
   background: linear-gradient(to right, rgb(0,0,0), rgba(0,0,0,.45) 100%, transparent 85%),
-   url("../images/bespoke.jpg");}
+   url("../images/bespoke.jpg") no-repeat center;
+   background-size: cover;
+ }
 
 #slick-slide04 {
   background: linear-gradient(to right, rgb(0,0,0), rgba(0,0,0,.45) 100%, transparent 85%),
-   url("../images/digital.jpg");}
+   url("../images/digital.jpg") no-repeat center;
+   background-size: cover;
+ }
 
 #slick-slide05 {
   background: linear-gradient(to right, rgb(0,0,0), rgba(0,0,0,.45) 100%, transparent 85%),
-   url("../images/cyber.jpg");
+   url("../images/cyber.jpg") no-repeat center;
+     background-size: cover;
 }
 
 .slick-slide {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+
   display: flex;
   flex-direction: row;
+  position: relative;
   height: 100%;
   width: 100%;
   padding: 19px;
@@ -203,9 +212,6 @@
 }
 }
 
-
-
-
 .slick-arrow.slick-hidden {
     display: none;
 }
@@ -220,16 +226,17 @@
   bottom: 12%;
   z-index: 999;
   button  {
-    width: 25px;
-    height: 25px;
-    border-radius: 100%;
-    background-color: #666666;
-    border: 2px solid transparent;
-    background-clip: content-box;
-    padding: 6px;
-    opacity: 0.9;
-    margin-right: 10px;
-    text-indent: -9999px;
+      width: 25px;
+      height: 25px;
+      border-radius: 100%;
+      background-color: #666666;
+      border: 2px solid transparent;
+      background-clip: content-box;
+      padding: 6px;
+      opacity: 0.9;
+      margin-right: 10px;
+      text-indent: -9999px;
+    
 
   }
   button:hover {

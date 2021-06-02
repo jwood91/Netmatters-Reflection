@@ -14,7 +14,7 @@
 
 @mixin nav($map) {
   @each $theme, $color in $map {
-    .nav-#{$theme}{
+    .navboth-#{$theme}{
         i { color: $color; }
         }
     .nav-#{$theme}:hover{
