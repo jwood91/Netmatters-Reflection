@@ -20,7 +20,7 @@
       z-index: 99;
       }
     @include mq('sm'){
-    height: 100px;
+
     padding-bottom: 15px;
   }
     @include mq('md') {
@@ -37,8 +37,8 @@
     flex-wrap: wrap;
     align-items: center;
     width: 100%;
-    height: 55%;
-    margin: 0 0.5em -0.5em 0.5em;
+    height: 50%;
+    margin: 0 0.5em 0 0.5em;
     @include mq('xs') {
       width: 100%;
     }
@@ -79,7 +79,6 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-
       width: 4em;
       height: 3.5rem;
       background-color: map-get($more-colors, 'darkgrey');
@@ -99,17 +98,11 @@
        }
 
       @include mq('lg') {
-         width: 57%;
-         .header-btn  {
-               margin: 0.2em;
-             }
 
+         width: 58%;
 
            }
           }
-
-
-
 
 
 
@@ -127,7 +120,6 @@
     font-size: 18px;
     font-weight: 500;
     color: white;
-    padding-right: 3px;
     line-height: 35px;
     text-align: center;
 
@@ -146,12 +138,7 @@
       margin-right: 0.2em;
       text-decoration: none;
       }
-      @include mq('xs') {
-        width: 30%;
-        justify-content: space-between;
-
-        }
-      @include mq('sm') {
+    @include mq('sm') {
             display: none;
             }
       @include mq('md'){
@@ -230,11 +217,11 @@
        }
      }
      @include mq('lg') {
-         width:17em ;
-         margin-left: 0.3em;
+         width:19em ;
+
          input{
              display: flex;
-             width: 13em ;
+             width: 19em ;
            }
          button{
            border-radius: 0px 3px 3px 0px;
