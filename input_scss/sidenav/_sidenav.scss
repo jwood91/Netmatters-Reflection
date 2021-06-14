@@ -23,12 +23,10 @@
   position: relative;
   z-index: 999;
   background-color: #fff;
-  transform: translate(0px);
   transition: 0.5s;
 }
 
 .isOpen  {
-  #mainContent {
     transform: translate(-275px);
     transition: 0.5s;
       @include mq('md') {
@@ -39,7 +37,7 @@
 
 
 
-  }
+
 
 #side-nav-top  {
   display: flex;

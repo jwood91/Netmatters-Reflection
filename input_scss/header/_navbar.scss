@@ -39,7 +39,7 @@
       height: 100%;
       border-right: 1px solid hsla(0,0%,100%,.1);
       border-left: 1px solid rgba(0,0,0,.25);
-      .nav-link {
+      .nav-link-item {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -61,8 +61,6 @@
         i {
           font-size: 22px;
           margin-bottom: 0.3em;
-
-          }
       }
     }
       @include mq('lg') {
@@ -73,11 +71,10 @@
       }
     }
   }
-
+}
 
 
 .nav-menu {
-
   display: none;
   position: absolute;
   flex-direction: row;
@@ -87,7 +84,7 @@
   height: 3em;
   outline: none;
   left: 0%;
-  top:  12.05rem;
+  top: 12.05rem;
 
 
   z-index: 99;
@@ -121,8 +118,6 @@
 
       span {
         text-align: left;
-
-
 
       }
     }

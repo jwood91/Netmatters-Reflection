@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
-     <script src=bootstrap/js/bootstrap.min.js></script>
+    <script src=bootstrap/js/bootstrap.min.js></script>
     <script src="https://kit.fontawesome.com/cd35332ff4.js"
       crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,400;1,500&display=swap" rel="stylesheet">
@@ -19,12 +19,32 @@
   </head>
 
     <body>
-      <div id="sideNavContainer">
-        <div id="mainContent">
+        <div id="overlay" class="overlay" onClick="sideNavHide()"></div>
 
-          <!--HEAD MENU BAR -->
-          <header>
-            <div id="page-head">
+        <div id="consent-popup" class="hidden">
+            <div id="cookie-header" class="cookie-item">
+              <h2>Cookies Policy</h2>
+            </div>
+            <div id="cookie-para" class="cookie-item">
+              <p>
+                We use cookies to obtain aggregate data regarding site traffic and interaction, in order to identify user trends and obtain insights in order to continually improve our site. These cookies enable us to improve your customer experience as you use our site and help provide you with relevant online marketing.<br>
+
+                <br>You can see a list of the other companies who use cookies on this website, by visiting cookie settings at the bottom of each page. For full details of how we use your personal information, and your rights in relation to it, view our privacy policy.
+              </p>
+            </div>
+            <div id="cookie-links-container" class="cookie-item">
+                <a id="cookie-settings" class="cookie-link" href="#">Change Settings</a>
+                <a id="cookie-accept" class="cookie-link" href="#">Accept Cookies</a>
+            </div>
+        </div>
+
+
+
+
+      <div id="scroll">
+
+        <header id="scroll-header" class="nav-up">
+              <div id="page-head">
                 <img src="images/chat-icon.png" alt="chat icon" id="chat-icon">
                 <div id="top-row">
                   <div id="logo-container">
@@ -69,11 +89,11 @@
                 </div>
               </div>
 
-            <div id="navbar" class="nav">
+            <div id="navbar" class="nav sticker">
               <div id="nav-main">
                 <ul id="nav-items">
                   <li class="nav-design navboth-design nav-item nav-left-end">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link-item" href="#">
                       <span><i class="fas fa-code"></i></span>
                       <span><small>Web</small><br>Design</span>
                     </a>
@@ -90,7 +110,7 @@
                   </li>
 
                   <li class="nav-it navboth-it nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link-item" href="#">
                       <span><i class="fas fa-desktop"></i></span>
                       <span><small>IT</small><br>Support</span>
                       </a>
@@ -107,7 +127,7 @@
                   </li>
 
                   <li class="nav-telecoms navboth-telecoms nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link-item" href="#">
                       <span><i class="fas fa-phone-volume telephone"></i></span>
                       <span><small>Telecoms</small><br>Services</span>
                     </a>
@@ -125,7 +145,7 @@
 
 
                   <li class="nav-software navboth-software nav-item">
-                    <a class="nav-link"  href="#">
+                    <a class="nav-link-item"  href="#">
                       <span><i class="fas fa-th"></i></span>
                       <span><small>Bespoke</small><br>Software</span>
                     </a>
@@ -142,7 +162,7 @@
                     </li>
 
                   <li class="nav-marketing navboth-marketing nav-item">
-                    <a class="nav-link"  href="#">
+                    <a class="nav-link-item"  href="#">
                       <span><i class="fas fa-signal"></i></span>
                       <span><small>Digital</small><br>Marketing</span>
                     </a>
@@ -159,7 +179,7 @@
                   </li>
 
                   <li class="nav-security navboth-security nav-item nav-right-end">
-                    <a class="nav-link"  href="#">
+                    <a class="nav-link-item"  href="#">
                       <span><i class="fas fa-shield-alt"></i></span>
                       <span><small>Cyber</small><br>Security</span>
                     </a>
@@ -177,8 +197,11 @@
               </ul>
               </div>
             </div>
-
           </header>
+
+      <div id="sideNavContainer" >
+
+        <div id="mainContent" onClick="sideNavHide()">
 
 
     <!-- IMAGE SLIDER -->
@@ -678,8 +701,10 @@
                       </div>
                     </div>
                   </div>
-          </footer>
+                </footer>
+
       </div>
+
 
       <!-- SIDE NAVIGATION -->
 
@@ -854,23 +879,14 @@
     </div>
 
 
+
+
       <script src="https://code.jquery.com/jquery-1.12.4.min.js"
   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
   crossorigin="anonymous"></script>
       <script type="text/javascript" src="js/slick/slick.min.js"></script>
+      <script type="text/javascript" src="js/sticky/jquery.sticky.js"></script>
       <script src="js/main.js"></script>
-      <script type="text/javascript">
-         $(document).ready(function(){
-           $('.slider').slick({
-             dots : true,
-             arrows :false,
-             rows : 1,
-             slidesToShow : 1,
-             slidesToScroll : 1,
-
-           });
-         });
-       </script>
 
 
     </body>

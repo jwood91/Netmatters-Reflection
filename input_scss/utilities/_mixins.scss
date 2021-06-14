@@ -18,7 +18,7 @@
         i { color: $color; }
         }
     .nav-#{$theme}:hover{
-      .nav-link { background-color: $color; }
+      .nav-link-item { background-color: $color; }
       i {color: white;}
       .nav-menu {
         display: flex;
