@@ -70,7 +70,7 @@ $('#scroll').scroll(function() {
           let st = $('#scroll').scrollTop();
           /*scroll down */
           if (st > lastScrollTop && st > headerHeight) {
-            if ($('#scroll-header').hasClass('nav-up') || $('#scroll-header').hasClass('nav-down-shown')  ) {
+            if ($('#scroll-header').hasClass('nav-up') || $('#scroll-header').hasClass('nav-down-shown')) {
               $('#scroll-header').removeClass('nav-up').removeClass('nav-down-shown').addClass('nav-down')
               console.log("scroll down conditional complete")
             }
