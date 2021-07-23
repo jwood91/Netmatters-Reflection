@@ -38,18 +38,23 @@ window.onload = () => {
         saveToStorage(storageType);
         overlaySeen.classList.remove('show-overlay');
         consentPopup.classList.add('hidden');
+        scroll.classList.remove('scroll-freeze')
+
 
     }
     const consentPopup = document.getElementById('consent-popup');
     const acceptBtn = document.getElementById('cookie-accept');
     const overlaySeen = document.getElementById('overlay');
+    const scroll = document.getElementById('scroll');
     acceptBtn.addEventListener('click', acceptFn);
 
     if (shouldShowPopup(storageType)) {
         setTimeout(() => {
           overlaySeen.classList.add('show-overlay');
           overlaySeen.classList.add('cookie-overlay');
+          scroll.classList.add('scroll-freeze');
           consentPopup.classList.remove('hidden');
+
 
         }, 200);
     }
@@ -106,7 +111,8 @@ $('#scroll').scroll(function() {
       $(`#overlay`).toggleClass('isOpen');
       $(`#scroll-header`).toggleClass('isOpen');
       $(`#mainContent`).toggleClass('isOpen');
-      $(`#hamburger`).toggleClass('is-active');    }
+      $(`#hamburger`).toggleClass('is-active');
+      $(`#scroll`).toggleClass('scroll-freeze')};
 
     function sideNavHide() {
       if ($(`#mainContent`).hasClass('isOpen')) {
@@ -116,5 +122,5 @@ $('#scroll').scroll(function() {
         $(`#scroll-header`).removeClass('isOpen');
         $(`#mainContent`).removeClass('isOpen');
         $(`#hamburger`).removeClass('is-active');
-      }
-    }
+        $(`#scroll`).removeClass('scroll-freeze')};
+      };

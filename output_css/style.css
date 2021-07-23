@@ -216,7 +216,6 @@ body ul {
 }
 
 .overlay {
-  display: block;
   visibility: hidden;
   position: absolute;
   z-index: 9999999999999;
@@ -224,7 +223,7 @@ body ul {
   left: 0;
   width: 100%;
   height: 100%;
-  overflow-y: scroll;
+  overflow-y: hidden;
   overflow-x: hidden;
   background-color: rgba(0, 0, 0, 0.7);
 }
@@ -234,11 +233,19 @@ body ul {
 }
 
 #scroll {
-  height: 100vh;
+  display: block;
   width: 100vw;
-  overflow-y: scroll;
+  overflow-y: hidden;
   overflow-x: hidden;
-  z-index: 99;
+  z-index: 1;
+}
+
+.scroll-full-height {
+  height: 100%;
+}
+
+.scroll-freeze {
+  height: 100vh;
 }
 
 .nav-down {
