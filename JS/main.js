@@ -107,7 +107,7 @@ $('#scroll').scroll(function() {
     /* toggle the side navigation and the hamburger transform on click */
     function toggleNav() {
       $('#overlay').toggleClass('show-overlay');
-      // $('#overlay').toggleClass('overlay-menu');
+      $(`#overlay`).toggleClass('isOpen');
       $(`#hamburger`).toggleClass('is-active');
       $(`#scroll`).toggleClass('scroll-freeze')
       $(`#sideNavContainer`).toggleClass('isOpen')
@@ -115,8 +115,8 @@ $('#scroll').scroll(function() {
 
     function sideNavHide() {
       if ($(`#sideNavContainer`).hasClass('isOpen')) {
-        $(`#overlay`).removeClass('show-overlay')
-        // $(`#overlay`).removeClass('overlay-menu');
+        $(`#overlay`).removeClass('show-overlay');
+        $(`#overlay`).removeClass('isOpen');
         $(`#sideNavContainer`).removeClass('isOpen');
         $(`#hamburger`).removeClass('is-active');
         $(`#scroll`).removeClass('scroll-freeze');

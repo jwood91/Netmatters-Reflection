@@ -269,6 +269,7 @@ body ul {
   height: 100%;
   transition: 0.5s;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 #sideNav {
