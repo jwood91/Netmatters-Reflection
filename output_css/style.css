@@ -904,7 +904,7 @@ body ul {
   }
   #search-sm input {
     display: flex;
-    width: 19em;
+    width: 15.6em;
   }
   #search-sm button {
     border-radius: 0px 3px 3px 0px;
@@ -1876,6 +1876,10 @@ body ul {
 
 .slick-active button:hover {
   background-color: white;
+}
+
+.click-list-dragable {
+  overflow: hidden;
 }
 
 /* ========= LATEST CONTAINER SECTION HEAD ========= */
