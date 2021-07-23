@@ -235,7 +235,8 @@ body ul {
 #scroll {
   height: 100vh;
   width: 100vw;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   z-index: 99;
 }
 
@@ -1518,7 +1519,7 @@ body ul {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  height: 80vh;
+  height: 82vh;
   box-sizing: border-box;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -1664,6 +1665,7 @@ body ul {
   -ms-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
+  overflow: hidden;
 }
 
 .slick-track {
@@ -1730,6 +1732,7 @@ body ul {
   padding: 19px;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   float: left;
   min-height: 1px;
 }
@@ -1876,10 +1879,6 @@ body ul {
 
 .slick-active button:hover {
   background-color: white;
-}
-
-.click-list-dragable {
-  overflow: hidden;
 }
 
 /* ========= LATEST CONTAINER SECTION HEAD ========= */
