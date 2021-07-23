@@ -107,20 +107,19 @@ $('#scroll').scroll(function() {
     /* toggle the side navigation and the hamburger transform on click */
     function toggleNav() {
       $('#overlay').toggleClass('show-overlay');
-      $('#overlay').toggleClass('overlay-menu');
-      $(`#overlay`).toggleClass('isOpen');
-      $(`#scroll-header`).toggleClass('isOpen');
-      $(`#mainContent`).toggleClass('isOpen');
+      // $('#overlay').toggleClass('overlay-menu');
       $(`#hamburger`).toggleClass('is-active');
-      $(`#scroll`).toggleClass('scroll-freeze')};
+      $(`#scroll`).toggleClass('scroll-freeze')
+      $(`#sideNavContainer`).toggleClass('isOpen')
+    };
 
     function sideNavHide() {
-      if ($(`#mainContent`).hasClass('isOpen')) {
+      if ($(`#sideNavContainer`).hasClass('isOpen')) {
         $(`#overlay`).removeClass('show-overlay')
-        $(`#overlay`).removeClass('overlay-menu');
-        $(`#overlay`).removeClass('isOpen');
-        $(`#scroll-header`).removeClass('isOpen');
-        $(`#mainContent`).removeClass('isOpen');
+        // $(`#overlay`).removeClass('overlay-menu');
+        $(`#sideNavContainer`).removeClass('isOpen');
         $(`#hamburger`).removeClass('is-active');
-        $(`#scroll`).removeClass('scroll-freeze')};
+        $(`#scroll`).removeClass('scroll-freeze');
+
+        };
       };
