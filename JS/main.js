@@ -69,36 +69,54 @@ window.onload = () => {
 let headerHeight = $('#scroll-header').outerHeight();
 let lastScrollTop = 0;
 
-$('#scroll').scroll(function() {
+$(document).scroll(function() {
       clearTimeout($.data(this, 'scrollTimer'));
       $.data(this, 'scrollTimer', setTimeout(function() {
-          let st = $('#scroll').scrollTop();
+          let st = $(document).scrollTop();
           /*scroll down */
           if (st > lastScrollTop && st > headerHeight) {
             if ($('#scroll-header').hasClass('nav-up') || $('#scroll-header').hasClass('nav-down-shown')) {
               $('#scroll-header').removeClass('nav-up').removeClass('nav-down-shown').addClass('nav-down')
+              $('#image-slider-container').addClass('nav-top-margin')
               console.log("scroll down conditional complete")
             }
           }
           /* scroll at page top */
-          else if (st == 0 && $(`#scroll-header`).hasClass('nav-down')) {
-            $('#scroll-header').removeClass('nav-down').addClass('nav-up');
-            console.log("scrolled  to top conditional complete")
-            }
+          // else if (st <= 195 && $(`#scroll-header`).hasClass('nav-down') || $(`#scroll-header`).hasClass('nav-down-shown')) {
+          //   $('#scroll-header').removeClass('nav-down').removeClass('nav-down-shown').addClass('nav-up');
+          //   $('#image-slider-container').removeClass('nav-top-margin')
+          //   console.log("scrolled  to top conditional complete")
+          //   }
             else if (st <= headerHeight) {
               /* empty to stop next conditional firing */
 
             } else if (st < lastScrollTop && st > headerHeight) {
               if ($('#scroll-header').hasClass('nav-down')) {
                 $('#scroll-header').removeClass('nav-down').addClass('nav-down-shown')
+
               }
             }
-            console.log("Haven't scrolled in 250ms!");
+            console.log("Haven't scrolled in 100ms!");
             lastScrollTop = st;
-          }, 250));
+          }, 100));
       }
     );
 
+
+$(document).scroll(function() {
+  let st = $(document).scrollTop();
+  if ($('#scroll-header').hasClass('nav-down') && st <= headerHeight) {
+      $('#scroll-header').removeClass('nav-down').removeClass('nav-down-shown').addClass('nav-up');
+      $('#image-slider-container').removeClass('nav-top-margin')
+      console.log('top scrolled hidden nav')
+    }
+  else if ($('#scroll-header').hasClass('nav-down-shown') && st < lastScrollTop && st == 0) {
+    $('#scroll-header').removeClass('nav-down').removeClass('nav-down-shown').addClass('nav-up');
+    $('#image-slider-container').removeClass('nav-top-margin')
+    console.log("TOP SCROLLED SHOWN NAV")
+  }
+
+});
 
 
 

@@ -1,5 +1,4 @@
 /* Slider */
-
 .slick-slider {
     @include slider($theme-colors);
     @include  slider-alt($theme-colors-alt)
