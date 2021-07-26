@@ -91,7 +91,7 @@ body {
   position: relative;
   overflow-y: hidden;
   overflow-x: hidden;
-  z-index: 999999999999999999;
+  z-index: 100000000;
 
 }
 
@@ -109,7 +109,6 @@ body {
 
 .nav-top-margin {
   margin-top: 154.797px;
-
   @include mq('sm') {
     margin-top: 91px;
   }

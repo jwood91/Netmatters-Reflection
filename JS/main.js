@@ -69,10 +69,10 @@ window.onload = () => {
 let headerHeight = $('#scroll-header').outerHeight();
 let lastScrollTop = 0;
 
-$('#sideNavContainer').scroll(function() {
+$(document).scroll(function() {
       clearTimeout($.data(this, 'scrollTimer'));
       $.data(this, 'scrollTimer', setTimeout(function() {
-          let st = $('#sideNavContainer').scrollTop();
+          let st = $(document).scrollTop();
           /*scroll down */
           if (st > lastScrollTop && st > headerHeight) {
             if ($('#scroll-header').hasClass('nav-up') || $('#scroll-header').hasClass('nav-down-shown')) {
@@ -103,8 +103,8 @@ $('#sideNavContainer').scroll(function() {
     );
 
 
-$('#sideNavContainer').scroll(function() {
-  let st = $('#sideNavContainer').scrollTop();
+$(document).scroll(function() {
+  let st = $(document).scrollTop();
   if ($('#scroll-header').hasClass('nav-down') && st <= headerHeight) {
       $('#scroll-header').removeClass('nav-down').removeClass('nav-down-shown').addClass('nav-up');
       $('#image-slider-container').removeClass('nav-top-margin')
