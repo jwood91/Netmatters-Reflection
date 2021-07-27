@@ -287,7 +287,7 @@ body ul {
   position: relative;
   height: 100%;
   transition: 0.5s;
-  overflow-y: scroll;
+  overflow-y: hidden;
   overflow-x: hidden;
 }
 
@@ -1712,6 +1712,7 @@ body ul {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  overflow: hidden;
 }
 
 .slick-track:before, .slick-track:after {
