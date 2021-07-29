@@ -113,6 +113,9 @@
             background-color: map-get($more-colors, 'darkgrey');
             color: white;
             z-index: -1;
+            @include mq('sm') {
+              left: 30.5%;
+            }
               }
 
       .box{

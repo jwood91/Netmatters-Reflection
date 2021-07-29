@@ -287,8 +287,15 @@ body ul {
   position: relative;
   height: 100%;
   transition: 0.5s;
-  overflow-y: hidden;
   overflow-x: hidden;
+}
+
+.scroll-hide {
+  overflow-y: hidden;
+}
+
+.scroll-shown {
+  overflow-y: scroll;
 }
 
 #sideNav {
@@ -2891,6 +2898,12 @@ body ul {
   background-color: #333645;
   color: white;
   z-index: -1;
+}
+
+@media (min-width: 768px) {
+  .client-align .description .arrow-box {
+    left: 30.5%;
+  }
 }
 
 .client-align .description .box {

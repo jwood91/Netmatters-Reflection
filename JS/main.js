@@ -129,6 +129,8 @@ $(document).scroll(function() {
       $(`#hamburger`).toggleClass('is-active');
       $(`#scroll`).toggleClass('scroll-freeze')
       $(`#sideNavContainer`).toggleClass('isOpen')
+      $(`#sideNavContainer`).toggleClass('scroll-shown')
+
     };
 
     function sideNavHide() {
@@ -138,6 +140,7 @@ $(document).scroll(function() {
         $(`#sideNavContainer`).removeClass('isOpen');
         $(`#hamburger`).removeClass('is-active');
         $(`#scroll`).removeClass('scroll-freeze');
+        $(`#sideNavContainer`).removeClass('scroll-shown')
 
         };
       };
