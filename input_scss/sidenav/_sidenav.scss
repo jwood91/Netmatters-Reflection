@@ -5,17 +5,21 @@
   position: relative;
   height: 100%;
   transition: 0.5s;
+  overflow-y: hidden;
   overflow-x: hidden;
 
+
+
+
 }
 
-.scroll-hide {
-  overflow-y: hidden;
-}
-
-.scroll-shown {
-  overflow-y: scroll;
-}
+// .scroll-hide {
+//   overflow-y: hidden;
+// }
+//
+// .scroll-shown {
+//   overflow-y: scroll;
+// }
 
 
 
@@ -31,6 +35,8 @@
   background-color: #333645;
   color: white;
   overflow-x: hidden;
+  overflow-y: scroll;
+  z-index: 0;
   @include mq('md') {
     width: 350px;
   }
@@ -40,7 +46,7 @@
 #mainContent {
   display: block;
   position: relative;
-  z-index: 999;
+
   background-color: #fff;
   transition: 0.5s;
 }
@@ -53,6 +59,7 @@
         transition: 0.5s;
       }
     }
+
 
 
 

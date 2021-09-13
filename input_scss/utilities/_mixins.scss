@@ -81,23 +81,40 @@
 
 
 @mixin form-input {
-  display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   margin: 1rem 0 0 0;
-    input {
-      width: 100%;
-      height: 3.09em;
-      border: 2px solid rgba(0,0,0,.23);
-      padding-left: 15px;
-      font-size: 13.5px;
-        }
-    label{
-      font-size: 16px;
-      font-weight: 600;
-        }
+  input {
+    width: 100%;
+    height: 3.09em;
+    padding-left: 15px;
+    font-size: 13.5px;
+  }
+  label{
+    font-size: 16px;
+    font-weight: 600;
       }
+  .input-area {
+      border: 2px solid rgba(0,0,0,.23);
+            }
 
+  .input-area:focus{
+    outline: none;
+    box-shadow: inset rgba(0,0,0, 0.075) 0px 1px 1px 0px, rgba(91, 192, 222, 0.6) 0px 0px 8px 0px;
+    border: 1.1px solid rgba(91, 192, 222, 0.7);
+    transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  }
+  .input-invalid {
+      border: 0.2px solid #d64541;
+      outline: none;
+      }
+  .input-invalid:focus{
+    outline: none;
+    box-shadow: inset rgba(0,0,0, 0.075) 0px 1px 1px 0px, rgba(91, 192, 222, 0.6) 0px 0px 8px 0px;
+    border: 1.1px solid #d64541;
+    transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  }
+};
 @mixin socials($map) {
   @each $theme, $color in $map {
     &-#{$theme} {
@@ -108,7 +125,7 @@
       }
 
   }
-}
+};
 
 @mixin mq($break) {
   $value: map-get($breakpoints, $break);
@@ -127,7 +144,7 @@
           @content;
         }
     }
-  }
+  };
 
 @mixin slider($map) {
   @each $theme, $item in $map {

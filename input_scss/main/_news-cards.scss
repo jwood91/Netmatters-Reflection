@@ -42,14 +42,7 @@
           font-size: 13px;
 
         }
-      .crd-ttl-purp {
-          color: map-get($theme-colors, 'design') !important;
-          font-weight: 600;
-      }
-      .crd-ttl-blue {
-          color: map-get($more-colors, 'cardblue') !important;
-          font-weight: 600;
-        }
+
       @include mq('sm'){
           height: 34em;
            width: 48% !important;
@@ -126,6 +119,7 @@
 
 
 /* News card buttons */
+}
 
 .btn {
     font-size: 18px;
@@ -157,8 +151,14 @@
     background-color: map-get($more-colors, 'cardbluehover') !important;
 
   }
+.crd-ttl-purp {
+    color: map-get($theme-colors, 'design') !important;
+    font-weight: 600;
 }
-
+.crd-ttl-blue {
+    color: map-get($more-colors, 'cardblue') !important;
+    font-weight: 600;
+  }
 .card-footer {
   width: 92%;
   align-self: center;

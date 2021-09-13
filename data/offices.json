@@ -1,0 +1,28 @@
+    {
+        "offices": [
+        {
+          "officeLink" : "#",
+          "location": "Cambridge Office",
+          "imageFile": "images/cambridge.jpg" ,
+          "address": "Unit 1.28<br>St Johns Innovation Centre Cowley Road,<br>Milton, Cambridge,<br>CB40WS",
+          "phone": "01223 37 57 72",
+          "map": " "
+        },
+        {
+          "officeLink": "#",
+          "location": "Wymondham Office",
+          "imageFile": "images/wymondham.jpg",
+          "address": "Unit 15,<br>Penfold Drive,<br>Gateway 11 Business Park,<br>Wymondham, Norfolk,<br>NR18 0WZ",
+          "phone": "01603 70 40 20",
+          "map": " "
+        },
+        {
+          "officeLink": "#",
+          "location": "Great Yarmouth Office",
+          "imageFile": "images/yarmouth.jpg",
+          "address": "Suite F23,<br>Beacon Innovation Centre,<br>Beacon Park, Gorleston,<br>Great Yarmouth, Norfolk,<br>NR31 7RA",
+          "phone": "01493 60 32 04",
+          "map": " "
+        }
+      ]
+}

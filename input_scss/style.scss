@@ -1,3 +1,4 @@
+
 @import 'utilities/mixins',
         'utilities/icons',
         'utilities/variables',
@@ -18,11 +19,10 @@
         'main/news-cards',
         'main/sign-up-form',
         'main/services-boxes',
-        'main/client-icons';
+        'main/client-icons',
+        'main/contact.scss';
 
 @import 'footer/footer-main',
         'footer/footer-partner-images';
-
-
 
 @import 'utilities/breakpoint-styles';

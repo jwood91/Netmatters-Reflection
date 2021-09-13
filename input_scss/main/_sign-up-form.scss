@@ -25,9 +25,8 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        border-radius: solid 1.1px #e5e5e5;
-        border-color: #ccc;
-        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        // border: solid 1.1px #e5e5e5;
+        // transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
         @include mq('md'){
             display: flex;
             flex-direction: row;
@@ -37,63 +36,13 @@
               width: 48%;
             }
         }
-        textarea:focus, input:focus{
-            outline: none;
-            box-shadow: inset rgba(0,0,0, 0.075) 0px 1px 1px 0px, rgba(91, 192, 222, 0.6) 0px 0px 8px 0px;
-            border: 1.1px solid rgba(91, 192, 222, 0.7);
-            transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
 
-          }
       }
 
-      .form-input{
-          @include form-input;
-          .ast-red {
-              color: #d24d57;
-              font-size: 18px;
-          }
-        }
 
 
-      #checkbox-container{
-          display: flex;
-          flex-direction: row;
-          max-height: 10rem;
-          min-width: 10rem;
-          font-size: 18px;
-          margin-top: 0.8em;
-          font-weight: 600;
 
-          label {
-              width: 80%;
-              font-size: 16px;
-              line-height: 30px;
-              cursor: pointer;
-                    }
 
-          #email-chkbox{
-              appearance: none;
-              width: 1.8em;
-              height: 1.8em;
-              border: 3px solid map-get($more-colors,'darkgrey');
-              border-radius: 3px;
-              cursor: pointer;
-              z-index: 2;
-
-              & ~ .icon-checkbox-checked {
-                  visibility: hidden;
-                  height: 20px;
-                  margin: 0.5em 1.5em 0 -1.4em ;
-                  transform: scale(1.9);
-                  z-index: 1;
-              }
-          }
-        }
-        #email-chkbox:checked {
-            & ~ .icon-checkbox-checked{
-              visibility: visible !important;
-                          }
-            }
         .subscribe-btn {
             width: 7.3em;
             height: 2.8em;
@@ -109,3 +58,56 @@
             }
         }
       }
+
+      .form-input{
+        display: flex;
+        flex-direction: column;
+          @include form-input;
+          .ast-red {
+              color: #d24d57;
+              font-size: 18px;
+          }
+        }
+
+
+    .checkbox-container{
+        display: flex;
+        flex-direction: row;
+        max-height: 10rem;
+        min-width: 10rem;
+        font-size: 18px;
+        margin-top: 0.8em;
+        font-weight: 600;
+
+        label {
+            width: 80%;
+            font-size: 16px;
+            line-height: 30px;
+            cursor: pointer;
+                  }
+
+
+      }
+
+    #email-chkbox{
+        appearance: none;
+        width: 1.8em;
+        height: 1.8em;
+        border: 3px solid map-get($more-colors,'darkgrey');
+        border-radius: 3px;
+        cursor: pointer;
+        z-index: 2;
+
+        & ~ .icon-checkbox-checked {
+            visibility: hidden;
+            height: 20px;
+            margin: 0.5em 1.5em 0 -1.4em ;
+            transform: scale(1.9);
+            z-index: 1;
+        }
+    }
+    #email-chkbox:checked {
+        & ~ .icon-checkbox-checked{
+          visibility: visible !important;
+                      }
+        }

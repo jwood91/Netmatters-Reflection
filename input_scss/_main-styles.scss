@@ -9,20 +9,21 @@
 }
 
 html, body {
-    overflow-x: hidden;
+ margin: 0;
+ padding: 0;
+ overflow: hidden;
+ height: 100%;
 
   }
 
 /* ======== BODY STYLES ========= */
 body {
-    display:block;
-    position: relative;
+    display: block;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: 'Poppins', sans-serif;
     h1 h2{ font-weight: 600};
     p {font-weight: 400};
-    min-width: 100vw;
     background-color: #fff;
     letter-spacing: .4px;
     line-height: 1.42857143;
@@ -42,23 +43,34 @@ body {
           }
 }
 
-
+#wrapper {
+  height: 100%;
+  width: 100%;
+}
 
 /* Header SCSS */
 
 
 #scroll-header {
-    display: flex;
+      display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    right: 0px;
+    justify-content: center;
     width: 100%;
-    height: auto;
-    background-color: grey;
+    background-color: #ffffff;
     box-sizing: border-box;
-    width: 100%;
-    z-index: 999999;
+    z-index: 99999999;
+    height: 154.797px;
+    @include mq('sm') {
+      height: 91px
+    }
+    @include mq('md') {
+      height: 193.391px;
+    }
+
   }
+
+
   .overlay {
     visibility: hidden;
     position: absolute;
@@ -79,7 +91,26 @@ body {
   transition: 0.5s;
 }
 
+#scroll-header-sticky {
+  position: fixed;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 154.797px;
+  width: 100%;
+  background-color: grey;
+  box-sizing: border-box;
+  z-index: 99999999;
+  transition-duration: 0.5s;
+  -webkit-backface-visibility: hidden;
+  @include mq('sm') {
+    height: 91px
+  }
+  @include mq('md') {
+    height: 193.391px;
+  }
 
+  }
 
 // .overlay-menu {
 // pointer-events: none;
@@ -89,21 +120,17 @@ body {
 #scroll {
   display: block;
   position: relative;
-  overflow-y: hidden;
+  align-items: center;
+  overflow-y: scroll;
   overflow-x: hidden;
-  z-index: 100000000;
+  max-height: 100%;
+  width: 100%;
+  transition-duration: 0.5s;
+  z-index: 1;
 
 }
 
-.scroll-full-height {
-  height: 100%;
 
-}
-
-.scroll-freeze {
-  height: 100vh;
-
-}
 
 
 
@@ -118,21 +145,21 @@ body {
 }
 
 .nav-down {
-  position: fixed;
+  visibility: visible;
   top: -193.30px;
   transition-duration: 0.5s;
-
 }
 
 .nav-down-shown {
-  position: fixed;
+  visibility: visible;
   top: 0px;
+  left: 0px;
   transition-duration: 0.5s;
+
 }
 
 .nav-up{
-  position: relative;
-  transition-duration: 0.5s;
+ visibility: hidden;
 
 }
 

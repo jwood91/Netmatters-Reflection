@@ -1,29 +1,29 @@
 /* ========== XS Breakpoint =========== */
-#top-row, .image-inner, #content-inner, #about-text-container, #card-inner, #client-icons, #form-container, #footer-container, #partner-top-row, #partner-bottom-row, #latest-inner, .menu-list{
+#top-row, .image-inner, #content-inner, #about-text-container, #card-inner, #client-icons, #form-container, #footer-container, #partner-top-row, #partner-bottom-row, #latest-inner, .menu-list, #office-inner, #contact-form-container-outer {
   @include mq('xs') {
-  max-width: 700px !important;
-  min-width: 320px !important;
+  max-width: 720px !important;
+  min-width: 100px !important;
   }
 }
-/* ============ SM Breakpoint =========== */
-#top-row, .image-inner, #content-inner, #about-text-container, #card-inner, #client-icons, #form-container, #footer-container, #partner-top-row, #partner-bottom-row, #latest-inner, .menu-list{
+// SM breakpoint
+#top-row, .image-inner, #content-inner, #about-text-container, #card-inner, #client-icons, #form-container, #footer-container, #partner-top-row, #partner-bottom-row, #latest-inner, .menu-list, #office-inner, #contact-form-container-outer {
   @include mq('sm') {
   max-width: 720px !important;
   }
 }
 
-/* ============ md breakpoint styles ========== */
+// / md breakpoint styles
 
-#top-row, .image-inner, #content-inner, #about-text-container, #card-inner, #client-icons, #form-container, #footer-container, #partner-top-row, #partner-bottom-row, #latest-inner, #nav-main, .menu-list{
+#top-row, .image-inner, #content-inner, #about-text-container, #card-inner, #client-icons, #form-container, #footer-container, #partner-top-row, #partner-bottom-row, #latest-inner, #nav-main, .menu-list, #office-inner, #contact-form-container-outer {
   @include mq('md') {
   max-width: 940px !important;
   }
 }
 
-/* ============ LG Breakpoint ===========*/
+//  LG Breakpoint
 
 
-#top-row, .image-inner, #content-inner, #about-text-container, #card-inner, #client-icons, #form-container, #footer-container, #partner-top-row, #partner-bottom-row, #latest-inner, #nav-main, .menu-list{
+#top-row, .image-inner, #content-inner, #about-text-container, #card-inner, #client-icons, #form-container, #footer-container, #partner-top-row, #partner-bottom-row, #latest-inner, #nav-main, .menu-list, #office-inner, #contact-form-container-outer {
   @include mq('lg') {
   max-width: 1188px !important;
   }
