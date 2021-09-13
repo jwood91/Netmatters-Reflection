@@ -173,7 +173,7 @@ $(`#scroll`).scroll(function() {
   let email = document.querySelector("input[name=email]");
   let phone = document.querySelector("input[name=phone]");
   let subject = document.querySelector("input[name=subject]");
-  let message = document.querySelector("input[name=message");
+  let message = document.querySelector("textarea[name=message");
 
 
 

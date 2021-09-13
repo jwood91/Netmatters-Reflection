@@ -126,7 +126,7 @@ function getOfficeHtml($office) {
        $message = test_input($_POST["message"]);
      }
      if ($nameErr == "" && $emailErr == "" && $phoneErr == "" && $subjectErr == "" && $messageErr == "") {
-       var_dump("hello");
+       
        $sql = "INSERT INTO contact (name, email, phone, subject, message)
        VALUES (? , ? , ? , ? , ?)";
        $db->prepare($sql)->execute([$name, $email, $phone, $subject, $message]);

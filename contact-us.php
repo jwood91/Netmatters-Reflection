@@ -4,7 +4,18 @@ include "inc/header.php" ?>
 <?php include "inc/function.php" ?>
 <?php include "inc/cookie.php" ?>
 <!-- offices boxes -->
+<div id="breadcrumbs-contact">
+  <div id="breadcrumbs-contact-inner">
+    <span><a href="#">Home</a> / Our Offices</span>
+  </div>
+</div>
+<div id="offices-header">
+  <div id="offices-header-inner">
+    <h1>Our Offices</h1>
+  </div>
+</div>
 <div id="office-outer">
+
   <div id="office-inner">
     <?php officeCard(); ?>
   </div>

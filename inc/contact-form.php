@@ -5,7 +5,7 @@
         <div id="address-inner">
           <ul id="address">
             <li><p>Email Us On:</p></li>
-            <li><h5>sales@netmatters.com</h5></li>
+            <li><a href="mailto:someone@yoursite.com?subject=Mail from Our Site" class="crd-ttl-purp"><h3>sales@netmatters.com</h3></a></li>
             <li><p>Business Hours:</p></li>
             <li><p>Monday - Friday 7:00 - 18:00</p></li>
             <li><p>Out of Hours IT Support</p></li>
@@ -91,12 +91,12 @@
             </div>
             <div id="contact-message-input" class='form-input'>
                 <label for="contact-message-entry" class="input-label"> Message <span class="ast-red">&#42;</span></label>
-                <input id="contact-message-entry" class="<?php
+                <textarea id="contact-message-entry" class="<?php
                     if ($messageErr == "fail"){
                       echo ("input-invalid");
                     } else {
                       echo ("input-area");
-                    };?>" name="message" cols="50" type="textarea" value="<?php if(isset($_POST['message'])) echo $_POST['message']; ?>"/>
+                    };?>" name="message" cols="50" type="textarea" value="<?php if(isset($_POST['message'])) echo $_POST['message']; ?>"></textarea>
             </div>
 
 
