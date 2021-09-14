@@ -70,6 +70,9 @@ function getOfficeHtml($office) {
                   <h3 id='office-phone' class='crd-ttl-purp'>{$office->phone}</h2>
                   <a id='office-button' class='btn btn-purple' href='' role='button'>VIEW MORE</a>
                   </div>
+                  <div class='office-map-outer'>
+                    <img class='office-map' src='{$office->map}'/>
+                  </div>
               </div>";
 
     return $html;
@@ -126,7 +129,7 @@ function getOfficeHtml($office) {
        $message = test_input($_POST["message"]);
      }
      if ($nameErr == "" && $emailErr == "" && $phoneErr == "" && $subjectErr == "" && $messageErr == "") {
-       
+
        $sql = "INSERT INTO contact (name, email, phone, subject, message)
        VALUES (? , ? , ? , ? , ?)";
        $db->prepare($sql)->execute([$name, $email, $phone, $subject, $message]);
