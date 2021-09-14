@@ -27,8 +27,8 @@
                 <img src="images/chat-icon.png" alt="chat icon" id="chat-icon">
                 <div id="top-row" class="top-row">
                   <div id="logo-container" class="logo-container">
-                      <a href="#">
-                        <img src="images/f-logo.png" alt="Netmatters logo" id="logo">
+                      <a  href="index.php">
+                        <img class="logo" src="images/f-logo.png" alt="Netmatters logo" >
                       </a>
                     </div>
                   <div id= "menu-phone" class="menu-phone">
@@ -36,7 +36,7 @@
                       <a href="#"><i class="fas fa-mouse"></i>Support</a>
                     </div>
                     <div id="contact-link" class=" contact-link header-btn mp-item">
-                      <a href="#"
+                      <a href="contact-us.php"
                       id="link-button"><i class="link-button far fa-paper-plane"></i>Contact</a>
                     </div>
                     <div id="search-sm" class="search-sm mp-item">

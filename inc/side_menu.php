@@ -1,6 +1,6 @@
 <div id="sideNav">
   <div id="side-nav-top">
-    <a href="#" class="contact-side-top"><span>Contact Us</span></a>
+    <a href="contact-us.php" class="contact-side-top"><span>Contact Us</span></a>
 
     <ul id="side-nav-design" class="side-list">
         <li class="side-head">
@@ -183,7 +183,7 @@
       </ul>
 
       <ul id="side-nav-contact" class="bottom-full-list">
-          <li class="bottom-nav-h"><a href="#"><span>Contact Us</span></a></li>
+          <li class="bottom-nav-h"><a href="contact-us.php"><span>Contact Us</span></a></li>
       </ul>
     </div>
   </div>

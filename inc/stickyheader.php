@@ -4,7 +4,7 @@
     <div id="top-row-sticky" class="top-row">
       <div id="logo-container-sticky" class="logo-container">
           <a href="#">
-            <img src="images/f-logo.png" alt="Netmatters logo" id="logo">
+            <img class="logo" src="images/f-logo.png" alt="Netmatters logo">
           </a>
         </div>
       <div id= "menu-phone-sticky" class="menu-phone">

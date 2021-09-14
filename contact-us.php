@@ -6,7 +6,7 @@ include "inc/header.php" ?>
 <!-- offices boxes -->
 <div id="breadcrumbs-contact">
   <div id="breadcrumbs-contact-inner">
-    <span><a href="#">Home</a> / Our Offices</span>
+    <span><a href="index.php">Home</a> / Our Offices</span>
   </div>
 </div>
 <div id="offices-header">
