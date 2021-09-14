@@ -1,6 +1,6 @@
 /* =========MAIN HEADER CONTAINER=========*/
 
-#page-head {
+.page-head {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -30,7 +30,7 @@
       }
 }
 /* TOP ROW OF THE PAGE HEAD */
-  #top-row {
+  .top-row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -46,14 +46,14 @@
   }
 
 
-#logo-container {
+.logo-container {
  display: flex;
  align-items: center;
  justify-content: flex-start;
  width: 50%;
  margin-right: auto;
  order: 1;
- #logo{
+ .logo{
     max-width: 450px;
     width: 100%;
     box-sizing: border-box;
@@ -61,20 +61,20 @@
 @include mq('sm') {
     width: 40%;
     margin-right: auto;
- #logo {
+ .logo {
     max-width: 340px;
  }
    }
   }
 
-#menu-phone{
+.menu-phone{
   display: flex;
   order: 2;
   justify-content: space-between;
   align-items: center;
   height: 100%;
   width: 30%;
-  #menu-button-container {
+  .menu-button-container {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -146,20 +146,20 @@
 
             }
     }
-  #support-link {
+  .support-link {
     background-color: map-get($more-colors, 'cardblue');
     }
-  #support-link:hover {
+  .support-link:hover {
     background-color: map-get($more-colors, 'cardbluehover');
       }
-  #contact-link {
+  .contact-link {
     background-color: map-get($more-colors, 'searchgrey');
     }
-  #contact-link:hover {
+  .contact-link:hover {
     background-color: map-get($more-colors, 'searchhovergrey');
     }
 
-  #phone-icon-container {
+  .phone-icon-container {
       display: flex;
       justify-content: flex-start;
       width: 27px;
@@ -175,14 +175,14 @@
        }
       }
 
-  #phone-icon-container:hover {
+  .phone-icon-container:hover {
     border-bottom: 4px solid black;
 
   }
 
 
   /* small search bar */
-  #search-sm {
+  .search-sm {
     display: none;
 
     width: 18em;
@@ -230,7 +230,7 @@
          }
    }
 
-      #search-button {
+      .search-button {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -248,7 +248,7 @@
          color: white;
          font-size: 23px;
        }
-       #search-button:hover {
+       .search-button:hover {
          background-color: map-get($more-colors, 'searchhovergrey')
        }
        @include mq('xs'){
@@ -267,7 +267,7 @@
 
 
 
-    #search-bar-container {
+    .search-bar-container {
       display: flex ;
       justify-content: center;
       align-items: center;
@@ -279,18 +279,7 @@
           font-size: 15px;
           color: #555;
             }
-        #search-input {
-            display: block ;
-            background-color: rgba(0,0,0,.1);
-            outline: 1px solid hsla(0,0%,100%,.2);
-            border: 2px solid rgba(0,0,0,.1);
-            border-right: none;
-            width: calc(100% - 55px);
-            height: 45px;
-            padding-left: 12px;
-            border-radius-left: 2px;
-            z-index: 1;
-                  }
+
         .search-icon-container {
             display: flex;
             justify-content: center;
@@ -304,10 +293,10 @@
             z-index: 1;
             button {
               display: block;
-              background: transparent;
+              background-color:  transparent;
               border: none;
               outline: none;
-              width: 101%;
+              width: 100%;
               font-size: 20px;
               height: 1.35em;
               border-left: none;
@@ -319,3 +308,15 @@
           display: none;
         }
       }
+      .search-input {
+          display: block ;
+          background-color: rgba(0,0,0,.1);
+          outline: 1px solid hsla(0,0%,100%,.2);
+          border: 2px solid rgba(0,0,0,.1);
+          border-right: none;
+          width: calc(100% - 55px);
+          height: 45px;
+          padding-left: 12px;
+          border-radius-left: 2px;
+          z-index: 1;
+                }

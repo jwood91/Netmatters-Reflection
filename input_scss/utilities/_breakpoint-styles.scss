@@ -1,12 +1,12 @@
 /* ========== XS Breakpoint =========== */
-#top-row, .image-inner, #content-inner, #about-text-container, #card-inner, #client-icons, #form-container, #footer-container, #partner-top-row, #partner-bottom-row, #latest-inner, .menu-list, #office-inner, #contact-form-container-outer, #offices-header-inner, #breadcrumbs-contact-inner {
+.top-row, .image-inner, #content-inner, #about-text-container, #card-inner, #client-icons, #form-container, #footer-container, #partner-top-row, #partner-bottom-row, #latest-inner, .menu-list, #office-inner, #contact-form-container-outer, #offices-header-inner, #breadcrumbs-contact-inner {
   @include mq('xs') {
   max-width: 720px !important;
   min-width: 100px !important;
   }
 }
 // SM breakpoint
-#top-row, .image-inner, #content-inner, #about-text-container, #card-inner, #client-icons, #form-container, #footer-container, #partner-top-row, #partner-bottom-row, #latest-inner, .menu-list, #office-inner, #contact-form-container-outer, #offices-header-inner, #breadcrumbs-contact-inner{
+.top-row, .image-inner, #content-inner, #about-text-container, #card-inner, #client-icons, #form-container, #footer-container, #partner-top-row, #partner-bottom-row, #latest-inner, .menu-list, #office-inner, #contact-form-container-outer, #offices-header-inner, #breadcrumbs-contact-inner{
   @include mq('sm') {
   max-width: 720px !important;
   }
@@ -14,7 +14,7 @@
 
 // / md breakpoint styles
 
-#top-row, .image-inner, #content-inner, #about-text-container, #card-inner, #client-icons, #form-container, #footer-container, #partner-top-row, #partner-bottom-row, #latest-inner, #nav-main, .menu-list, #office-inner, #contact-form-container-outer, #offices-header-inner, #breadcrumbs-contact-inner {
+.top-row, .image-inner, #content-inner, #about-text-container, #card-inner, #client-icons, #form-container, #footer-container, #partner-top-row, #partner-bottom-row, #latest-inner, #nav-main, .menu-list, #office-inner, #contact-form-container-outer, #offices-header-inner, #breadcrumbs-contact-inner {
   @include mq('md') {
   max-width: 940px !important;
   }
@@ -23,7 +23,7 @@
 //  LG Breakpoint
 
 
-#top-row, .image-inner, #content-inner, #about-text-container, #card-inner, #client-icons, #form-container, #footer-container, #partner-top-row, #partner-bottom-row, #latest-inner, #nav-main, .menu-list, #office-inner, #contact-form-container-outer, #offices-header-inner, #breadcrumbs-contact-inner {
+.top-row, .image-inner, #content-inner, #about-text-container, #card-inner, #client-icons, #form-container, #footer-container, #partner-top-row, #partner-bottom-row, #latest-inner, #nav-main, .menu-list, #office-inner, #contact-form-container-outer, #offices-header-inner, #breadcrumbs-contact-inner {
   @include mq('lg') {
   max-width: 1188px !important;
   }

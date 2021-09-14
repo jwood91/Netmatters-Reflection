@@ -23,34 +23,34 @@
         <?php include "inc/stickyheader.php" ?>
         <div id="scroll">
         <header id="scroll-header" class="visible">
-              <div id="page-head">
+              <div id="page-head" class="page-head">
                 <img src="images/chat-icon.png" alt="chat icon" id="chat-icon">
-                <div id="top-row">
-                  <div id="logo-container">
+                <div id="top-row" class="top-row">
+                  <div id="logo-container" class="logo-container">
                       <a href="#">
                         <img src="images/f-logo.png" alt="Netmatters logo" id="logo">
                       </a>
                     </div>
-                  <div id= "menu-phone">
-                    <div id="support-link" class="header-btn mp-item">
+                  <div id= "menu-phone" class="menu-phone">
+                    <div id="support-link" class=" support-link header-btn mp-item">
                       <a href="#"><i class="fas fa-mouse"></i>Support</a>
                     </div>
-                    <div id="contact-link" class="header-btn mp-item">
+                    <div id="contact-link" class=" contact-link header-btn mp-item">
                       <a href="#"
-                      id="link-button"><i class="far fa-paper-plane"></i>Contact</a>
+                      id="link-button"><i class="link-button far fa-paper-plane"></i>Contact</a>
                     </div>
-                    <div id="search-sm" class="mp-item">
+                    <div id="search-sm" class="search-sm mp-item">
                         <input placeholder="Search...">
                         <div class="search-icon-container">
-                          <button id="search-button" type=submit><i class="fas fa-search"></i></button>
+                          <button id="search-button" class="search-button" type=submit><i class="fas fa-search"></i></button>
                         </div>
                     </div>
-                    <div  id="phone-icon-container" class="hidden">
-                      <a href="tel:01603704020" title="Call 01603704020" target="_blank"><img src="images/telephone.png" alt="phone icon image" id="phone-icon" ></a>
+                    <div  id="phone-icon-container" class="phone-icon-container hidden">
+                      <a href="tel:01603704020" title="Call 01603704020" target="_blank"><img src="images/telephone.png" alt="phone icon image" id="phone-icon" class="phone-icon" ></a>
                     </div>
 
                     <div id="menu-button-container" onclick="toggleNav()">
-                      <button id="hamburger" class="hamburger hamburger--spin" type="button">
+                      <button id="hamburger-main" class="menu-button-container hamburger hamburger--spin" type="button">
                           <span class="hamburger-box">
                             <span class="hamburger-inner"></span>
                             <span id="title">Menu</span>
@@ -59,8 +59,8 @@
                         </button>
                       </div>
                   </div>
-                  <div id="search-bar-container" class="hidden">
-                    <input placeholder="Search..." id="search-input" class="hidden">
+                  <div id="search-bar-container" class="search-bar-container hidden">
+                    <input placeholder="Search..." id="search-input" class=" search-input hidden">
                     <div class="hidden search-icon-container">
                       <button type=submit class="hidden"><i class="fas fa-search"></i></button>
                     </div>
@@ -68,9 +68,9 @@
                 </div>
               </div>
 
-            <div id="navbar" class="nav sticker">
-              <div id="nav-main">
-                <ul id="nav-items">
+            <div id="navbar" class="navbar-class nav sticker">
+              <div id="nav-main" class="nav-main">
+                <ul id="nav-items" class="nav-items">
                   <li class="nav-design navboth-design nav-item nav-left-end">
                     <a class="nav-link-item" href="#">
                       <span><i class="fas fa-code"></i></span>

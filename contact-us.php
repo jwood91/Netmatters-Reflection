@@ -26,5 +26,5 @@ include "inc/header.php" ?>
 <!-- email signup box -->
 <?php include "inc/newsletter.php" ?>
 
-
+<script src="js/contact.js"></script>
 <?php include "inc/footer.php" ?>

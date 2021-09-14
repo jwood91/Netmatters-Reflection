@@ -65,7 +65,7 @@ body {
       height: 91px
     }
     @include mq('md') {
-      height: 193.391px;
+      height: auto;
     }
 
   }
@@ -107,7 +107,7 @@ body {
     height: 91px
   }
   @include mq('md') {
-    height: 193.391px;
+    height: auto;
   }
 
   }
@@ -146,7 +146,7 @@ body {
 
 .nav-down {
   visibility: visible;
-  top: -193.30px;
+  top: -220.30px;
   transition-duration: 0.5s;
 }
 

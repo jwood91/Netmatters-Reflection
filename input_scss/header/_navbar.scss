@@ -1,5 +1,5 @@
 
-#navbar {
+.navbar-class {
   display: none;
   width: 100%;
   background-color: map-get($more-colors, 'darkgrey');
@@ -9,7 +9,7 @@
   }
 }
 
-#nav-main {
+.nav-main {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -17,8 +17,9 @@
   height: 6.4rem;
 
   color: #fff;
+}
 
-  #nav-items {
+  .nav-items {
     @include menu($theme-colors-alt);
     @include nav($theme-colors);
     display: flex;
@@ -63,6 +64,8 @@
           margin-bottom: 0.3em;
       }
     }
+    }
+
       @include mq('lg') {
       span {
         font-size: 16px;
@@ -70,8 +73,8 @@
         }
       }
     }
-  }
-}
+
+
 
 
 .nav-menu {
@@ -84,9 +87,7 @@
   height: 3em;
   outline: none;
   left: 0%;
-  top: 12.05rem;
-
-
+  top: 12.95rem;
   z-index: 99;
   .menu-list {
     display: flex;
