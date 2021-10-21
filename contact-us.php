@@ -9,6 +9,7 @@ include "inc/header.php" ?>
     <span><a href="index.php">Home</a> / Our Offices</span>
   </div>
 </div>
+
 <div id="offices-header">
   <div id="offices-header-inner">
     <h1>Our Offices</h1>

@@ -59,7 +59,7 @@ body {
     width: 100%;
     background-color: #ffffff;
     box-sizing: border-box;
-    z-index: 99999999;
+    z-index: 99;
     height: 154.797px;
     @include mq('sm') {
       height: 91px
@@ -74,7 +74,7 @@ body {
   .overlay {
     visibility: hidden;
     position: absolute;
-    z-index: 99999999;
+    z-index: 9999999;
     top: 0;
     left: 0;
     width: 100%;
@@ -100,7 +100,7 @@ body {
   width: 100%;
   background-color: grey;
   box-sizing: border-box;
-  z-index: 99999999;
+  z-index: 99;
   transition-duration: 0.5s;
   -webkit-backface-visibility: hidden;
   @include mq('sm') {

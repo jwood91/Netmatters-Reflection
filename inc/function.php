@@ -3,7 +3,7 @@
     function full_news_array() {
         include("connection.php");
         try {
-          $results = $db->query("SELECT * FROM news");
+          $results = $db->query("SELECT * FROM news LIMIT 3");
           $results->setFetchMode(PDO::FETCH_ASSOC);
             // echo "<br>Retrieved Results";
 

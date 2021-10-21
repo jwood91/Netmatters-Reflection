@@ -13,7 +13,4 @@
     echo "Error in connection" . $e->getMessage();
     exit;
   };
-
-
-
 ?>

@@ -166,7 +166,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  
+
 }
 
 // ================================================================================================================================================================================================================================================================================================================================================================================================================
@@ -210,16 +210,52 @@
     padding: 10px 30px 25px 30px;
     border-radius: 10px;
     @include mq('lg') {
-      order: 1
+      order: 1;
+      width: 66%;
 
     }
 }
 
+#contact-sign-up-inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
 
+}
+
+.contact-form-input {
+  display: flex;
+  flex-direction: column;
+  @include form-input;
+  .ast-red {
+      color: #d24d57;
+      font-size: 18px;
+  }
+  width: 100%;
+  @include mq('md') {
+    justify-content: center;
+    align-items: center;
+    width: 47%;
+    label {
+      width: 100%;
+    }
+    input {
+      width: 100%;
+    }
+  }
+}
+
+#contact-message-input {
+  width: 100%;
+}
 
 #contact-message-entry {
   @include form-input;
    height: 100px;
+
    padding-top: 15px;
 }
 
@@ -341,16 +377,19 @@
 
 
 //Address section styling links to contact styling.
-
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
 
 #address-container {
     width: 100%;
     order: 1;
     padding-bottom: 25px;
-    p {
+    p, a {
       font-size: 1rem;
-      font-weight: 600;
     }
     h3{
       font-size: 1.625rem;
@@ -361,4 +400,33 @@
       order: 2;
       margin-left: 25px;
   }
+}
+
+.bold-para {
+  font-weight: 600;
+}
+//Accordion styles.
+.accord-container {
+  width: 100%;
+}
+
+a.accordion {
+  width: 100%;
+  padding: 0;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  text-align: left;
+  font-size: 18px;
+
+  cursor: pointer;
+}
+
+
+
+.accordion-content {
+  padding-top: 1.5em;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
 }
